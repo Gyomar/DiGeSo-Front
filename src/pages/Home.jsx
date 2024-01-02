@@ -1,38 +1,51 @@
-import React from "react";
-import { styled } from '@mui/material/styles';
-import Box from "@mui/material/Box";
-import Stack from "@mui/material/Stack";
-import Button from "@mui/material/Button";
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import Stack from '@mui/material/Stack';
+import Layaout from '../containers/Layout';
 
+function Home() {
 
-const StyleButton = styled(Button)({
-  padding: 16,
-  textTransform: "none",
-  fontSize: 19,
-});
-
-const Home = () => {
   return (
     <Box
       sx={{
-        objectFit: "cover",
-        position: "absolute",
-        width: "100%",
-        height: "100vh",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
+        display: 'flex',
+        objectFit: 'cover',
+        width: '100%',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
       }}
     >
-      <Stack
-        direction="column"
-        justifyContent="space-around"
-        alignItems="stretch"
-        spacing={2}
-        sx={{ height: "100vh" }}
-      >
-      </Stack>
+      <Layaout />
+      <Box component="main" sx={{ p: 3, width: "100vw" }}>
+        <Box>
+          <Container maxWidth="lg">
+            <Grid container spacing={2}>
+              <Grid item xs={6}>
+                <Stack
+                  direction="column"
+                  justifyContent="center"
+                  alignItems="flex-start"
+                  spacing={6}
+                  sx={{ py: 14 }}
+                >
+                  <Typography variant="h1" gutterBottom sx={{ fontSize: "3.5rem" }}>
+                    Crea asombrosas web, has crecer tu negocio con DiGeSo
+                  </Typography>
+                  <Typography variant="body1" gutterBottom>
+                    Soluciones de desarrollo web, lading pages, desarrollo de apps, marketing digital, publcidad, diseño de logos, sesiones de fotografia, edicion de videos y mas...
+                  </Typography>
+                  <Button variant="contained">Empecemos</Button>
+                </Stack>
+              </Grid>
+            </Grid>
+          </Container>
+        </Box>
+      </Box>
     </Box>
   );
-};
+}
 
 export default Home;

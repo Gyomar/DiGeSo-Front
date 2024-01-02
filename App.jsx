@@ -1,9 +1,11 @@
-import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import Home from "/src/pages/Home";
+import AboutUs from "/src/pages/AboutUs";
+import Services from "/src/pages/Services";
+import ContactUs from "/src/pages/ContactUs";
 import NotFound from "/src/pages/NotFound";
 import CssBaseline from "@mui/material/CssBaseline";
 import Dosis300woff2 from "/src/assets/fonts/dosis-v32-latin-300.woff2";
@@ -19,10 +21,10 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: '#df6129',
+      main:"#2196f3",
     },
     secondary: {
-      main: '#a48363'
+      main: "#ffc400"
     }
   },
   components: {
@@ -100,6 +102,9 @@ const App = () => {
         <BrowserRouter>
           <Routes>
             <Route exact path="/" element={<Home />} />
+            <Route exact path="/about-us" element={<AboutUs />} />
+            <Route exact path="/services" element={<Services />} />
+            <Route exact path="/contact-us" element={<ContactUs />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

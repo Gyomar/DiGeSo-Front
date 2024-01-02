@@ -1,8 +1,7 @@
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
 import Layaout from '../containers/Layout';
 
-const NotFound = () => {
+const Services = () => {
 	return (
     <Box
       sx={{
@@ -14,13 +13,9 @@ const NotFound = () => {
       }}
     >
       <Layaout />
-      <Box component="main" sx={{ p: 3, width: "100vw" }}>
-				<Typography variant="h1" gutterBottom sx={{ fontSize: "3.5rem", mt: 8 }}>
-					Pagina no Encontrada 404 
-				</Typography>
-      </Box>
+      Servicios
     </Box>
   );
 }
 
-export default NotFound;
+export default Services;
