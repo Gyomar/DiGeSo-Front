@@ -11,12 +11,76 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import PropTypes from 'prop-types';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
+import Fab from '@mui/material/Fab';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import Fade from '@mui/material/Fade';
+import Slide from '@mui/material/Slide';
+import LogoDigeso from '../assets/images/LogoDigeso.svg';
+import LogoDigesoWhite from '../assets/images/LogoDigesoWhite.svg';
 
 const drawerWidth = 240;
 const navItems = ['Inicio', 'Nosotros', 'Servicios', 'Contactenos'];
 
-const TopAppBar = () => {
+function ScrollTop(props) {
+  const { children } = props;
+
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 100,
+  });
+
+  const handleClick = (event) => {
+    const anchor = (event.target.ownerDocument || document).querySelector(
+      '#back-to-top-anchor',
+    );
+
+    if (anchor) {
+      anchor.scrollIntoView({
+        block: 'center',
+      });
+    }
+  };
+
+  return (
+    <Fade in={trigger}>
+      <Box
+        onClick={handleClick}
+        role="presentation"
+        sx={{ position: 'fixed', bottom: 16, right: 16 }}
+      >
+        {children}
+      </Box>
+    </Fade>
+  );
+}
+
+ScrollTop.propTypes = {
+  children: PropTypes.element.isRequired,
+};
+
+function HideOnScroll(props) {
+  const { children } = props;
+
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 100,
+  });
+
+  return (
+    <Slide appear={false} direction="down" in={!trigger}>
+      {children}
+    </Slide>
+  );
+}
+
+HideOnScroll.propTypes = {
+  children: PropTypes.element.isRequired,
+};
+
+const TopAppBar = (props) => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
@@ -24,10 +88,18 @@ const TopAppBar = () => {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        Digital Genius Solutions
-      </Typography>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', pt: 2 }}>
+      <Box
+        component="svg"
+        sx={{
+          height: 40,
+          maxWidth: 130,
+          backgroundImage: `url(${LogoDigeso})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'contain',
+          display: { xs: 'block', sm: 'none' },
+        }}
+      ></Box>
       <Divider />
       <List>
         {navItems.map((item) => (
@@ -49,35 +121,47 @@ const TopAppBar = () => {
         width: '100%',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
+        position: 'absolute'
       }}
     >
-      <AppBar component="nav">
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-          >
-            Digital Genius Solutions
-          </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
-                {item}
-              </Button>
-            ))}
-          </Box>
-        </Toolbar>
-      </AppBar>
+      <HideOnScroll {...props}>
+        <AppBar
+          component="nav"
+          sx={{ backgroundColor: 'transparent', boxShadow: 'none', pt: 2 }}
+        >
+          <Container maxWidth="xl">
+            <Toolbar sx={{ justifyContent: 'space-between' }}>
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                edge="start"
+                onClick={handleDrawerToggle}
+                sx={{ mr: 2, display: { sm: 'none' } }}
+              >
+                <MenuIcon />
+              </IconButton>
+              <Box
+                component="svg"
+                sx={{
+                  height: 50,
+                  backgroundImage: `url(${LogoDigesoWhite})`,
+                  backgroundRepeat: 'no-repeat',
+                  backgroundSize: 'contain',
+                  display: { xs: 'none', sm: 'block' },
+                }}
+              ></Box>
+              <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+                {navItems.map((item) => (
+                  <Button key={item} sx={{ color: '#ffffff' }}>
+                    {item}
+                  </Button>
+                ))}
+              </Box>
+            </Toolbar>
+          </Container>
+        </AppBar>
+      </HideOnScroll>
+      <Toolbar id="back-to-top-anchor" />
       <nav>
         <Drawer
           variant="temporary"
@@ -97,8 +181,12 @@ const TopAppBar = () => {
           {drawer}
         </Drawer>
       </nav>
-
+      <ScrollTop {...props}>
+        <Fab size="small" aria-label="scroll back to top">
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </ScrollTop>
     </Box>
   );
-}
+};
 export default TopAppBar;
