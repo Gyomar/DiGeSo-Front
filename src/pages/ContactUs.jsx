@@ -28,6 +28,7 @@ const ContactUs = () => {
             backgroundImage: `url(${CabezaFondo})`,
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
+            backgroundPosition: 'center center'
           }}
         >
           <Box
