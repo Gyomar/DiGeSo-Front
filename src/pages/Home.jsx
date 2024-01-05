@@ -70,7 +70,7 @@ function Home() {
                     <Grow
                       in={true}
                       style={{ transformOrigin: '0 0 0' }}
-                      {...{ timeout: 1000 }}
+                      {...{ timeout: 3000 }}
                     >
                       <Typography
                         variant="h3"
@@ -85,7 +85,7 @@ function Home() {
                     <Grow
                       in={true}
                       style={{ transformOrigin: '0 0 0' }}
-                      {...{ timeout: 1000 }}
+                      {...{ timeout: 3000 }}
                     >
                       <Typography
                         variant="body1"
@@ -144,7 +144,7 @@ function Home() {
                 <Typography
                   variant="body1"
                   gutterBottom
-                  sx={{ textAlign: 'center', maxWidth: 540 }}
+                  sx={{ textAlign: 'center', maxWidth: 540, fontSize: '1.2rem' }}
                 >
                   Bienvenido a Digital Genius Solutions, tu socio integral para
                   el éxito en línea. Nos especializamos en ofrecer servicios de
@@ -164,7 +164,7 @@ function Home() {
                       <Typography variant="h6" gutterBottom>
                         Diseño
                       </Typography>
-                      <Typography variant="body1">
+                      <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
                         Convierte tu visión en una experiencia visual
                         cautivadora con nuestro equipo de diseñadores creativos.
                         Desde conceptos innovadores, te ayudamos a destacarte en
@@ -182,7 +182,7 @@ function Home() {
                       <Typography variant="h6" gutterBottom>
                         Desarrollo
                       </Typography>
-                      <Typography variant="body1">
+                      <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
                         Desde sitios web corporativos hasta aplicaciones
                         interactivas, nuestro equipo de desarrolladores trabaja
                         con las últimas tecnologías para garantizar soluciones
@@ -201,7 +201,7 @@ function Home() {
                       <Typography variant="h6" gutterBottom>
                         Marketing
                       </Typography>
-                      <Typography variant="body1">
+                      <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
                         Aumenta tu visibilidad y atrae a tu audiencia objetivo
                         con estrategias de marketing efectivas. Desde SEO hasta
                         campañas publicitarias, te ayudamos a alcanzar y superar
@@ -219,7 +219,7 @@ function Home() {
                       <Typography variant="h6" gutterBottom>
                         Social Media
                       </Typography>
-                      <Typography variant="body1">
+                      <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
                         Construye una comunidad activa y comprometida en las
                         redes sociales. Nuestro equipo crea estrategias de
                         contenido que resonan, fomentando la lealtad de la
@@ -237,7 +237,7 @@ function Home() {
                       <Typography variant="h6" gutterBottom>
                         eCommerce
                       </Typography>
-                      <Typography variant="body1">
+                      <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
                         Potencia tu presencia en línea con soluciones de
                         comercio electrónico personalizadas. Desde la
                         configuración hasta la optimización continua, estamos
@@ -256,7 +256,7 @@ function Home() {
                       <Typography variant="h6" gutterBottom>
                         Ayuda y Soporte
                       </Typography>
-                      <Typography variant="body1">
+                      <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
                         Estamos aquí para ti en cada paso del camino. Nuestro
                         equipo de soporte técnico está listo para abordar
                         cualquier pregunta o problema, asegurando un
@@ -308,7 +308,7 @@ function Home() {
                 <Typography
                   variant="body1"
                   gutterBottom
-                  sx={{ textAlign: 'center', maxWidth: 540 }}
+                  sx={{ textAlign: 'center', maxWidth: 540, fontSize: '1.2rem' }}
                 >
                   En DiGeSo, aprovechamos tecnologías de vanguardia, como React,
                   Figma, PrestaShop, Power BI, y más. Estamos comprometidos a
@@ -571,7 +571,7 @@ function Home() {
                 <Typography
                   variant="body1"
                   gutterBottom
-                  sx={{ textAlign: 'center', maxWidth: 540 }}
+                  sx={{ textAlign: 'center', maxWidth: 540, fontSize: '1.2rem' }}
                 >
                   Nuestro talentoso equipo incluye desarrolladores web
                   apasionados, expertos en marketing digital y profesionales de

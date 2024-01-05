@@ -8,7 +8,12 @@ import Stack from '@mui/material/Stack';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
-const navItems = ['Inicio', 'Nosotros', 'Servicios', 'Contactenos'];
+const navItems = [
+  { label: 'Inicio', link: '/' },
+  { label: 'Nosotros', link: '/about-us' },
+  { label: 'Servicios', link: '/services' },
+  { label: 'Contactenos', link: '/contact-us' },
+];
 
 function Footer() {
   return (
@@ -66,12 +71,18 @@ function Footer() {
                   alignItems="stretch"
                   spacing={2}
                 >
-                  <FacebookIcon sx={{ color: '#ffffff' }} />
-                  <InstagramIcon sx={{ color: '#ffffff' }} />
+                  <Link href="#"><FacebookIcon sx={{ color: '#ffffff' }} /></Link>
+                  <Link href="#"><InstagramIcon sx={{ color: '#ffffff' }} /></Link>
                 </Stack>
               </Stack>
             </Grid>
-            <Grid container item xs={12} md={4} justifyContent="center">
+            <Grid
+              container
+              item
+              xs={12}
+              md={4}
+              justifyContent={{ xs: 'left', md: 'center' }}
+            >
               <Stack
                 direction="column"
                 justifyContent="flex-start"
@@ -89,7 +100,7 @@ function Footer() {
                   Compañia
                 </Typography>
                 <Stack
-                  direction="column"
+                  direction={{ xs: 'row', md: 'column' }}
                   justifyContent="flex-start"
                   alignItems="flex-start"
                   spacing={2}
@@ -97,21 +108,27 @@ function Footer() {
                   {navItems.map((item) => (
                     <Link
                       variant="body2"
-                      key={item}
-                      href="#"
+                      key={item.label}
+                      href={item.link}
                       underline="none"
                       sx={{
                         textAlign: 'left',
                         color: '#ffffff',
                       }}
                     >
-                      {item}
+                      {item.label}
                     </Link>
                   ))}
                 </Stack>
               </Stack>
             </Grid>
-            <Grid container item xs={12} md={4} justifyContent="center">
+            <Grid
+              container
+              item
+              xs={12}
+              md={4}
+              justifyContent={{ xs: 'left', md: 'center' }}
+            >
               <Stack
                 direction="column"
                 justifyContent="flex-start"
@@ -128,20 +145,27 @@ function Footer() {
                 >
                   Ponerse en contacto
                 </Typography>
-                <Typography
-                  variant="body2"
-                  gutterBottom
-                  sx={{ textAlign: 'left', color: '#ffffff' }}
+                <Stack
+                  direction={{ xs: 'row', md: 'column' }}
+                  justifyContent="flex-start"
+                  alignItems="flex-start"
+                  spacing={2}
                 >
-                  info@example.com
-                </Typography>
-                <Typography
-                  variant="body2"
-                  gutterBottom
-                  sx={{ textAlign: 'left', color: '#ffffff' }}
-                >
-                  1-800-1234-567
-                </Typography>
+                  <Typography
+                    variant="body2"
+                    gutterBottom
+                    sx={{ textAlign: 'left', color: '#ffffff' }}
+                  >
+                    info@example.com
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    gutterBottom
+                    sx={{ textAlign: 'left', color: '#ffffff' }}
+                  >
+                    1-800-1234-567
+                  </Typography>
+                </Stack>
               </Stack>
             </Grid>
           </Grid>

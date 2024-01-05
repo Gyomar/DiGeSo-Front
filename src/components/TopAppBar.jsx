@@ -22,7 +22,12 @@ import LogoDigeso from '../assets/images/LogoDigeso.svg';
 import LogoDigesoWhite from '../assets/images/LogoDigesoWhite.svg';
 
 const drawerWidth = 240;
-const navItems = ['Inicio', 'Nosotros', 'Servicios', 'Contactenos'];
+const navItems = [
+  { label: 'Inicio', link: '/' },
+  { label: 'Nosotros', link: '/about-us' },
+  { label: 'Servicios', link: '/services' },
+  { label: 'Contactenos', link: '/contact-us' },
+];
 
 function ScrollTop(props) {
   const { children } = props;
@@ -103,9 +108,9 @@ const TopAppBar = (props) => {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+          <ListItem href={item.link} key={item.label} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
+              <ListItemText primary={item.label} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -121,7 +126,7 @@ const TopAppBar = (props) => {
         width: '100%',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        position: 'absolute'
+        position: 'absolute',
       }}
     >
       <HideOnScroll {...props}>
@@ -152,8 +157,8 @@ const TopAppBar = (props) => {
               ></Box>
               <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                 {navItems.map((item) => (
-                  <Button key={item} sx={{ color: '#ffffff' }}>
-                    {item}
+                  <Button href={item.link} key={item.label} sx={{ color: '#ffffff' }}>
+                    {item.label}
                   </Button>
                 ))}
               </Box>
