@@ -8,6 +8,7 @@ import Layaout from '../containers/Layout';
 import CabezaFondo from '../assets/images/home-hero-bg.jpg';
 import FotoGyomar from '../assets/images/profile-photo-gyomar.jpg';
 import FotoDayana from '../assets/images/profile-photo-dayana.jpg';
+import FotoManuel from '../assets/images/profile-photo-manuel.jpg';
 import LogoIllustrator from '../assets/images/illustrator.svg';
 import LogoPhotoshop from '../assets/images/photoshop.svg';
 import LogoFigma from '../assets/images/figma.svg';
@@ -618,6 +619,23 @@ function Home() {
                       </Typography>
                       <Typography variant="body1">
                         Desarrolladora Web y Marketing Digital
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Grid>
+                <Grid item>
+                  <Card sx={{ minWidth: 300 }} elevation={1}>
+                    <CardMedia
+                      sx={{ height: 260 }}
+                      image={FotoManuel}
+                      title="Foto Manuel"
+                    />
+                    <CardContent>
+                      <Typography variant="h6" gutterBottom>
+                        Manuel Buitrago
+                      </Typography>
+                      <Typography variant="body1">
+                        Diseñador Grafico y UI/UX
                       </Typography>
                     </CardContent>
                   </Card>
