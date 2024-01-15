@@ -6,7 +6,7 @@ import Layaout from '../containers/Layout';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Divider from '@mui/material/Divider';
-import imgAboutUs from '../assets/images/about-bg-img.jpg';
+import CabezaFondo from '../assets/images/pages-hero-bg.jpg';
 
 
 const AboutUs = () => {
@@ -26,7 +26,7 @@ const AboutUs = () => {
             display: 'flex',
             width: '100%',
             height: '70vh',
-            backgroundImage: `url(${imgAboutUs})`,
+            backgroundImage: `url(${CabezaFondo})`,
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
             backgroundPosition: 'center center'

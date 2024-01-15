@@ -18,7 +18,7 @@ import Fab from '@mui/material/Fab';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Fade from '@mui/material/Fade';
 import Slide from '@mui/material/Slide';
-import LogoDigeso from '../assets/images/LogoDigeso.svg';
+import LogoDigesoBlue from '../assets/images/LogoDigesoBlue.svg';
 import LogoDigesoWhite from '../assets/images/LogoDigesoWhite.svg';
 
 const drawerWidth = 240;
@@ -99,7 +99,7 @@ const TopAppBar = (props) => {
         sx={{
           height: 40,
           maxWidth: 130,
-          backgroundImage: `url(${LogoDigeso})`,
+          backgroundImage: `url(${LogoDigesoBlue})`,
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'contain',
           display: { xs: 'block', sm: 'none' },
