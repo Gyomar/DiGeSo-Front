@@ -1,15 +1,19 @@
-import Layaout from '../containers/Layout';
-import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
-import CabezaFondo from '../assets/images/pages-hero-bg.jpg';
-import Container from '@mui/material/Container';
-import Fade from '@mui/material/Fade';
-import Typography from '@mui/material/Typography';
-import BannerStart from '../components/BannerStart';
+import {
+  Box,
+  Container,
+  Fade,
+  Stack,
+  Typography,
+} from '@mui/material';
+
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import FacebookIcon from '@mui/icons-material/Facebook';
+
+import Layaout from '../containers/Layout';
+import CabezaFondo from '../assets/images/pages-hero-bg.jpg';
+import BannerStart from '../components/BannerStart';
 
 const ContactUs = () => {
   return (
