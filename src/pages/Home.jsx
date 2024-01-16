@@ -1,13 +1,30 @@
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
-import Stack from '@mui/material/Stack';
+import {
+  Box,
+  Button,
+  Card,
+  CardContent,
+  CardMedia,
+  Container,
+  Grid,
+  Grow,
+  Stack,
+  Typography,
+} from '@mui/material';
+
+import BrushIcon from '@mui/icons-material/Brush';
+import CodeIcon from '@mui/icons-material/Code';
+import AppShortcutIcon from '@mui/icons-material/AppShortcut';
+import InterestsIcon from '@mui/icons-material/Interests';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+
 import Layaout from '../containers/Layout';
+import BannerStart from '../components/BannerStart';
+
 import CabezaFondo from '../assets/images/home-hero-bg.jpg';
 import FotoGyomar from '../assets/images/profile-photo-gyomar.jpg';
 import FotoDayana from '../assets/images/profile-photo-dayana.jpg';
+import FotoManuel from '../assets/images/profile-photo-manuel.jpg';
 import LogoIllustrator from '../assets/images/illustrator.svg';
 import LogoPhotoshop from '../assets/images/photoshop.svg';
 import LogoFigma from '../assets/images/figma.svg';
@@ -20,17 +37,81 @@ import LogoVite from '../assets/images/vitejs.svg';
 import LogoWordpress from '../assets/images/wordpress.svg';
 import LogoMetabusiness from '../assets/images/meta.svg';
 import LogoPrestashop from '../assets/images/prestashop.svg';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import BrushIcon from '@mui/icons-material/Brush';
-import CodeIcon from '@mui/icons-material/Code';
-import AppShortcutIcon from '@mui/icons-material/AppShortcut';
-import InterestsIcon from '@mui/icons-material/Interests';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import SupportAgentIcon from '@mui/icons-material/SupportAgent';
-import Grow from '@mui/material/Grow';
-import BannerStart from '../components/BannerStart';
+
+const cardsServiceList = [
+  {
+    title: 'Diseño',
+    description: `Convierte tu visión en una experiencia visual
+  cautivadora con nuestro equipo de diseñadores creativos.
+  Desde conceptos innovadores, te ayudamos a destacarte en
+  la multitud.`,
+    icon: <BrushIcon sx={{ fontSize: 40 }} color="primary" />,
+  },
+  {
+    title: 'Desarrollo',
+    description: `Desde sitios web corporativos hasta aplicaciones
+  interactivas, nuestro equipo de desarrolladores trabaja
+  con las últimas tecnologías para garantizar soluciones
+  robustas y escalables que se adaptan a tus necesidades
+  específicas.`,
+    icon: <CodeIcon sx={{ fontSize: 40 }} color="primary" />,
+  },
+  {
+    title: 'Marketing',
+    description: `Aumenta tu visibilidad y atrae a tu audiencia objetivo
+  con estrategias de marketing efectivas. Desde SEO hasta
+  campañas publicitarias, te ayudamos a alcanzar y superar
+  tus metas de marketing.`,
+    icon: <AppShortcutIcon sx={{ fontSize: 40 }} color="primary" />,
+  },
+  {
+    title: 'Social Media',
+    description: `Construye una comunidad activa y comprometida en las
+  redes sociales. Nuestro equipo crea estrategias de
+  contenido que resonan, fomentando la lealtad de la
+  audiencia y aumentando la presencia en línea.`,
+    icon: <InterestsIcon sx={{ fontSize: 40 }} color="primary" />,
+  },
+  {
+    title: 'eCommerce',
+    description: `Potencia tu presencia en línea con soluciones de
+  comercio electrónico personalizadas. Desde la
+  configuración hasta la optimización continua, estamos
+  comprometidos a impulsar tu éxito en el mundo del
+  comercio digital.`,
+    icon: <ShoppingCartIcon sx={{ fontSize: 40 }} color="primary" />,
+  },
+  {
+    title: 'Ayuda y Soporte',
+    description: `Estamos aquí para ti en cada paso del camino. Nuestro
+  equipo de soporte técnico está listo para abordar
+  cualquier pregunta o problema, asegurando un
+  funcionamiento sin problemas de tus soluciones
+  digitales.`,
+    icon: <SupportAgentIcon sx={{ fontSize: 40 }} color="primary" />,
+  },
+];
+
+const cardsTecnologyList = [
+  { title: 'Figma', description: 'Edicion y diseño', image: LogoFigma },
+  { title: 'Illustrator', description: 'Edicion de ilustraciones', image: LogoIllustrator },
+  { title: 'Photoshop', description: 'Edicion de imagenes', image: LogoPhotoshop },
+  { title: 'NodeJs', description: 'Libreria para backend', image: LogoNodejs },
+  { title: 'Power BI', description: 'Business intelligence', image: LogoPowerbi },
+  { title: 'Power BI Report', description: 'Informes paginados', image: LogoPowerbireport },
+  { title: 'React', description: 'Frontend Framework', image: LogoReact },
+  { title: 'Material UI', description: 'Componentes en react', image: LogoMaterialui },
+  { title: 'Vite', description: 'Compilador de proyectos', image: LogoVite },
+  { title: 'Wordpress', description: 'Creador de sitios', image: LogoWordpress },
+  { title: 'Meta Business', description: 'Marketing y publicidad', image: LogoMetabusiness },
+  { title: 'Prestashop', description: 'Tiendas virtuales', image: LogoPrestashop },
+];
+
+const cardsTeamList = [
+  { title: 'Gyomar Pacheco', description: 'Desarrollador Web y Business Intelligence', image: FotoGyomar },
+  { title: 'Dayana Perez', description: 'Desarrolladora Web y Marketing Digital', image: FotoDayana },
+  { title: 'Manuel Buitrago', description: 'Diseñador Grafico y UI/UX', image: FotoManuel },
+];
 
 function Home() {
   return (
@@ -44,7 +125,7 @@ function Home() {
           backgroundImage: `url(${CabezaFondo})`,
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
-          backgroundPosition: 'center center'
+          backgroundPosition: 'center center',
         }}
       >
         <Box
@@ -145,7 +226,11 @@ function Home() {
                 <Typography
                   variant="body1"
                   gutterBottom
-                  sx={{ textAlign: 'center', maxWidth: 540, fontSize: '1.2rem' }}
+                  sx={{
+                    textAlign: 'center',
+                    maxWidth: 540,
+                    fontSize: '1.2rem',
+                  }}
                 >
                   Bienvenido a Digital Genius Solutions, tu socio integral para
                   el éxito en línea. Nos especializamos en ofrecer servicios de
@@ -156,117 +241,28 @@ function Home() {
             </Box>
             <Box>
               <Grid container spacing={2} justifyContent="center">
-                <Grid item>
-                  <Card
-                    sx={{ minHeight: 325, minWidth: 300, maxWidth: 380, p: 2 }}
-                  >
-                    <CardContent>
-                      <BrushIcon sx={{ fontSize: 40 }} color="primary" />
-                      <Typography variant="h6" gutterBottom>
-                        Diseño
-                      </Typography>
-                      <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
-                        Convierte tu visión en una experiencia visual
-                        cautivadora con nuestro equipo de diseñadores creativos.
-                        Desde conceptos innovadores, te ayudamos a destacarte en
-                        la multitud.
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-                <Grid item>
-                  <Card
-                    sx={{ minHeight: 325, minWidth: 300, maxWidth: 380, p: 2 }}
-                  >
-                    <CardContent>
-                      <CodeIcon sx={{ fontSize: 40 }} color="primary" />
-                      <Typography variant="h6" gutterBottom>
-                        Desarrollo
-                      </Typography>
-                      <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
-                        Desde sitios web corporativos hasta aplicaciones
-                        interactivas, nuestro equipo de desarrolladores trabaja
-                        con las últimas tecnologías para garantizar soluciones
-                        robustas y escalables que se adaptan a tus necesidades
-                        específicas.
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-                <Grid item>
-                  <Card
-                    sx={{ minHeight: 325, minWidth: 300, maxWidth: 380, p: 2 }}
-                  >
-                    <CardContent>
-                      <AppShortcutIcon sx={{ fontSize: 40 }} color="primary" />
-                      <Typography variant="h6" gutterBottom>
-                        Marketing
-                      </Typography>
-                      <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
-                        Aumenta tu visibilidad y atrae a tu audiencia objetivo
-                        con estrategias de marketing efectivas. Desde SEO hasta
-                        campañas publicitarias, te ayudamos a alcanzar y superar
-                        tus metas de marketing.
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-                <Grid item>
-                  <Card
-                    sx={{ minHeight: 325, minWidth: 300, maxWidth: 380, p: 2 }}
-                  >
-                    <CardContent>
-                      <InterestsIcon sx={{ fontSize: 40 }} color="primary" />
-                      <Typography variant="h6" gutterBottom>
-                        Social Media
-                      </Typography>
-                      <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
-                        Construye una comunidad activa y comprometida en las
-                        redes sociales. Nuestro equipo crea estrategias de
-                        contenido que resonan, fomentando la lealtad de la
-                        audiencia y aumentando la presencia en línea.
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-                <Grid item>
-                  <Card
-                    sx={{ minHeight: 325, minWidth: 300, maxWidth: 380, p: 2 }}
-                  >
-                    <CardContent>
-                      <ShoppingCartIcon sx={{ fontSize: 40 }} color="primary" />
-                      <Typography variant="h6" gutterBottom>
-                        eCommerce
-                      </Typography>
-                      <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
-                        Potencia tu presencia en línea con soluciones de
-                        comercio electrónico personalizadas. Desde la
-                        configuración hasta la optimización continua, estamos
-                        comprometidos a impulsar tu éxito en el mundo del
-                        comercio digital.
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-                <Grid item>
-                  <Card
-                    sx={{ minHeight: 325, minWidth: 300, maxWidth: 380, p: 2 }}
-                  >
-                    <CardContent>
-                      <SupportAgentIcon sx={{ fontSize: 40 }} color="primary" />
-                      <Typography variant="h6" gutterBottom>
-                        Ayuda y Soporte
-                      </Typography>
-                      <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
-                        Estamos aquí para ti en cada paso del camino. Nuestro
-                        equipo de soporte técnico está listo para abordar
-                        cualquier pregunta o problema, asegurando un
-                        funcionamiento sin problemas de tus soluciones
-                        digitales.
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
+                {cardsServiceList.map((item) => (
+                  <Grid item key={item.title}>
+                    <Card
+                      sx={{
+                        minHeight: 325,
+                        minWidth: 300,
+                        maxWidth: 380,
+                        p: 2,
+                      }}
+                    >
+                      <CardContent>
+                        {item.icon}
+                        <Typography variant="h6" gutterBottom>
+                          {item.title}
+                        </Typography>
+                        <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
+                          {item.description}
+                        </Typography>
+                      </CardContent>
+                    </Card>
+                  </Grid>
+                ))}
               </Grid>
             </Box>
           </Stack>
@@ -309,7 +305,11 @@ function Home() {
                 <Typography
                   variant="body1"
                   gutterBottom
-                  sx={{ textAlign: 'center', maxWidth: 540, fontSize: '1.2rem' }}
+                  sx={{
+                    textAlign: 'center',
+                    maxWidth: 540,
+                    fontSize: '1.2rem',
+                  }}
                 >
                   En DiGeSo, aprovechamos tecnologías de vanguardia, como React,
                   Figma, PrestaShop, Power BI, y más. Estamos comprometidos a
@@ -325,210 +325,25 @@ function Home() {
                 justifyContent="center"
                 alignItems="center"
               >
-                <Grid item>
+                {cardsTecnologyList.map((item) => (
+                  <Grid item key={item.title}>
                   <Card sx={{ width: 240 }} elevation={0}>
                     <CardMedia
                       sx={{ height: 40, backgroundSize: 'contain' }}
-                      image={LogoFigma}
-                      title="Logo Figma"
+                      image={item.image}
+                      title={item.title}
                     />
                     <CardContent>
                       <Typography variant="h6" gutterBottom textAlign="center">
-                        Figma
+                        {item.title}
                       </Typography>
                       <Typography variant="body1" textAlign="center">
-                        Edicion y diseño
+                        {item.description}
                       </Typography>
                     </CardContent>
                   </Card>
                 </Grid>
-                <Grid item>
-                  <Card sx={{ width: 240 }} elevation={0}>
-                    <CardMedia
-                      sx={{ height: 40, backgroundSize: 'contain' }}
-                      image={LogoIllustrator}
-                      title="Logo Illustrator"
-                    />
-                    <CardContent>
-                      <Typography variant="h6" gutterBottom textAlign="center">
-                        Illustrator
-                      </Typography>
-                      <Typography variant="body1" textAlign="center">
-                        Edicion de ilustraciones
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-                <Grid item>
-                  <Card sx={{ width: 240 }} elevation={0}>
-                    <CardMedia
-                      sx={{ height: 40, backgroundSize: 'contain' }}
-                      image={LogoPhotoshop}
-                      title="Logo Photoshop"
-                    />
-                    <CardContent>
-                      <Typography variant="h6" gutterBottom textAlign="center">
-                        Photoshop
-                      </Typography>
-                      <Typography variant="body1" textAlign="center">
-                        Edicion de imagenes
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-                <Grid item>
-                  <Card sx={{ width: 240 }} elevation={0}>
-                    <CardMedia
-                      sx={{ height: 40, backgroundSize: 'contain' }}
-                      image={LogoNodejs}
-                      title="Logo Nodejs"
-                    />
-                    <CardContent>
-                      <Typography variant="h6" gutterBottom textAlign="center">
-                        NodeJs
-                      </Typography>
-                      <Typography variant="body1" textAlign="center">
-                        Libreria para backend
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-                <Grid item>
-                  <Card sx={{ width: 240 }} elevation={0}>
-                    <CardMedia
-                      sx={{ height: 40, backgroundSize: 'contain' }}
-                      image={LogoPowerbi}
-                      title="Logo Power BI"
-                    />
-                    <CardContent>
-                      <Typography variant="h6" gutterBottom textAlign="center">
-                        Power BI
-                      </Typography>
-                      <Typography variant="body1" textAlign="center">
-                        Business intelligence
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-                <Grid item>
-                  <Card sx={{ width: 240 }} elevation={0}>
-                    <CardMedia
-                      sx={{ height: 40, backgroundSize: 'contain' }}
-                      image={LogoPowerbireport}
-                      title="Logo Power BI Report"
-                    />
-                    <CardContent>
-                      <Typography variant="h6" gutterBottom textAlign="center">
-                        Power BI Report
-                      </Typography>
-                      <Typography variant="body1" textAlign="center">
-                        Informes paginados
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-                <Grid item>
-                  <Card sx={{ width: 240 }} elevation={0}>
-                    <CardMedia
-                      sx={{ height: 40, backgroundSize: 'contain' }}
-                      image={LogoReact}
-                      title="Logo React"
-                    />
-                    <CardContent>
-                      <Typography variant="h6" gutterBottom textAlign="center">
-                        React
-                      </Typography>
-                      <Typography variant="body1" textAlign="center">
-                        Frontend Framework
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-                <Grid item>
-                  <Card sx={{ width: 240 }} elevation={0}>
-                    <CardMedia
-                      sx={{ height: 40, backgroundSize: 'contain' }}
-                      image={LogoMaterialui}
-                      title="Logo Material UI"
-                    />
-                    <CardContent>
-                      <Typography variant="h6" gutterBottom textAlign="center">
-                        Material UI
-                      </Typography>
-                      <Typography variant="body1" textAlign="center">
-                        Componentes en react
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-                <Grid item>
-                  <Card sx={{ width: 240 }} elevation={0}>
-                    <CardMedia
-                      sx={{ height: 40, backgroundSize: 'contain' }}
-                      image={LogoVite}
-                      title="Logo Vite"
-                    />
-                    <CardContent>
-                      <Typography variant="h6" gutterBottom textAlign="center">
-                        Vite
-                      </Typography>
-                      <Typography variant="body1" textAlign="center">
-                        Compilador de proyectos
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-                <Grid item>
-                  <Card sx={{ width: 240 }} elevation={0}>
-                    <CardMedia
-                      sx={{ height: 40, backgroundSize: 'contain' }}
-                      image={LogoWordpress}
-                      title="Logo Wordpress"
-                    />
-                    <CardContent>
-                      <Typography variant="h6" gutterBottom textAlign="center">
-                        Wordpress
-                      </Typography>
-                      <Typography variant="body1" textAlign="center">
-                        Creador de sitios
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-                <Grid item>
-                  <Card sx={{ width: 240 }} elevation={0}>
-                    <CardMedia
-                      sx={{ height: 40, backgroundSize: 'contain' }}
-                      image={LogoMetabusiness}
-                      title="logo Meta"
-                    />
-                    <CardContent>
-                      <Typography variant="h6" gutterBottom textAlign="center">
-                        Meta Business
-                      </Typography>
-                      <Typography variant="body1" textAlign="center">
-                        Marketing digital y publicidad
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-                <Grid item>
-                  <Card sx={{ width: 240 }} elevation={0}>
-                    <CardMedia
-                      sx={{ height: 40, backgroundSize: 'contain' }}
-                      image={LogoPrestashop}
-                      title="Logo Prestashop"
-                    />
-                    <CardContent>
-                      <Typography variant="h6" gutterBottom textAlign="center">
-                        Prestashop
-                      </Typography>
-                      <Typography variant="body1" textAlign="center">
-                        Tiendas virtuales
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
+                ))}
               </Grid>
             </Box>
           </Stack>
@@ -572,7 +387,11 @@ function Home() {
                 <Typography
                   variant="body1"
                   gutterBottom
-                  sx={{ textAlign: 'center', maxWidth: 540, fontSize: '1.2rem' }}
+                  sx={{
+                    textAlign: 'center',
+                    maxWidth: 540,
+                    fontSize: '1.2rem',
+                  }}
                 >
                   Nuestro talentoso equipo incluye desarrolladores web
                   apasionados, expertos en marketing digital y profesionales de
@@ -588,40 +407,25 @@ function Home() {
                 justifyContent="center"
                 alignItems="center"
               >
-                <Grid item>
+                {cardsTeamList.map((item) => (
+                  <Grid item key={item.title}>
                   <Card sx={{ minWidth: 300 }} elevation={1}>
                     <CardMedia
                       sx={{ height: 260 }}
-                      image={FotoGyomar}
-                      title="Foto Gyomar"
+                      image={item.image}
+                      title={item.title}
                     />
                     <CardContent>
                       <Typography variant="h6" gutterBottom>
-                        Gyomar Pacheco
+                      {item.title}
                       </Typography>
                       <Typography variant="body1">
-                        Desarrolador web y Business Intelligence
+                      {item.description}
                       </Typography>
                     </CardContent>
                   </Card>
                 </Grid>
-                <Grid item>
-                  <Card sx={{ minWidth: 300 }} elevation={1}>
-                    <CardMedia
-                      sx={{ height: 260 }}
-                      image={FotoDayana}
-                      title="Foto Dayana"
-                    />
-                    <CardContent>
-                      <Typography variant="h6" gutterBottom>
-                        Dayana Perez
-                      </Typography>
-                      <Typography variant="body1">
-                        Desarrolladora Web y Marketing Digital
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
+                ))}
               </Grid>
             </Box>
             <BannerStart />
