@@ -18,7 +18,7 @@ function BannerStart() {
           display: 'flex',
           flexWrap: 'wrap',
           width: '60vw',
-          minWidth: 300,
+          minWidth: 270,
           minHeight: 200,
           alignSelf: 'center',
         }}
@@ -29,7 +29,7 @@ function BannerStart() {
             backgroundColor: '#ffffff',
             minHeight: 200,
             width: '60vw',
-            minWidth: 300,
+            minWidth: 270,
             display: 'flex',
             alignItems: 'center',
             p: 2,
@@ -58,7 +58,7 @@ function BannerStart() {
                   }}
                   color="primary"
                 >
-                  Quieres empezar un proyecto con nosotros?
+                  ¿Quieres empezar un proyecto con nosotros?
                 </Typography>
                 <Typography
                   variant="body1"

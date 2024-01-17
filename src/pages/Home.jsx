@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   Box,
   Button,
@@ -9,6 +10,7 @@ import {
   Grow,
   Stack,
   Typography,
+  Collapse,
 } from '@mui/material';
 
 import BrushIcon from '@mui/icons-material/Brush';
@@ -45,7 +47,7 @@ const cardsServiceList = [
   cautivadora con nuestro equipo de diseñadores creativos.
   Desde conceptos innovadores, te ayudamos a destacarte en
   la multitud.`,
-    icon: <BrushIcon sx={{ fontSize: 40 }} color="primary" />,
+    icon: <BrushIcon sx={{ fontSize: '2.5rem' }} color="primary" />,
   },
   {
     title: 'Desarrollo',
@@ -54,7 +56,7 @@ const cardsServiceList = [
   con las últimas tecnologías para garantizar soluciones
   robustas y escalables que se adaptan a tus necesidades
   específicas.`,
-    icon: <CodeIcon sx={{ fontSize: 40 }} color="primary" />,
+    icon: <CodeIcon sx={{ fontSize: '2.5rem' }} color="primary" />,
   },
   {
     title: 'Marketing',
@@ -62,24 +64,24 @@ const cardsServiceList = [
   con estrategias de marketing efectivas. Desde SEO hasta
   campañas publicitarias, te ayudamos a alcanzar y superar
   tus metas de marketing.`,
-    icon: <AppShortcutIcon sx={{ fontSize: 40 }} color="primary" />,
+    icon: <AppShortcutIcon sx={{ fontSize: '2.5rem' }} color="primary" />,
   },
   {
     title: 'Social Media',
     description: `Construye una comunidad activa y comprometida en las
-  redes sociales. Nuestro equipo crea estrategias de
-  contenido que resonan, fomentando la lealtad de la
-  audiencia y aumentando la presencia en línea.`,
-    icon: <InterestsIcon sx={{ fontSize: 40 }} color="primary" />,
+    redes sociales. Nuestro equipo crea estrategias de
+    contenido que resuenan, fomentando la lealtad de la
+    audiencia y aumentando la presencia en línea.`,
+    icon: <InterestsIcon sx={{ fontSize: '2.5rem' }} color="primary" />,
   },
   {
     title: 'eCommerce',
     description: `Potencia tu presencia en línea con soluciones de
-  comercio electrónico personalizadas. Desde la
-  configuración hasta la optimización continua, estamos
-  comprometidos a impulsar tu éxito en el mundo del
-  comercio digital.`,
-    icon: <ShoppingCartIcon sx={{ fontSize: 40 }} color="primary" />,
+    comercio electrónico personalizado. Desde la
+    configuración hasta la optimización continua, estamos
+    comprometidos a impulsar tu éxito en el mundo del
+    comercio digital.`,
+    icon: <ShoppingCartIcon sx={{ fontSize: '2.5rem' }} color="primary" />,
   },
   {
     title: 'Ayuda y Soporte',
@@ -88,32 +90,92 @@ const cardsServiceList = [
   cualquier pregunta o problema, asegurando un
   funcionamiento sin problemas de tus soluciones
   digitales.`,
-    icon: <SupportAgentIcon sx={{ fontSize: 40 }} color="primary" />,
+    icon: <SupportAgentIcon sx={{ fontSize: '2.5rem' }} color="primary" />,
   },
 ];
 
 const cardsTecnologyList = [
   { title: 'Figma', description: 'Edicion y diseño', image: LogoFigma },
-  { title: 'Illustrator', description: 'Edicion de ilustraciones', image: LogoIllustrator },
-  { title: 'Photoshop', description: 'Edicion de imagenes', image: LogoPhotoshop },
+  {
+    title: 'Illustrator',
+    description: 'Edición  de ilustraciones',
+    image: LogoIllustrator,
+  },
+  {
+    title: 'Photoshop',
+    description: 'Edición de imágenes',
+    image: LogoPhotoshop,
+  },
   { title: 'NodeJs', description: 'Libreria para backend', image: LogoNodejs },
-  { title: 'Power BI', description: 'Business intelligence', image: LogoPowerbi },
-  { title: 'Power BI Report', description: 'Informes paginados', image: LogoPowerbireport },
+  {
+    title: 'Power BI',
+    description: 'Business intelligence',
+    image: LogoPowerbi,
+  },
+  {
+    title: 'Power BI Report',
+    description: 'Informes paginados',
+    image: LogoPowerbireport,
+  },
   { title: 'React', description: 'Frontend Framework', image: LogoReact },
-  { title: 'Material UI', description: 'Componentes en react', image: LogoMaterialui },
+  {
+    title: 'Material UI',
+    description: 'Componentes en React',
+    image: LogoMaterialui,
+  },
   { title: 'Vite', description: 'Compilador de proyectos', image: LogoVite },
-  { title: 'Wordpress', description: 'Creador de sitios', image: LogoWordpress },
-  { title: 'Meta Business', description: 'Marketing y publicidad', image: LogoMetabusiness },
-  { title: 'Prestashop', description: 'Tiendas virtuales', image: LogoPrestashop },
+  {
+    title: 'Wordpress',
+    description: 'Creador de sitios',
+    image: LogoWordpress,
+  },
+  {
+    title: 'Meta Business',
+    description: 'Marketing y publicidad',
+    image: LogoMetabusiness,
+  },
+  {
+    title: 'Prestashop',
+    description: 'Tiendas virtuales',
+    image: LogoPrestashop,
+  },
 ];
 
 const cardsTeamList = [
-  { title: 'Gyomar Pacheco', description: 'Desarrollador Web y Business Intelligence', image: FotoGyomar },
-  { title: 'Dayana Perez', description: 'Desarrolladora Web y Marketing Digital', image: FotoDayana },
-  { title: 'Manuel Buitrago', description: 'Diseñador Grafico y UI/UX', image: FotoManuel },
+  {
+    index: 1,
+    title: 'Gyomar Pacheco',
+    description: 'Desarrollador Web y BI',
+    review: `Soy Gyomar, un profesional apasionado, experto en Business Analytics, desarrollo y emprendimiento. Mi enfoque se centra en colaborar estrechamente con emprendedores y empresas para alcanzar sus metas en marketing digital, desarrollo de aplicaciones y crecimiento empresarial.`,
+    image: FotoGyomar,
+  },
+  {
+    index: 2,
+    title: 'Dayana Perez',
+    description: 'Desarrolladora Web y Marketing Digital',
+    review: `¡Hola! Soy Dayana, Ingeniera en informática con más de 8 años de experiencia como programadora web frontend y cofundadora de Digital Genius, una empresa digital donde convergen pasión y profesionalismo para impulsar el éxito de empresas y emprendedores mediante desarrollos de aplicaciones y estrategias de marketing digital.`,
+    image: FotoDayana,
+  },
+  {
+    index: 3,
+    title: 'Manuel Buitrago',
+    description: 'Diseñador Gráfico y UI/UX',
+    review: `Soy Manuel, un joven diseñador gráfico recién graduado de bachiller. Digital Genius me ha brindado la emocionante oportunidad de aplicar mi talento y ejercer mi primer trabajo profesional, mientras continúo mis estudios universitarios.`,
+    image: FotoManuel,
+  },
 ];
 
 function Home() {
+  const [expandedCardIndex, setExpandedCardIndex] = useState(0);
+
+  const handleMouseOver = (cardIndex) => (event) => {
+    setExpandedCardIndex(cardIndex);
+  };
+
+  const handleMouseOut = () => {
+    setExpandedCardIndex(0);
+  };
+
   return (
     <Layaout>
       <Box
@@ -133,60 +195,66 @@ function Home() {
             display: 'flex',
             width: '100%',
             height: '100vh',
+            position: 'absolute',
             backgroundColor: '#101218',
             opacity: 0.8,
             transition: 'background 0.3s, border-radius 0.3s, opacity 0.3s',
           }}
-        >
-          <Box component="main" sx={{ width: '100vw' }}>
-            <Container maxWidth="xl">
-              <Grid container spacing={2} sx={{ height: '100vh' }}>
-                <Grid item xs={12} md={6}>
-                  <Stack
-                    direction="column"
-                    justifyContent="center"
-                    alignItems="flex-start"
-                    spacing={6}
-                    sx={{ height: '100vh' }}
+        />
+        <Box component="main" sx={{ width: '100vw', zIndex: 1 }}>
+          <Container maxWidth="xl">
+            <Grid container spacing={2} sx={{ height: '100vh', px: 4 }}>
+              <Grid item xs={12} md={5}>
+                <Stack
+                  direction="column"
+                  justifyContent="center"
+                  alignItems="flex-start"
+                  spacing={4}
+                  sx={{ height: '100vh' }}
+                >
+                  <Grow
+                    in={true}
+                    style={{ transformOrigin: '0 0 0' }}
+                    {...{ timeout: 3000 }}
                   >
-                    <Grow
-                      in={true}
-                      style={{ transformOrigin: '0 0 0' }}
-                      {...{ timeout: 3000 }}
+                    <Typography
+                      variant="h3"
+                      gutterBottom
+                      sx={{
+                        color: '#ffffff',
+                        textWrap: 'balance',
+                      }}
                     >
-                      <Typography
-                        variant="h3"
-                        gutterBottom
-                        sx={{
-                          color: '#ffffff',
-                        }}
-                      >
-                        Crea asombrosas web, has crecer tu negocio con DiGeSo
-                      </Typography>
-                    </Grow>
-                    <Grow
-                      in={true}
-                      style={{ transformOrigin: '0 0 0' }}
-                      {...{ timeout: 3000 }}
+                      Crea asombrosas webs, has crecer tu negocio con DiGeSo
+                    </Typography>
+                  </Grow>
+                  <Grow
+                    in={true}
+                    style={{ transformOrigin: '0 0 0' }}
+                    {...{ timeout: 3000 }}
+                  >
+                    <Typography
+                      variant="body1"
+                      gutterBottom
+                      sx={{
+                        color: '#ffffff',
+                        textWrap: 'pretty',
+                      }}
                     >
-                      <Typography
-                        variant="body1"
-                        gutterBottom
-                        sx={{ color: '#ffffff', fontSize: '1.2rem' }}
-                      >
-                        Soluciones de desarrollo web, ladings pages, desarrollo
-                        de apps, marketing digital, publcidad, diseño de logos,
-                        sesiones de fotografia, edicion de videos, business
-                        intelligence, tiendas virtuales y mas...
-                      </Typography>
-                    </Grow>
+                      Soluciones de desarrollo web, landing pages, desarrollo de
+                      apps, marketing digital, publicidad, diseño de logos,
+                      sesiones de fotografía, edición de videos, business
+                      intelligence, tiendas virtuales y más...
+                    </Typography>
+                  </Grow>
 
-                    <Button variant="contained">Empecemos</Button>
-                  </Stack>
-                </Grid>
+                  <Button variant="contained" color="primary">
+                    Empecemos
+                  </Button>
+                </Stack>
               </Grid>
-            </Container>
-          </Box>
+            </Grid>
+          </Container>
         </Box>
       </Box>
       <Box
@@ -214,14 +282,14 @@ function Home() {
                 spacing={3}
               >
                 <Typography
-                  variant="h1"
+                  variant="h2"
                   gutterBottom
                   sx={{
-                    fontSize: { xs: '2.5rem', md: '3.5rem' },
                     textAlign: 'center',
                   }}
+                  color="primary"
                 >
-                  Como podemos ayudarte?
+                  ¿Cómo podemos ayudarte?
                 </Typography>
                 <Typography
                   variant="body1"
@@ -229,12 +297,11 @@ function Home() {
                   sx={{
                     textAlign: 'center',
                     maxWidth: 540,
-                    fontSize: '1.2rem',
                   }}
                 >
                   Bienvenido a Digital Genius Solutions, tu socio integral para
                   el éxito en línea. Nos especializamos en ofrecer servicios de
-                  diseño, desarrollo, ecommerce, marketing, social media, y
+                  diseño, desarrollo, eCommerce, marketing, social media, y
                   brindamos asistencia y soporte excepcionales.
                 </Typography>
               </Stack>
@@ -246,7 +313,7 @@ function Home() {
                     <Card
                       sx={{
                         minHeight: 325,
-                        minWidth: 300,
+                        minWidth: 270,
                         maxWidth: 380,
                         p: 2,
                       }}
@@ -256,7 +323,7 @@ function Home() {
                         <Typography variant="h6" gutterBottom>
                           {item.title}
                         </Typography>
-                        <Typography variant="body1" sx={{ fontSize: '1.2rem' }}>
+                        <Typography variant="body1">
                           {item.description}
                         </Typography>
                       </CardContent>
@@ -293,14 +360,14 @@ function Home() {
                 spacing={3}
               >
                 <Typography
-                  variant="h1"
+                  variant="h2"
                   gutterBottom
                   sx={{
-                    fontSize: { xs: '2.5rem', md: '3.5rem' },
                     textAlign: 'center',
                   }}
+                  color="primary"
                 >
-                  Tecnologias que utilizamos
+                  Tecnologías que utilizamos
                 </Typography>
                 <Typography
                   variant="body1"
@@ -308,7 +375,6 @@ function Home() {
                   sx={{
                     textAlign: 'center',
                     maxWidth: 540,
-                    fontSize: '1.2rem',
                   }}
                 >
                   En DiGeSo, aprovechamos tecnologías de vanguardia, como React,
@@ -327,22 +393,26 @@ function Home() {
               >
                 {cardsTecnologyList.map((item) => (
                   <Grid item key={item.title}>
-                  <Card sx={{ width: 240 }} elevation={0}>
-                    <CardMedia
-                      sx={{ height: 40, backgroundSize: 'contain' }}
-                      image={item.image}
-                      title={item.title}
-                    />
-                    <CardContent>
-                      <Typography variant="h6" gutterBottom textAlign="center">
-                        {item.title}
-                      </Typography>
-                      <Typography variant="body1" textAlign="center">
-                        {item.description}
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
+                    <Card sx={{ width: 240 }} elevation={0}>
+                      <CardMedia
+                        sx={{ height: 40, backgroundSize: 'contain' }}
+                        image={item.image}
+                        title={item.title}
+                      />
+                      <CardContent>
+                        <Typography
+                          variant="h6"
+                          gutterBottom
+                          textAlign="center"
+                        >
+                          {item.title}
+                        </Typography>
+                        <Typography variant="body1" textAlign="center">
+                          {item.description}
+                        </Typography>
+                      </CardContent>
+                    </Card>
+                  </Grid>
                 ))}
               </Grid>
             </Box>
@@ -375,12 +445,12 @@ function Home() {
                 spacing={3}
               >
                 <Typography
-                  variant="h1"
+                  variant="h2"
                   gutterBottom
                   sx={{
-                    fontSize: { xs: '2.5rem', md: '3.5rem' },
                     textAlign: 'center',
                   }}
+                  color="primary"
                 >
                   Conoce nuestro liderazgo
                 </Typography>
@@ -390,7 +460,6 @@ function Home() {
                   sx={{
                     textAlign: 'center',
                     maxWidth: 540,
-                    fontSize: '1.2rem',
                   }}
                 >
                   Nuestro talentoso equipo incluye desarrolladores web
@@ -409,22 +478,51 @@ function Home() {
               >
                 {cardsTeamList.map((item) => (
                   <Grid item key={item.title}>
-                  <Card sx={{ minWidth: 300 }} elevation={1}>
-                    <CardMedia
-                      sx={{ height: 260 }}
-                      image={item.image}
-                      title={item.title}
-                    />
-                    <CardContent>
-                      <Typography variant="h6" gutterBottom>
-                      {item.title}
-                      </Typography>
-                      <Typography variant="body1">
-                      {item.description}
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
+                    <Card
+                      sx={{
+                        minWidth: 270,
+                        maxWidth: 300,
+                        minHeight: 400,
+                        position: 'relative',
+                      }}
+                      elevation={1}
+                      onMouseOver={handleMouseOver(item.index)}
+                      onMouseOut={handleMouseOut}
+                    >
+                      <CardMedia
+                        sx={{
+                          height: 300,
+                          backgroundRepeat: 'no-repeat',
+                          backgroundSize: 'cover',
+                          backgroundPosition: 'top center',
+                        }}
+                        image={item.image}
+                        title={item.title}
+                      />
+                      <CardContent
+                        sx={{
+                          position: 'absolute',
+                          bottom: 0,
+                          backgroundColor: '#ffffff',
+                        }}
+                      >
+                        <Typography variant="h6" gutterBottom color="primary">
+                          {item.title}
+                        </Typography>
+                        <Typography variant="subtitle1">
+                          {item.description}
+                        </Typography>
+                        <Collapse in={expandedCardIndex === item.index}>
+                          <Typography
+                            variant="body1"
+                            sx={{ height: 292, textWrap: 'pretty', pt: 2 }}
+                          >
+                            {item.review}
+                          </Typography>
+                        </Collapse>
+                      </CardContent>
+                    </Card>
+                  </Grid>
                 ))}
               </Grid>
             </Box>
