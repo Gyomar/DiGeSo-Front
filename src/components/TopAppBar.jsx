@@ -26,7 +26,7 @@ const navItems = [
   { label: 'Inicio', link: '/' },
   { label: 'Nosotros', link: '/about-us' },
   { label: 'Servicios', link: '/services' },
-  { label: 'Contactenos', link: '/contact-us' },
+  { label: 'Contáctenos', link: '/contact-us' },
 ];
 
 function ScrollTop(props) {
@@ -93,23 +93,30 @@ const TopAppBar = (props) => {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', pt: 2 }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', pt: 1 }}>
       <Box
-        component="svg"
         sx={{
-          height: 40,
-          maxWidth: 130,
-          backgroundImage: `url(${LogoDigesoBlue})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'contain',
-          display: { xs: 'block', sm: 'none' },
+          width: drawerWidth,
+          py: 1,
         }}
-      ></Box>
+      >
+        <Box
+          component="svg"
+          sx={{
+            height: 45,
+            maxWidth: 240,
+            backgroundImage: `url(${LogoDigesoBlue})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'contain',
+            backgroundPosition: 'center center',
+          }}
+        ></Box>
+      </Box>
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem href={item.link} key={item.label} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
+          <ListItem key={item.label} disablePadding>
+            <ListItemButton href={item.link} sx={{ textAlign: 'center' }}>
               <ListItemText primary={item.label} />
             </ListItemButton>
           </ListItem>
@@ -141,7 +148,7 @@ const TopAppBar = (props) => {
                 aria-label="open drawer"
                 edge="start"
                 onClick={handleDrawerToggle}
-                sx={{ mr: 2, display: { sm: 'none' } }}
+                sx={{ mr: 2, display: { md: 'none' } }}
               >
                 <MenuIcon />
               </IconButton>
@@ -152,12 +159,16 @@ const TopAppBar = (props) => {
                   backgroundImage: `url(${LogoDigesoWhite})`,
                   backgroundRepeat: 'no-repeat',
                   backgroundSize: 'contain',
-                  display: { xs: 'none', sm: 'block' },
+                  display: { xs: 'none', md: 'block' },
                 }}
               ></Box>
-              <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+              <Box sx={{ display: { xs: 'none', md: 'block' } }}>
                 {navItems.map((item) => (
-                  <Button href={item.link} key={item.label} sx={{ color: '#ffffff' }}>
+                  <Button
+                    href={item.link}
+                    key={item.label}
+                    sx={{ color: '#ffffff' }}
+                  >
                     {item.label}
                   </Button>
                 ))}
@@ -176,7 +187,7 @@ const TopAppBar = (props) => {
             keepMounted: true,
           }}
           sx={{
-            display: { xs: 'block', sm: 'none' },
+            display: { xs: 'block', md: 'none' },
             '& .MuiDrawer-paper': {
               boxSizing: 'border-box',
               width: drawerWidth,

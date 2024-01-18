@@ -12,7 +12,7 @@ const navItems = [
   { label: 'Inicio', link: '/' },
   { label: 'Nosotros', link: '/about-us' },
   { label: 'Servicios', link: '/services' },
-  { label: 'Contactenos', link: '/contact-us' },
+  { label: 'Contáctanos', link: '/contact-us' },
 ];
 
 function Footer() {
@@ -26,6 +26,7 @@ function Footer() {
           alignItems: 'center',
           justifyContent: 'center',
           py: 8,
+          px: {xs: 1, sm: 4},
         }}
       >
         <Container maxWidth="xl">
@@ -58,7 +59,7 @@ function Footer() {
                   gutterBottom
                   sx={{ textAlign: 'left', color: '#ffffff' }}
                 >
-                  Tu Socio Digital Integral Diseño | Desarrollo | Ecommerce |
+                  Tu Socio Digital Integral Diseño | Desarrollo | eCommerce |
                   Marketing | Social Media Soporte Técnico | Tecnologías: React,
                   Figma, PrestaShop, Power BI Equipo: Desarrolladores Web |
                   Marketing Digital | Business Intelligence ¡Inicia tu proyecto
