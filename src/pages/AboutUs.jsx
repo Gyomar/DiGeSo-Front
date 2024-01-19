@@ -29,6 +29,8 @@ const AboutUs = () => {
             objectFit: 'cover',
             width: '100%',
             minHeight: '100vh',
+            position:'relative',
+            zIndex:2,
             //border: '1px solid red',
           }}
         >
@@ -114,8 +116,9 @@ const AboutUs = () => {
             width: '100%',
             minHeight: '100vh',
             //border: '1px solid brown',
-            marginTop: {xs:'-50%', md:'-40%', lg:'-20%'},
-            zIndex: 2,
+            marginTop: '-380px',
+            position:'relative',
+            zIndex: 3,
             
           }}
         >
@@ -374,15 +377,17 @@ const AboutUs = () => {
               display: 'flex',
               flexDirection:'column',
               width: '100%',
-              marginTop:'4%',
-              marginBottom:'8%',
+              marginTop:'2%',
+              marginBottom:'4%',
+              //border:'1px solid red',
             }}
           >
             <Container maxWidth="md"
               sx={{
                 display: 'flex',
                 flexDirection:'column',
-                width: '80%',
+                width: '70%',
+                //border:'1px solid blue',
               }}
             >
               <Typography variant="h1" gutterBottom
