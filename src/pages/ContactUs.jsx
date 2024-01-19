@@ -138,7 +138,7 @@ const ContactUs = () => {
                   }}
                 >
                   <Typography variant="subtitle1" gutterBottom>
-                    Contactanos
+                  Contáctanos
                   </Typography>
                   <Stack
                     direction="row"
