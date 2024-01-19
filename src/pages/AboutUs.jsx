@@ -32,7 +32,7 @@ const AboutUs = () => {
             //border: '1px solid red',
           }}
         >
-          <Container maxWidth="xl" sx={{zIndex:-1, padding:"0px"}} >
+          <Container maxWidth="xl" sx={{zIndex:-1, padding:"0px", margin:"0px", display:"contents"}} >
             <Box 
               sx={{
                 position: 'relative',
@@ -114,7 +114,7 @@ const AboutUs = () => {
             width: '100%',
             minHeight: '100vh',
             //border: '1px solid brown',
-            marginTop: '-280px',
+            marginTop: {xs:'-50%', md:'-40%', lg:'-20%'},
             zIndex: 2,
             
           }}
@@ -194,10 +194,9 @@ const AboutUs = () => {
               </Grid>
             </Grid>
           </Container>
-          <Container maxWidth="lg"
+          <Container maxWidth="xl"
             sx={{ 
-              width: '100%',
-              minHeight: '100vh',
+              
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
@@ -206,18 +205,30 @@ const AboutUs = () => {
               //border: '1px solid black',
             }}
           >
-            <Typography variant="h1" gutterBottom
+            <Box
               sx={{ 
-                fontSize: { xs: '2.5rem', md: '3.5rem' },
-                marginTop:'3%',
-                color: '#20447b', 
-                mt: 8,
-                mb: 4, 
+                width: '100%',
               }}
             >
-              Nuestros Procesos
-            </Typography>
-            <Grid container spacing={4} justifyContent="center" alignItems="center" marginBottom={'5%'}>
+              <Typography variant="h1" gutterBottom
+                sx={{ 
+                  fontSize: { xs: '2.5rem', md: '3.5rem' },
+                  marginTop:'5%',
+                  marginBottom:'6%',
+                  color: '#20447b', 
+                }}
+              >
+                Nuestros Procesos
+              </Typography>
+            </Box>
+            <Box
+              sx={{ 
+                width: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+              }}
+            >
+              <Grid container spacing={4} justifyContent="center" alignItems="center" marginBottom={'5%'}>
               {[
                 { id: 1, title: "Desarollo", content: "Creación de sitios web, Apps, Ecommerce y sistemas personalizados para satisfacer las necesidades específicas de cada cliente.", numero:"01." },
                 { id: 2, title: "Diseño Creativo", content: "Retoque de fotos, diseño de logos, creación de feeds de Instagram, banners de Facebook, videos simples en After Effects, y más.", numero:"02." },
@@ -227,25 +238,25 @@ const AboutUs = () => {
                   <Container maxWidth="xs"
                     sx={{ 
                       width: '100%',
-                      height: '35vh',
+                      height: '30vh',
                       display: 'flex',
                       flexDirection: 'column',
-                      alignItems: 'Top',
                       textAlign: 'Left',
-                      color:'#e9ebed',
-                      fontSize:'5rem',
-                      padding:{xs:'0rem', md:'0rem'},
+                      padding:{xs:'1rem', md:'4rem'},
                     }}
                   >
-                    <Box 
-                      sx={{
-                        width: '100%',
-                        display:'flex',
-                        alignItems: 'flex-start',
+                    
+                    <Typography variant="body1" gutterBottom
+                      sx={{ 
+                        fontSize:'5.5rem' ,
+                        color: '#e9ebed', 
+                        fontWeight:600,
+                        lineHeight:'0.1', 
+                        mb:2,
                       }}
                     >
                       {item.numero}
-                    </Box>
+                    </Typography>
                     <Typography variant="h4" gutterBottom
                       sx={{ 
                         fontSize:'1.25rem' ,
@@ -276,25 +287,24 @@ const AboutUs = () => {
                   <Container maxWidth="xs"
                     sx={{ 
                       width: '100%',
-                      height: '35vh',
+                      height: '30vh',
                       display: 'flex',
                       flexDirection: 'column',
-                      alignItems: 'Top',
                       textAlign: 'Left',
-                      color:'#e9ebed',
-                      fontSize:'5rem',
-                      padding:{xs:'0rem', md:'0rem'},
+                      padding:{xs:'1rem', md:'4rem'},
                     }}
                   >
-                    <Box 
-                      sx={{
-                        width: '100%',
-                        display:'flex',
-                        alignItems: 'flex-start',
+                    <Typography variant="body1" gutterBottom
+                      sx={{ 
+                        fontSize:'5.5rem' ,
+                        color: '#e9ebed', 
+                        fontWeight:600,
+                        lineHeight:'0.1', 
+                        mb:2,
                       }}
                     >
                       {item.numero}
-                    </Box>
+                    </Typography>
                     <Typography variant="h4" gutterBottom
                       sx={{ 
                         fontSize:'1.25rem' ,
@@ -317,6 +327,7 @@ const AboutUs = () => {
                 </Grid>
               ))}
             </Grid>
+          </Box>
           </Container>
         </Box>
         <Box component="section"
@@ -324,7 +335,6 @@ const AboutUs = () => {
             display: 'flex',
             flexDirection: { xs: 'column', md: 'row' },
             width: '100%',
-            minHeight: '100vh',
             backgroundColor:'#f3f5f5',
           }}
         >
@@ -332,7 +342,6 @@ const AboutUs = () => {
             sx={{
               display: 'flex',
               width: '100%',
-              minHeight: '100vh',
               padding:{xs:'0px', md:'0px'},
             }}
           >
@@ -357,7 +366,6 @@ const AboutUs = () => {
                   transition: 'background 0.3s, border-radius 0.3s, opacity 0.3s',
                 }}
               >
-
               </Box>
             </Box>
           </Container>
@@ -366,41 +374,51 @@ const AboutUs = () => {
               display: 'flex',
               flexDirection:'column',
               width: '100%',
-              minHeight: '100vh',
+              marginTop:'4%',
+              marginBottom:'8%',
             }}
           >
-            <Typography variant="h1" gutterBottom
-              sx={{ 
-                fontSize: { xs: '2.5rem', md: '3.5rem' },
-                mt:8,
-                textAlign:'center',
-                color: '#20447b', 
-                mb: 4, 
-              }}
-            >
-              ¿Por qué elegirnos?
-            </Typography>
-            <Typography variant="body1" gutterBottom
-              sx={{ 
-                fontSize:'1rem', 
-                color:'Black',
-                mt: 4,
-                mb: 4, 
-              }}
-            >
-              Al elegir Digital Genius Solutions, elige una asociación estratégica que no solo
-              impulsa tu presencia en línea, sino que también contribuye al crecimiento sostenible
-              de tu negocio. ¡Trabajemos juntos para alcanzar nuevos niveles de éxito digital!
-            </Typography>
-            <Container maxWidth='xs'
+            <Container maxWidth="md"
               sx={{
                 display: 'flex',
+                flexDirection:'column',
                 width: '80%',
-                mt: 4,
               }}
             >
-              <MyAccordion></MyAccordion>
+              <Typography variant="h1" gutterBottom
+                sx={{ 
+                  fontSize: { xs: '2.5rem', md: '3.5rem' },
+                  mt:4,
+                  textAlign:'center',
+                  color: '#20447b', 
+                  mb: 4, 
+                }}
+              >
+                ¿Por qué elegirnos?
+              </Typography>
+              <Typography variant="body1" gutterBottom
+                sx={{ 
+                  fontSize:'1rem', 
+                  color:'Black',
+                  mt: 4,
+                  mb: 4, 
+                }}
+              >
+                Al elegir Digital Genius Solutions, elige una asociación estratégica que no solo
+                impulsa tu presencia en línea, sino que también contribuye al crecimiento sostenible
+                de tu negocio. ¡Trabajemos juntos para alcanzar nuevos niveles de éxito digital!
+              </Typography>
+              <Container maxWidth='xs'
+                sx={{
+                  display: 'flex',
+                  width: '80%',
+                  mt: 4,
+                }}
+              >
+                <MyAccordion></MyAccordion>
+              </Container>
             </Container>
+            
           </Container>
         </Box>
         <Box component="section"
