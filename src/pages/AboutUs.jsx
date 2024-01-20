@@ -69,7 +69,7 @@ const AboutUs = () => {
                 >
                   <Container maxWidth="xl"
                     sx={{ 
-                      width: {xs:'90%', md:'45%'},
+                      width: {xs:'90%', md:'55%'},
                       height:'70vh',
                       display: 'flex',
                       flexDirection:'column',
@@ -89,7 +89,7 @@ const AboutUs = () => {
                     </Typography>
                     <Typography variant="h4" gutterBottom
                       sx={{ 
-                        fontSize:{xs:'2rem', md:'2.125rem'},
+                        fontSize:{xs:'1.5rem', md:'1.8rem'},
                         color: '#ffffff', 
                         mb: 4, 
                       }}
@@ -98,7 +98,7 @@ const AboutUs = () => {
                     </Typography>
                     <Typography variant="body1" gutterBottom
                       sx={{ 
-                        color: '#ffffff', fontSize: {xs:'1.125rem', md:'1.2rem'} 
+                        color: '#ffffff', fontSize: {xs:'1rem', md:'1.2rem'} 
                       }}
                     >
                       Nuestra filosofía fusiona innovación y colaboración. Trabajamos incansablemente para posicionar tu éxito en el mundo digital. ¡Te invitamos a conocer más sobre nosotros!
@@ -116,7 +116,33 @@ const AboutUs = () => {
             width: '100%',
             minHeight: '100vh',
             //border: '1px solid brown',
-            marginTop: '-380px',
+            marginTop: {
+              '@media (min-width: 280px) and (max-width: 359px)': {
+                marginTop: '-240px',
+              },
+              '@media (min-width: 360px) and (max-width: 389px)': {
+                marginTop: '-300px',
+              },
+              '@media (min-width: 390px) and (max-width: 415px)': {
+                marginTop: '-380px',
+              },
+              '@media (min-width: 416px) and (max-width: 531px)': {
+                marginTop: '-340px',
+              },
+              '@media (min-width: 531px) and (max-width: 600px)': {
+                marginTop: '-300px',
+              },
+              '@media (min-width: 601px) and (max-width: 819px)': {
+                marginTop: '-350px',
+              },
+              '@media (min-width: 819px) and (max-width: 1025px)': {
+                marginTop: '-280px',
+              },
+              '@media (min-width: 1026px)': {
+                marginTop: '-280px',
+              },
+            },
+            
             position:'relative',
             zIndex: 3,
             
@@ -164,10 +190,10 @@ const AboutUs = () => {
                       Nuestra Misión
                     </Typography>
                     <Typography variant="body1" sx={{ fontSize: '0.9rem' }}>
-                      Facilitar el crecimiento y la expansión de emprendedores y PYMEs a través
+                      Facilitar el crecimiento de emprendedores y PYMEs a través
                       de soluciones digitales integrales. Nos comprometemos a brindar servicios 
                       de desarrollo web, diseño creativo, marketing digital y análisis de negocios 
-                      que impulsen la presencia en línea y el rendimiento comercial de nuestros clientes.
+                      que impulsen la presencia en línea de nuestros clientes.
                     </Typography>
                   </CardContent>
                 </Card>
