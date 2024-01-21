@@ -19,8 +19,10 @@ const AboutUs = () => {
         sx={{
           backgroundColor:'#fdfdfd',
           width:'100%',
+          minHeight:'100vh',
           position:'relative',
           zIndex:1,
+          //border:'1px solid red',
         }}
       >
         <Box component="section"
@@ -31,83 +33,189 @@ const AboutUs = () => {
             minHeight: '100vh',
             position:'relative',
             zIndex:2,
-            //border: '1px solid red',
+            //border: '1px solid blue',
           }}
         >
-          <Container maxWidth="xl" sx={{zIndex:-1, padding:"0px", margin:"0px", display:"contents"}} >
-            <Box 
+          <Container maxWidth="lg"
+            sx={{ 
+              width: '100%',
+              minHeight:'100vh',
+              display: 'flex',
+              flexDirection:'column',
+              alignItems: 'center',
+              textAlign: 'center',
+              justifyContent:'center',
+              //border:'1px solid orange',
+              position:'relative',
+            }}
+          >
+            <Box
               sx={{
-                position: 'relative',
                 display: 'flex',
                 width: '100%',
-                height: '70vh',
-                backgroundImage: `url(${CabezaFondo})`,
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center center',
-                zIndex:1,
+                height: '20vh',
+                //border:'1px solid black',
+              }}
+            ></Box>
+            <Box
+              sx={{
+                display: 'flex',
+                width: '100%',
+                height: '45vh',
+                //border:'1px solid red',
+                position:'relative',
               }}
             >
-              <Box
-                sx={{
+              <Container maxWidth="md"
+                sx={{ 
                   display: 'flex',
-                  width: '100%',
-                  height: '70vh',
-                  backgroundColor: '#101218',
-                  opacity: 0.8,
-                  transition: 'background 0.3s, border-radius 0.3s, opacity 0.3s',
+                  flexDirection:'column',
+                  alignItems: 'center',
+                  textAlign: 'center',
+                  justifyContent:'center',
+                  //border:'1px solid yellow',
                 }}
               >
-                <Box 
-                  sx={{ 
-                    width: '100vw',
-                    height: '70vh',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
+                <Typography variant="h2" gutterBottom
+                  sx={{
+                    fontSize:'3rem',
+                    color: '#ffffff', 
                   }}
                 >
-                  <Container maxWidth="xl"
-                    sx={{ 
-                      width: {xs:'90%', md:'55%'},
-                      height:'70vh',
-                      display: 'flex',
-                      flexDirection:'column',
-                      alignItems: 'center',
-                      textAlign: 'center',
-                      justifyContent:'center',
-                    }}
+                  Nosotros
+                </Typography>
+                <Typography variant="h4" gutterBottom
+                  sx={{ 
+                    fontSize:'1.5rem',
+                    color: '#ffffff', 
+                    mb: 3, 
+                  }}
+                >
+                  Bienvenido a Digital Genius Solutions
+                </Typography>
+                <Typography variant="body1" gutterBottom
+                  sx={{ 
+                    color: '#ffffff', 
+                    fontSize:'1.2rem', 
+                  }}
+                >
+                  Nuestra filosofía fusiona innovación y colaboración. Trabajamos incansablemente para posicionar tu éxito en el mundo digital. ¡Te invitamos a conocer más sobre nosotros!
+                </Typography>
+              </Container>
+            </Box>
+            <Box
+              sx={{
+                display: 'flex',
+                width: '100%',
+                minHeight: '35vh',
+                //border:'1px solid blue',
+                position:'relative',
+              }}
+            >
+              <Grid container spacing={2} justifyContent="center">
+                <Grid item>
+                  <Card
+                    sx={{ height: 250, minWidth: 270, maxWidth: 320, borderRadius: 0, p: 2 }}
                   >
-                    <Typography variant="h2" gutterBottom
-                      sx={{
-                        fontSize:{xs:'3rem',md:'3.5rem'},
-                        color: '#ffffff', 
-                        mt:'3rem',
-                      }}
-                    >
-                      Nosotros
-                    </Typography>
-                    <Typography variant="h4" gutterBottom
-                      sx={{ 
-                        fontSize:{xs:'1.5rem', md:'1.8rem'},
-                        color: '#ffffff', 
-                        mb: 4, 
-                      }}
-                    >
-                      Bienvenido a Digital Genius Solutions
-                    </Typography>
-                    <Typography variant="body1" gutterBottom
-                      sx={{ 
-                        color: '#ffffff', fontSize: {xs:'1rem', md:'1.2rem'} 
-                      }}
-                    >
-                      Nuestra filosofía fusiona innovación y colaboración. Trabajamos incansablemente para posicionar tu éxito en el mundo digital. ¡Te invitamos a conocer más sobre nosotros!
-                    </Typography>
-                  </Container>
-                </Box>
-              </Box>
+                    <CardContent>
+                      <Divider
+                        sx={{ 
+                          height: '8px',
+                          width:'30%',
+                          backgroundColor: '#20447b', 
+                        }}
+                      />
+                      <Typography variant="h4" gutterBottom>
+                        Quienes Somos?
+                      </Typography>
+                      <Typography variant="body1" sx={{ fontSize: '0.9rem' }}>
+                        Digital Genius Solutions impulsa el crecimiento de emprendedores y PYMEs con 
+                        soluciones digitales integrales: desarrollo, diseño, marketing digital y 
+                        business analytics. Nuestro enfoque se basa en la colaboración, dedicación y 
+                        pasión para alcanzar el éxito compartido.
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Grid>
+                <Grid item>
+                  <Card
+                    sx={{ height: 250, minWidth: 270, maxWidth: 320, borderRadius: 0, p: 2 }}
+                  >
+                    <CardContent>
+                      <Divider
+                        sx={{ 
+                          height: '8px',
+                          width:'30%',
+                          backgroundColor: '#20447b', 
+                        }}
+                      />
+                      <Typography variant="h4" gutterBottom>
+                        Nuestra Misión
+                      </Typography>
+                      <Typography variant="body1" sx={{ fontSize: '0.9rem' }}>
+                        Facilitar el crecimiento de emprendedores y PYMEs a través
+                        de soluciones digitales integrales. Nos comprometemos a brindar servicios 
+                        de desarrollo web, diseño creativo, marketing digital y análisis de negocios 
+                        que impulsen la presencia en línea de nuestros clientes.
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Grid>
+                <Grid item>
+                  <Card
+                    sx={{ height: 250, minWidth: 270, maxWidth: 320, borderRadius: 0, p: 2 }}
+                  >
+                    <CardContent>
+                      <Divider
+                        sx={{ 
+                          height: '8px',
+                          width:'30%',
+                          backgroundColor: '#20447b', 
+                        }}
+                      />
+                      <Typography variant="h4" gutterBottom>
+                        Nuestra Filosofia
+                      </Typography>
+                      <Typography variant="body1" sx={{ fontSize: '0.9rem' }}>
+                        Creemos en el poder del trabajo en equipo, la dedicación y la pasión. Fomentamos un
+                        entorno colaborativo donde cada miembro contribuye al éxito colectivo. Valoramos la
+                        innovación, la transparencia y la responsabilidad en cada proyecto.
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              </Grid>
             </Box>
           </Container>
+          <Box
+            sx={{
+              position: 'absolute',
+              display: 'flex',
+              width: '100%',
+              height: '80vh',
+              backgroundImage: `url(${CabezaFondo})`,
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center center',
+              zIndex:-1,
+              top:0,
+              margin:'0px',
+              padding:'0px',
+            }}
+          >
+            <Box 
+              sx={{
+                display: 'flex',
+                margin:'0px',
+                padding:'0px',
+                width: '100%',
+                height: '80vh',
+                backgroundColor: '#101218',
+                opacity: 0.8,
+                transition: 'background 0.3s, border-radius 0.3s, opacity 0.3s',
+              }}
+            ></Box>
+          </Box>
         </Box>
         <Box component="section"
           sx={{
@@ -116,134 +224,34 @@ const AboutUs = () => {
             width: '100%',
             minHeight: '100vh',
             //border: '1px solid brown',
-            marginTop: {
-              '@media (min-width: 280px) and (max-width: 359px)': {
-                marginTop: '-240px',
-              },
-              '@media (min-width: 360px) and (max-width: 389px)': {
-                marginTop: '-300px',
-              },
-              '@media (min-width: 390px) and (max-width: 415px)': {
-                marginTop: '-380px',
-              },
-              '@media (min-width: 416px) and (max-width: 531px)': {
-                marginTop: '-340px',
-              },
-              '@media (min-width: 531px) and (max-width: 600px)': {
-                marginTop: '-300px',
-              },
-              '@media (min-width: 601px) and (max-width: 819px)': {
-                marginTop: '-350px',
-              },
-              '@media (min-width: 819px) and (max-width: 1025px)': {
-                marginTop: '-280px',
-              },
-              '@media (min-width: 1026px)': {
-                marginTop: '-280px',
-              },
-            },
-            
-            position:'relative',
-            zIndex: 3,
-            
           }}
         >
-          <Container  maxWidth="xl">
-            <Grid container spacing={2} justifyContent="center">
-              <Grid item>
-                <Card
-                  sx={{ minHeight: 280, minWidth: 300, maxWidth: 350, borderRadius: 0, p: 2 }}
-                >
-                  <CardContent>
-                    <Divider
-                      sx={{ 
-                        height: '8px',
-                        width:'20%',
-                        backgroundColor: '#20447b', 
-                      }}
-                    />
-                    <Typography variant="h4" gutterBottom>
-                      Quienes Somos?
-                    </Typography>
-                    <Typography variant="body1" sx={{ fontSize: '0.9rem' }}>
-                      Digital Genius Solutions impulsa el crecimiento de emprendedores y PYMEs con 
-                      soluciones digitales integrales: desarrollo, diseño, marketing digital y 
-                      business analytics. Nuestro enfoque se basa en la colaboración, dedicación y 
-                      pasión para alcanzar el éxito compartido.
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
-              <Grid item>
-                <Card
-                  sx={{ minHeight: 280, minWidth: 300, maxWidth: 350, borderRadius: 0, p: 2 }}
-                >
-                  <CardContent>
-                    <Divider
-                      sx={{ 
-                        height: '8px',
-                        width:'20%',
-                        backgroundColor: '#20447b', 
-                      }}
-                    />
-                    <Typography variant="h4" gutterBottom>
-                      Nuestra Misión
-                    </Typography>
-                    <Typography variant="body1" sx={{ fontSize: '0.9rem' }}>
-                      Facilitar el crecimiento de emprendedores y PYMEs a través
-                      de soluciones digitales integrales. Nos comprometemos a brindar servicios 
-                      de desarrollo web, diseño creativo, marketing digital y análisis de negocios 
-                      que impulsen la presencia en línea de nuestros clientes.
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
-              <Grid item>
-                <Card
-                  sx={{ minHeight: 280, minWidth: 300, maxWidth: 350, borderRadius: 0, p: 2 }}
-                >
-                  <CardContent>
-                    <Divider
-                      sx={{ 
-                        height: '8px',
-                        width:'20%',
-                        backgroundColor: '#20447b', 
-                      }}
-                    />
-                    <Typography variant="h4" gutterBottom>
-                      Nuestra Filosofia
-                    </Typography>
-                    <Typography variant="body1" sx={{ fontSize: '0.9rem' }}>
-                      Creemos en el poder del trabajo en equipo, la dedicación y la pasión. Fomentamos un
-                      entorno colaborativo donde cada miembro contribuye al éxito colectivo. Valoramos la
-                      innovación, la transparencia y la responsabilidad en cada proyecto.
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
-            </Grid>
-          </Container>
           <Container maxWidth="xl"
             sx={{ 
-              
+              width:'100%',
+              minHeight:'100vh',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
               textAlign: 'center',
               justifyContent: 'center',
+              mt:8,
               //border: '1px solid black',
             }}
           >
             <Box
               sx={{ 
-                width: '100%',
+                width:'100%',
+                minHeight:'20vh',
+                display: 'flex',
+                alignItems:'center',
+                justifyContent:'center',
+                //border: '1px solid blue',
               }}
             >
               <Typography variant="h1" gutterBottom
                 sx={{ 
-                  fontSize: { xs: '2.5rem', md: '3.5rem' },
-                  marginTop:'5%',
-                  marginBottom:'6%',
+                  fontSize: { xs: '3rem', md: '3.5rem' },
                   color: '#20447b', 
                 }}
               >
@@ -252,111 +260,121 @@ const AboutUs = () => {
             </Box>
             <Box
               sx={{ 
-                width: '100%',
+                width:'100%',
+                minHeight:'40vh',
                 display: 'flex',
-                flexDirection: 'column',
+                //border: '1px solid purple',
               }}
             >
-              <Grid container spacing={4} justifyContent="center" alignItems="center" marginBottom={'5%'}>
-              {[
-                { id: 1, title: "Desarollo", content: "Creación de sitios web, Apps, Ecommerce y sistemas personalizados para satisfacer las necesidades específicas de cada cliente.", numero:"01." },
-                { id: 2, title: "Diseño Creativo", content: "Retoque de fotos, diseño de logos, creación de feeds de Instagram, banners de Facebook, videos simples en After Effects, y más.", numero:"02." },
-                { id: 3, title: "Marketing Digital", content: "Estrategias personalizadas, creación de buyer personas, diseño de feeds de Instagram, publicaciones y contenido, para mejorar la visibilidad y el engagement en línea.", numero:"03." },
-              ].map((item) => (
-                <Grid item key={item.id} xs={12} md={4}>
-                  <Container maxWidth="xs"
-                    sx={{ 
-                      width: '100%',
-                      height: '30vh',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      textAlign: 'Left',
-                      padding:{xs:'1rem', md:'4rem'},
-                    }}
-                  >
-                    
-                    <Typography variant="body1" gutterBottom
+              <Grid container spacing={4} justifyContent="center" alignItems="center">
+                {[
+                  { id: 1, title: "Desarollo", content: "Creación de sitios web, Apps, Ecommerce y sistemas personalizados para satisfacer las necesidades específicas de cada cliente.", numero:"01." },
+                  { id: 2, title: "Diseño Creativo", content: "Retoque de fotos, diseño de logos, creación de feeds de Instagram, banners de Facebook, videos simples en After Effects, y más.", numero:"02." },
+                  { id: 3, title: "Marketing Digital", content: "Estrategias personalizadas, creación de buyer personas, diseño de feeds de Instagram, publicaciones y contenido, para mejorar la visibilidad y el engagement en línea.", numero:"03." },
+                ].map((item) => (
+                  <Grid item key={item.id} xs={12} md={4}>
+                    <Container maxWidth="xs"
                       sx={{ 
-                        fontSize:'5.5rem' ,
-                        color: '#e9ebed', 
-                        fontWeight:600,
-                        lineHeight:'0.1', 
-                        mb:2,
+                        width: '100%',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        textAlign: 'Left',
+                        padding:{xs:'1rem', md:'3rem'},
                       }}
                     >
-                      {item.numero}
-                    </Typography>
-                    <Typography variant="h4" gutterBottom
+                      <Typography variant="body1" gutterBottom
+                        sx={{ 
+                          fontSize:'5rem' ,
+                          color: '#e9ebed', 
+                          fontWeight:600,
+                          lineHeight:'0.1', 
+                          mb:2,
+                        }}
+                      >
+                        {item.numero}
+                      </Typography>
+                      <Typography variant="h4" gutterBottom
+                        sx={{ 
+                          fontSize:'1.1rem' ,
+                          color: '#20447b', 
+                          mb: 2, 
+                        }}
+                      >
+                        {item.title}
+                      </Typography>
+                      <Typography variant="body1" gutterBottom
+                        sx={{ 
+                          fontSize:'1rem', 
+                          color:'Black',
+                          mb: 2, 
+                        }}
+                      >
+                        {item.content}
+                      </Typography>
+                    </Container>
+                  </Grid>
+                ))}
+              </Grid>
+            </Box>
+            <Box
+              sx={{ 
+                width:'100%',
+                minHeight:'40vh',
+                display: 'flex',
+                //border: '1px solid grey',
+              }}
+            >
+              <Grid container spacing={4} justifyContent="center" alignItems="center">
+                {[
+                  { id: 4, title: "Business Analytics", content: "Análisis minucioso de datos para informar decisiones estratégicas, optimizar el rendimiento comercial y facilitar la toma de decisiones informadas.", numero:"04." },
+                  { id: 5, title: "Potencial Juvenil", content: "Brindamos oportunidades laborales y experiencia profesional a jóvenes prometedores en el campo de la tecnología.", numero:"05." },
+                  { id: 6, title: "Colaboración Estratégica", content: "Trabajamos como partners estratégicos con grandes empresas de marketing para ofrecer soluciones conjuntas y proyectos de alto impacto.", numero:"06." },
+                ].map((item) => (
+                  <Grid item key={item.id} xs={12} md={4}>
+                    <Container maxWidth="xs"
                       sx={{ 
-                        fontSize:'1.25rem' ,
-                        color: '#20447b', 
-                        mb: 2, 
+                        width: '100%',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        textAlign: 'Left',
+                        padding:{xs:'1rem', md:'3rem'},
                       }}
                     >
-                      {item.title}
-                    </Typography>
-                    <Typography variant="body1" gutterBottom
-                      sx={{ 
-                        fontSize:'1rem', 
-                        color:'Black',
-                        mb: 2, 
-                      }}
-                    >
-                      {item.content}
-                    </Typography>
-                  </Container>
-                </Grid>
-              ))}
-              {[
-                { id: 4, title: "Business Analytics", content: "Análisis detallado de datos para informar decisiones estratégicas y optimizar el rendimiento comercial.", numero:"04." },
-                { id: 5, title: "Empoderamiento de Jóvenes Talentosos", content: "Brindamos oportunidades laborales y experiencia profesional a jóvenes prometedores en el campo de la tecnología.", numero:"05." },
-                { id: 6, title: "Colaboración con Grandes Empresas", content: "Trabajamos como partners estratégicos con grandes empresas de marketing para ofrecer soluciones conjuntas y proyectos de alto impacto.", numero:"06." },
-              ].map((item) => (
-                <Grid item key={item.id} xs={12} md={4}>
-                  <Container maxWidth="xs"
-                    sx={{ 
-                      width: '100%',
-                      height: '30vh',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      textAlign: 'Left',
-                      padding:{xs:'1rem', md:'4rem'},
-                    }}
-                  >
-                    <Typography variant="body1" gutterBottom
-                      sx={{ 
-                        fontSize:'5.5rem' ,
-                        color: '#e9ebed', 
-                        fontWeight:600,
-                        lineHeight:'0.1', 
-                        mb:2,
-                      }}
-                    >
-                      {item.numero}
-                    </Typography>
-                    <Typography variant="h4" gutterBottom
-                      sx={{ 
-                        fontSize:'1.25rem' ,
-                        color: '#20447b', 
-                        mb: 2, 
-                      }}
-                    >
-                      {item.title}
-                    </Typography>
-                    <Typography variant="body1" gutterBottom
-                      sx={{ 
-                        fontSize:'1rem', 
-                        color:'Black',
-                        mb: 2, 
-                      }}
-                    >
-                      {item.content}
-                    </Typography>
-                  </Container>
-                </Grid>
-              ))}
-            </Grid>
-          </Box>
+                      <Typography variant="body1" gutterBottom
+                        sx={{ 
+                          fontSize:'5rem' ,
+                          color: '#e9ebed', 
+                          fontWeight:600,
+                          lineHeight:'0.1', 
+                          mb:2,
+                        }}
+                      >
+                        {item.numero}
+                      </Typography>
+                      <Typography variant="h4" gutterBottom
+                        sx={{ 
+                          fontSize:'1.1rem' ,
+                          color: '#20447b', 
+                          mb: 2, 
+                        }}
+                      >
+                        {item.title}
+                      </Typography>
+                      <Typography variant="body1" gutterBottom
+                        sx={{ 
+                          fontSize:'1rem', 
+                          color:'Black',
+                          mb: 2, 
+                        }}
+                      >
+                        {item.content}
+                      </Typography>
+                    </Container>
+                  </Grid>
+                ))}
+              </Grid>
+            </Box>
+            
           </Container>
         </Box>
         <Box component="section"
@@ -403,53 +421,75 @@ const AboutUs = () => {
               display: 'flex',
               flexDirection:'column',
               width: '100%',
-              marginTop:'2%',
-              marginBottom:'4%',
-              //border:'1px solid red',
+              //border:'1px solid aqua',
+              padding:{xs:'0px', md:'0px'},
             }}
           >
             <Container maxWidth="md"
               sx={{
                 display: 'flex',
                 flexDirection:'column',
-                width: '70%',
+                alignItems:'center',
+                width: '90%',
                 //border:'1px solid blue',
+                mt:4,
+                mb:8,
               }}
             >
-              <Typography variant="h1" gutterBottom
+              <Box
                 sx={{ 
-                  fontSize: { xs: '2.5rem', md: '3.5rem' },
-                  mt:4,
-                  textAlign:'center',
-                  color: '#20447b', 
-                  mb: 4, 
+                  width:'100%',
+                  minHeight:'15vh',
+                  display: 'flex',
+                  
+                  justifyContent:'center',
+                  //border: '1px solid grey',
                 }}
               >
-                ¿Por qué elegirnos?
-              </Typography>
-              <Typography variant="body1" gutterBottom
+                <Typography variant="h1" gutterBottom
+                  sx={{ 
+                    fontSize: { xs: '3rem', md: '3.5rem' },
+                    display:'flex',
+                    alignItems:'center',
+                    color: '#20447b', 
+                  }}
+                >
+                  ¿Por qué elegirnos?
+                </Typography>
+              </Box>
+              <Box
                 sx={{ 
-                  fontSize:'1rem', 
-                  color:'Black',
-                  mt: 4,
-                  mb: 4, 
+                  width:'100%',
+                  minHeight:'25vh',
+                  display: 'flex',
+                  alignItems:'center',
+                  mb:4,
+                  //border: '1px solid orange',
                 }}
               >
-                Al elegir Digital Genius Solutions, elige una asociación estratégica que no solo
-                impulsa tu presencia en línea, sino que también contribuye al crecimiento sostenible
-                de tu negocio. ¡Trabajemos juntos para alcanzar nuevos niveles de éxito digital!
-              </Typography>
-              <Container maxWidth='xs'
+                <Typography variant="body1" gutterBottom
+                  sx={{ 
+                    fontSize:'1.25rem', 
+                    color:'Black', 
+                  }}
+                >
+                  Al elegir Digital Genius Solutions, elige una asociación estratégica que no solo
+                  impulsa tu presencia en línea, sino que también contribuye al crecimiento sostenible
+                  de tu negocio. ¡Trabajemos juntos para alcanzar nuevos niveles de éxito digital!
+                </Typography>
+              </Box>
+              
+              <Box
                 sx={{
                   display: 'flex',
-                  width: '80%',
-                  mt: 4,
+                  alignItems:'center',
+                  width:'90%',
+                  //border: '1px solid red',
                 }}
               >
                 <MyAccordion></MyAccordion>
-              </Container>
+              </Box>
             </Container>
-            
           </Container>
         </Box>
         <Box component="section"
@@ -464,9 +504,7 @@ const AboutUs = () => {
           <BannerStart/>
         </Box>
       </Box>
-      
-    </Layaout >
+    </Layaout>
   );
 }
-
 export default AboutUs;
