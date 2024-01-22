@@ -76,17 +76,17 @@ const AboutUs = () => {
                   //border:'1px solid yellow',
                 }}
               >
-                <Typography variant="h2" gutterBottom
+                <Typography variant="h3" gutterBottom
                   sx={{
-                    fontSize:'3rem',
+                    //fontSize:'3rem',
                     color: '#ffffff', 
                   }}
                 >
                   Nosotros
                 </Typography>
-                <Typography variant="h4" gutterBottom
+                <Typography variant="h5" gutterBottom
                   sx={{ 
-                    fontSize:'1.5rem',
+                    //fontSize:'1.5rem',
                     color: '#ffffff', 
                     mb: 3, 
                   }}
@@ -96,7 +96,7 @@ const AboutUs = () => {
                 <Typography variant="body1" gutterBottom
                   sx={{ 
                     color: '#ffffff', 
-                    fontSize:'1.2rem', 
+                    //fontSize:'1.2rem', 
                   }}
                 >
                   Nuestra filosofía fusiona innovación y colaboración. Trabajamos incansablemente para posicionar tu éxito en el mundo digital. ¡Te invitamos a conocer más sobre nosotros!
@@ -115,7 +115,7 @@ const AboutUs = () => {
               <Grid container spacing={2} justifyContent="center">
                 <Grid item>
                   <Card
-                    sx={{ height: 250, minWidth: 270, maxWidth: 320, borderRadius: 0, p: 2 }}
+                    sx={{ height: 300, minWidth: 300, maxWidth: 350, borderRadius: 0, p: 2 }}
                   >
                     <CardContent>
                       <Divider
@@ -128,7 +128,7 @@ const AboutUs = () => {
                       <Typography variant="h4" gutterBottom>
                         Quienes Somos?
                       </Typography>
-                      <Typography variant="body1" sx={{ fontSize: '0.9rem' }}>
+                      <Typography variant="body1">
                         Digital Genius Solutions impulsa el crecimiento de emprendedores y PYMEs con 
                         soluciones digitales integrales: desarrollo, diseño, marketing digital y 
                         business analytics. Nuestro enfoque se basa en la colaboración, dedicación y 
@@ -139,7 +139,7 @@ const AboutUs = () => {
                 </Grid>
                 <Grid item>
                   <Card
-                    sx={{ height: 250, minWidth: 270, maxWidth: 320, borderRadius: 0, p: 2 }}
+                    sx={{ height: 300, minWidth: 300, maxWidth: 350, borderRadius: 0, p: 2 }}
                   >
                     <CardContent>
                       <Divider
@@ -152,7 +152,7 @@ const AboutUs = () => {
                       <Typography variant="h4" gutterBottom>
                         Nuestra Misión
                       </Typography>
-                      <Typography variant="body1" sx={{ fontSize: '0.9rem' }}>
+                      <Typography variant="body1" >
                         Facilitar el crecimiento de emprendedores y PYMEs a través
                         de soluciones digitales integrales. Nos comprometemos a brindar servicios 
                         de desarrollo web, diseño creativo, marketing digital y análisis de negocios 
@@ -163,7 +163,7 @@ const AboutUs = () => {
                 </Grid>
                 <Grid item>
                   <Card
-                    sx={{ height: 250, minWidth: 270, maxWidth: 320, borderRadius: 0, p: 2 }}
+                    sx={{ height: 300, minWidth: 300, maxWidth: 350, borderRadius: 0, p: 2 }}
                   >
                     <CardContent>
                       <Divider
@@ -176,7 +176,7 @@ const AboutUs = () => {
                       <Typography variant="h4" gutterBottom>
                         Nuestra Filosofia
                       </Typography>
-                      <Typography variant="body1" sx={{ fontSize: '0.9rem' }}>
+                      <Typography variant="body1" >
                         Creemos en el poder del trabajo en equipo, la dedicación y la pasión. Fomentamos un
                         entorno colaborativo donde cada miembro contribuye al éxito colectivo. Valoramos la
                         innovación, la transparencia y la responsabilidad en cada proyecto.
@@ -295,7 +295,7 @@ const AboutUs = () => {
                       </Typography>
                       <Typography variant="h4" gutterBottom
                         sx={{ 
-                          fontSize:'1.1rem' ,
+                          //fontSize:'1.1rem' ,
                           color: '#20447b', 
                           mb: 2, 
                         }}
@@ -304,7 +304,7 @@ const AboutUs = () => {
                       </Typography>
                       <Typography variant="body1" gutterBottom
                         sx={{ 
-                          fontSize:'1rem', 
+                          //fontSize:'1rem', 
                           color:'Black',
                           mb: 2, 
                         }}
@@ -353,7 +353,7 @@ const AboutUs = () => {
                       </Typography>
                       <Typography variant="h4" gutterBottom
                         sx={{ 
-                          fontSize:'1.1rem' ,
+                          //fontSize:'1.1rem' ,
                           color: '#20447b', 
                           mb: 2, 
                         }}
@@ -362,7 +362,7 @@ const AboutUs = () => {
                       </Typography>
                       <Typography variant="body1" gutterBottom
                         sx={{ 
-                          fontSize:'1rem', 
+                          //fontSize:'1rem', 
                           color:'Black',
                           mb: 2, 
                         }}
@@ -446,9 +446,9 @@ const AboutUs = () => {
                   //border: '1px solid grey',
                 }}
               >
-                <Typography variant="h1" gutterBottom
+                <Typography variant="h2" gutterBottom
                   sx={{ 
-                    fontSize: { xs: '3rem', md: '3.5rem' },
+                    //fontSize: { xs: '3rem', md: '3.5rem' },
                     display:'flex',
                     alignItems:'center',
                     color: '#20447b', 
@@ -469,7 +469,7 @@ const AboutUs = () => {
               >
                 <Typography variant="body1" gutterBottom
                   sx={{ 
-                    fontSize:'1.25rem', 
+                    //fontSize:'1.25rem', 
                     color:'Black', 
                   }}
                 >
