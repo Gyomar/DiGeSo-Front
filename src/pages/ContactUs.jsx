@@ -1,10 +1,4 @@
-import {
-  Box,
-  Container,
-  Fade,
-  Stack,
-  Typography,
-} from '@mui/material';
+import { Box, Container, Fade, Stack, Typography } from '@mui/material';
 
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
@@ -28,68 +22,67 @@ const ContactUs = () => {
             display: 'flex',
             objectFit: 'cover',
             width: '100%',
-            height: '60vh',
+            height: '80vh',
             backgroundImage: `url(${CabezaFondo})`,
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
-            backgroundPosition: 'center center'
+            backgroundPosition: 'center center',
           }}
         >
           <Box
             sx={{
               display: 'flex',
               width: '100%',
-              height: '60vh',
+              height: '80vh',
+              position: 'absolute',
               backgroundColor: '#101218',
               opacity: 0.8,
               transition: 'background 0.3s, border-radius 0.3s, opacity 0.3s',
             }}
-          >
-            <Box component="main" sx={{ width: '100vw' }}>
-              <Container maxWidth="xl">
-                <Stack
-                  direction="column"
-                  justifyContent="center"
-                  alignItems="center"
-                  spacing={3}
-                  sx={{ height: '60vh' }}
+          />
+          <Box component="main" sx={{ width: '100vw', zIndex: 1  }}>
+            <Container maxWidth="xl">
+              <Stack
+                direction="column"
+                justifyContent="center"
+                alignItems="center"
+                spacing={3}
+                sx={{ height: '80vh' }}
+              >
+                <Typography
+                  variant="h3"
+                  gutterBottom
+                  sx={{
+                    color: '#ffffff',
+                  }}
                 >
-                  <Typography
-                    variant="h3"
-                    gutterBottom
-                    sx={{
-                      color: '#ffffff',
-                    }}
-                  >
-                    Contactanos
-                  </Typography>
-                  <Typography
-                    variant="h5"
-                    gutterBottom
-                    sx={{
-                      color: '#ffffff',
-                    }}
-                  >
-                    Contacto para servicios empresariales premium
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    gutterBottom
-                    sx={{
-                      color: '#ffffff',
-                      maxWidth: 540,
-                      fontSize: '1.2rem',
-                      textAlign: 'center',
-                    }}
-                  >
-                    Bienvenido a nuestro centro de contacto exclusivo para
-                    servicios empresariales premium. Estamos aquí para brindarte
-                    una experiencia personalizada y responder a todas tus
-                    consultas relacionadas con nuestros servicios de élite.
-                  </Typography>
-                </Stack>
-              </Container>
-            </Box>
+                  Contactanos
+                </Typography>
+                <Typography
+                  variant="h5"
+                  gutterBottom
+                  sx={{
+                    color: '#ffffff',
+                  }}
+                >
+                  Contacto para servicios empresariales premium
+                </Typography>
+                <Typography
+                  variant="body1"
+                  gutterBottom
+                  sx={{
+                    color: '#ffffff',
+                    maxWidth: 540,
+                    textAlign: 'center',
+                  }}
+                >
+                  Bienvenido a nuestro centro de contacto exclusivo para
+                  servicios empresariales premium. Estamos aquí para brindarte
+                  una experiencia personalizada y responder a todas tus
+                  consultas relacionadas con nuestros servicios de élite.
+                </Typography>
+              </Stack>
+            </Container>
           </Box>
         </Box>
       </Fade>
@@ -123,7 +116,7 @@ const ContactUs = () => {
                   gutterBottom
                   sx={{
                     textAlign: 'left',
-                    minWidth: 300
+                    minWidth: 300,
                   }}
                 >
                   Ponerse en contacto
@@ -134,11 +127,11 @@ const ContactUs = () => {
                   alignItems="flex-start"
                   spacing={3}
                   sx={{
-                    minWidth: 300
+                    minWidth: 300,
                   }}
                 >
                   <Typography variant="subtitle1" gutterBottom>
-                  Contáctanos
+                    Contáctanos
                   </Typography>
                   <Stack
                     direction="row"
@@ -146,7 +139,7 @@ const ContactUs = () => {
                     alignItems="flex-start"
                     spacing={3}
                   >
-                    <EmailIcon color='primary'/>
+                    <EmailIcon color="primary" />
                     <Typography variant="body2" gutterBottom>
                       info@example.com
                     </Typography>
@@ -157,7 +150,7 @@ const ContactUs = () => {
                     alignItems="flex-start"
                     spacing={3}
                   >
-                    <PhoneInTalkIcon color='primary'/>
+                    <PhoneInTalkIcon color="primary" />
                     <Typography variant="body2" gutterBottom>
                       +001 987-654-3210
                     </Typography>
@@ -168,7 +161,7 @@ const ContactUs = () => {
                     alignItems="flex-start"
                     spacing={3}
                   >
-                    <WhatsAppIcon color='primary'/>
+                    <WhatsAppIcon color="primary" />
                     <Typography variant="body2" gutterBottom>
                       +001 987-654-3210
                     </Typography>
@@ -179,7 +172,7 @@ const ContactUs = () => {
                     alignItems="flex-start"
                     spacing={3}
                   >
-                    <FacebookIcon color='primary' />
+                    <FacebookIcon color="primary" />
                     <Typography variant="body2" gutterBottom>
                       @digeso
                     </Typography>

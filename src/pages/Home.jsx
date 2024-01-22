@@ -512,10 +512,10 @@ function Home() {
                         <Typography variant="subtitle1">
                           {item.description}
                         </Typography>
-                        <Collapse in={expandedCardIndex === item.index}>
+                        <Collapse in={expandedCardIndex === item.index} {...{ timeout: 1000 }}>
                           <Typography
                             variant="body1"
-                            sx={{ height: 292, textWrap: 'pretty', pt: 2 }}
+                            sx={{ height: 294, textWrap: 'pretty', pt: 2 }}
                           >
                             {item.review}
                           </Typography>
