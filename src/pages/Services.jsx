@@ -105,17 +105,17 @@ const Services = () => {
                       //border:'1px solid yellow',
                     }}
                   >
-                    <Typography variant="h2" gutterBottom
+                    <Typography variant="h3" gutterBottom
                       sx={{
-                        fontSize:'3rem',
+                        //fontSize:'3rem',
                         color: '#ffffff', 
                       }}
                     >
                       Servicios
                     </Typography>
-                    <Typography variant="h4" gutterBottom
+                    <Typography variant="h5" gutterBottom
                       sx={{ 
-                        fontSize:'1.5rem',
+                        //fontSize:'1.5rem',
                         color: '#ffffff', 
                         mb: 3, 
                       }}
@@ -125,7 +125,7 @@ const Services = () => {
                     <Typography variant="body1" gutterBottom
                       sx={{ 
                         color: '#ffffff', 
-                        fontSize:'1.2rem', 
+                        //fontSize:'1.2rem', 
                       }}
                     >
                       Explora nuestra amplia gama de servicios, desde desarrollo web y diseño creativo hasta marketing digital y análisis empresarial, destacando tu presencia en línea.
@@ -169,9 +169,9 @@ const Services = () => {
                 //border: '1px solid blue',
               }}
             >
-              <Typography variant="h1" gutterBottom
+              <Typography variant="h3" gutterBottom
                 sx={{ 
-                  fontSize: { xs: '3rem', md: '3.5rem' },
+                  //fontSize: { xs: '3rem', md: '3.5rem' },
                   color: '#20447b', 
                 }}
               >
@@ -213,9 +213,9 @@ const Services = () => {
                       >
                         {item.icon}
                       </Icon>
-                      <Typography variant="h4" gutterBottom
+                      <Typography variant="h5" gutterBottom
                         sx={{ 
-                          fontSize:'1.1rem' ,
+                          //fontSize:'1.1rem' ,
                           color: '#20447b', 
                           mb: 2, 
                         }}
@@ -224,7 +224,7 @@ const Services = () => {
                       </Typography>
                       <Typography variant="body1" gutterBottom
                         sx={{ 
-                          fontSize:'1rem', 
+                          //fontSize:'1rem', 
                           color:'Black',
                           mb: 2, 
                         }}
@@ -271,9 +271,9 @@ const Services = () => {
                       >
                         {item.icon}
                       </Icon>
-                      <Typography variant="h4" gutterBottom
+                      <Typography variant="h5" gutterBottom
                         sx={{ 
-                          fontSize:'1.1rem' ,
+                          //fontSize:'1.1rem' ,
                           color: '#20447b', 
                           mb: 2, 
                         }}
@@ -282,7 +282,7 @@ const Services = () => {
                       </Typography>
                       <Typography variant="body1" gutterBottom
                         sx={{ 
-                          fontSize:'1rem', 
+                          //fontSize:'1rem', 
                           color:'Black',
                           mb: 2, 
                         }}
