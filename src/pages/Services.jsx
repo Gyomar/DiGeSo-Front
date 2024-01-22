@@ -188,9 +188,9 @@ const Services = () => {
             >
               <Grid container spacing={4} justifyContent="center" alignItems="center">
                 {[
-                  { id: 1, title: "Desarollo", content: "Creación de sitios web, Apps, Ecommerce y sistemas personalizados para satisfacer las necesidades específicas de cada cliente.", icon: <Develop fontSize="large"/>, numero:"01." },
-                  { id: 2, title: "Diseño Creativo", content: "Retoque de fotos, diseño de logos, creación de feeds de Instagram, banners de Facebook, videos simples en After Effects, y más.", icon: <Diseno fontSize="large"/> , numero:"02." },
-                  { id: 3, title: "Marketing Digital", content: "Estrategias personalizadas, creación de buyer personas, diseño de feeds de Instagram, publicaciones y contenido, para mejorar la visibilidad en línea.", icon:<Marketing fontSize="large"/>, numero:"03." },
+                  { id: 1, title: "Desarollo", content: "Creación de sitios web, Apps, Ecommerce y sistemas personalizados para satisfacer las necesidades específicas de cada cliente.", icon: <Develop fontSize="large" style={{ color: '#20447b' }}/>, numero:"01." },
+                  { id: 2, title: "Diseño Creativo", content: "Retoque de fotos, diseño de logos, creación de feeds de Instagram, banners de Facebook, videos simples en After Effects, y más.", icon: <Diseno fontSize="large" style={{ color: '#20447b' }}/> , numero:"02." },
+                  { id: 3, title: "Marketing Digital", content: "Estrategias personalizadas, creación de buyer personas, diseño de feeds de Instagram, publicaciones y contenido, para mejorar la visibilidad en línea.", icon:<Marketing fontSize="large" style={{ color: '#20447b' }}/>, numero:"03." },
                 ].map((item) => (
                   <Grid item key={item.id} xs={12} md={4}>
                     <Container maxWidth="xs"
@@ -216,7 +216,7 @@ const Services = () => {
                       <Typography variant="h5" gutterBottom
                         sx={{ 
                           //fontSize:'1.1rem' ,
-                          color: '#20447b', 
+                          color: 'Black', 
                           mb: 2, 
                         }}
                       >
@@ -246,9 +246,9 @@ const Services = () => {
             >
               <Grid container spacing={4} justifyContent="center" alignItems="center">
                 {[
-                  { id: 4, title: "Business Analytics", content: "Análisis minucioso de datos para informar decisiones estratégicas, optimizar el rendimiento comercial y facilitar la toma de decisiones informadas.", icon:<Poll fontSize="large"/>, numero:"04." },
-                  { id: 5, title: "Potencial Juvenil", content: "Facilitamos el desarrollo profesional y ofrecemos oportunidades laborales y experiencia valiosa a jóvenes prometedores en el campo de la tecnología.", icon:<Jovenes fontSize="large"/>, numero:"05." },
-                  { id: 6, title: "Colaboración Estratégica", content: "Trabajamos como partners estratégicos con grandes empresas de marketing para ofrecer soluciones conjuntas y proyectos de alto impacto.", icon:<Empresas fontSize="large"/>, numero:"06." },
+                  { id: 4, title: "Business Analytics", content: "Análisis minucioso de datos para informar decisiones estratégicas, optimizar el rendimiento comercial y facilitar la toma de decisiones informadas.", icon:<Poll fontSize="large" style={{ color: '#20447b' }}/>, numero:"04." },
+                  { id: 5, title: "Potencial Juvenil", content: "Facilitamos el desarrollo profesional y ofrecemos oportunidades laborales y experiencia valiosa a jóvenes prometedores en el campo de la tecnología.", icon:<Jovenes fontSize="large" style={{ color: '#20447b' }}/>, numero:"05." },
+                  { id: 6, title: "Colaboración Estratégica", content: "Trabajamos como partners estratégicos con grandes empresas de marketing para ofrecer soluciones conjuntas y proyectos de alto impacto.", icon:<Empresas fontSize="large" style={{ color: '#20447b' }}/>, numero:"06." },
                 ].map((item) => (
                   <Grid item key={item.id} xs={12} md={4}>
                     <Container maxWidth="xs"
@@ -274,7 +274,7 @@ const Services = () => {
                       <Typography variant="h5" gutterBottom
                         sx={{ 
                           //fontSize:'1.1rem' ,
-                          color: '#20447b', 
+                          color: 'Black', 
                           mb: 2, 
                         }}
                       >
