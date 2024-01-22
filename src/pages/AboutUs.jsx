@@ -268,9 +268,9 @@ const AboutUs = () => {
             >
               <Grid container spacing={4} justifyContent="center" alignItems="center">
                 {[
-                  { id: 1, title: "Desarollo", content: "Creación de sitios web, Apps, Ecommerce y sistemas personalizados para satisfacer las necesidades específicas de cada cliente.", numero:"01." },
-                  { id: 2, title: "Diseño Creativo", content: "Retoque de fotos, diseño de logos, creación de feeds de Instagram, banners de Facebook, videos simples en After Effects, y más.", numero:"02." },
-                  { id: 3, title: "Marketing Digital", content: "Estrategias personalizadas, creación de buyer personas, diseño de feeds de Instagram, publicaciones y contenido, para mejorar la visibilidad y el engagement en línea.", numero:"03." },
+                  { id: 1, title: "Desarrollo Colaborativo", content: "Fomentamos la colaboración entre equipos para crear soluciones digitales innovadoras y eficientes, impulsando proyectos de desarrollo web y aplicaciones.", numero:"01." },
+                  { id: 2, title: "Cultivo de Talento", content: "Identificamos y nutrimos jóvenes talentosos, proporcionándoles oportunidades de crecimiento en un entorno laboral donde aprenden y prosperan.", numero:"02." },
+                  { id: 3, title: "Estrategias Digitales", content: "Diseñamos y ejecutamos estrategias de marketing digital personalizadas, maximizando la visibilidad y el impacto de marcas y emprendimientos.", numero:"03." },
                 ].map((item) => (
                   <Grid item key={item.id} xs={12} md={4}>
                     <Container maxWidth="xs"
@@ -326,9 +326,9 @@ const AboutUs = () => {
             >
               <Grid container spacing={4} justifyContent="center" alignItems="center">
                 {[
-                  { id: 4, title: "Business Analytics", content: "Análisis minucioso de datos para informar decisiones estratégicas, optimizar el rendimiento comercial y facilitar la toma de decisiones informadas.", numero:"04." },
-                  { id: 5, title: "Potencial Juvenil", content: "Brindamos oportunidades laborales y experiencia profesional a jóvenes prometedores en el campo de la tecnología.", numero:"05." },
-                  { id: 6, title: "Colaboración Estratégica", content: "Trabajamos como partners estratégicos con grandes empresas de marketing para ofrecer soluciones conjuntas y proyectos de alto impacto.", numero:"06." },
+                  { id: 4, title: "Social Media", content: "Desarrollamos e implementamos estrategias de contenido efectivas en redes sociales, maximizando la visibilidad, la participación y la construcción de la marca.", numero:"04." },
+                  { id: 5, title: "E-commerce", content: "Creamos plataformas de comercio electrónico intuitivas y atractivas, optimizadas para la experiencia del usuario y diseñadas para impulsar las conversiones.", numero:"05." },
+                  { id: 6, title: "Ayuda y soporte", content: "Brindamos asistencia a clientes, asegurando respuestas rápidas y soluciones efectivas para sus preguntas y preocupaciones.", numero:"06." },
                 ].map((item) => (
                   <Grid item key={item.id} xs={12} md={4}>
                     <Container maxWidth="xs"
