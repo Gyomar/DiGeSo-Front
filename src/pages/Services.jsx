@@ -4,6 +4,13 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import BannerStart from '../components/BannerStart';
+import Icon from '@mui/material/Icon';
+import Poll from '@mui/icons-material/Poll';
+import Develop from '@mui/icons-material/Devices';
+import Empresas from '@mui/icons-material/Groups';
+import Jovenes from '@mui/icons-material/SettingsAccessibility';
+import Diseno from '@mui/icons-material/AppShortcut';
+import Marketing from '@mui/icons-material/SystemSecurityUpdateGood';
 import CabezaFondo from '../assets/images/pages-hero-bg.jpg';
 
 const Services = () => {
@@ -67,7 +74,7 @@ const Services = () => {
                   alignItems: 'center',
                   textAlign: 'center',
                   justifyContent:'center',
-                  border:'1px solid orange',
+                  //border:'1px solid orange',
                   position:'relative',
                 }}
               >
@@ -76,7 +83,7 @@ const Services = () => {
                     display: 'flex',
                     width: '100%',
                     height: '20vh',
-                    border:'1px solid black',
+                    //border:'1px solid black',
                   }}
                 ></Box>
                 <Box
@@ -84,7 +91,7 @@ const Services = () => {
                     display: 'flex',
                     width: '100%',
                     height: '45vh',
-                    border:'1px solid red',
+                    //border:'1px solid red',
                     position:'relative',
                   }}
                 >
@@ -95,7 +102,7 @@ const Services = () => {
                       alignItems: 'center',
                       textAlign: 'center',
                       justifyContent:'center',
-                      border:'1px solid yellow',
+                      //border:'1px solid yellow',
                     }}
                   >
                     <Typography variant="h2" gutterBottom
@@ -135,7 +142,7 @@ const Services = () => {
             flexDirection:'column',
             width: '100%',
             minHeight: '100vh',
-            border: '1px solid brown',
+            //border: '1px solid brown',
           }}
         >
           <Container maxWidth="xl"
@@ -147,8 +154,9 @@ const Services = () => {
               alignItems: 'center',
               textAlign: 'center',
               justifyContent: 'center',
-              mt:8,
-              border: '1px solid black',
+              mt:4,
+              mb:8,
+              //border: '1px solid black',
             }}
           >
             <Box
@@ -158,7 +166,7 @@ const Services = () => {
                 display: 'flex',
                 alignItems:'center',
                 justifyContent:'center',
-                border: '1px solid blue',
+                //border: '1px solid blue',
               }}
             >
               <Typography variant="h1" gutterBottom
@@ -175,14 +183,14 @@ const Services = () => {
                 width:'100%',
                 minHeight:'40vh',
                 display: 'flex',
-                border: '1px solid purple',
+                //border: '1px solid purple',
               }}
             >
               <Grid container spacing={4} justifyContent="center" alignItems="center">
                 {[
-                  { id: 1, title: "Desarollo", content: "Creación de sitios web, Apps, Ecommerce y sistemas personalizados para satisfacer las necesidades específicas de cada cliente.", numero:"01." },
-                  { id: 2, title: "Diseño Creativo", content: "Retoque de fotos, diseño de logos, creación de feeds de Instagram, banners de Facebook, videos simples en After Effects, y más.", numero:"02." },
-                  { id: 3, title: "Marketing Digital", content: "Estrategias personalizadas, creación de buyer personas, diseño de feeds de Instagram, publicaciones y contenido, para mejorar la visibilidad y el engagement en línea.", numero:"03." },
+                  { id: 1, title: "Desarollo", content: "Creación de sitios web, Apps, Ecommerce y sistemas personalizados para satisfacer las necesidades específicas de cada cliente.", icon: <Develop fontSize="large"/>, numero:"01." },
+                  { id: 2, title: "Diseño Creativo", content: "Retoque de fotos, diseño de logos, creación de feeds de Instagram, banners de Facebook, videos simples en After Effects, y más.", icon: <Diseno fontSize="large"/> , numero:"02." },
+                  { id: 3, title: "Marketing Digital", content: "Estrategias personalizadas, creación de buyer personas, diseño de feeds de Instagram, publicaciones y contenido, para mejorar la visibilidad en línea.", icon:<Marketing fontSize="large"/>, numero:"03." },
                 ].map((item) => (
                   <Grid item key={item.id} xs={12} md={4}>
                     <Container maxWidth="xs"
@@ -191,21 +199,20 @@ const Services = () => {
                         display: 'flex',
                         flexDirection: 'column',
                         textAlign: 'Left',
-                        padding:{xs:'1rem', md:'3rem'},
+                        padding:{xs:'1rem', md:'2rem'},
                         backgroundColor: 'white',
                       }}
                     >
-                      <Typography variant="body1" gutterBottom
+                      <Icon
                         sx={{ 
-                          fontSize:'5rem' ,
-                          color: '#e9ebed', 
-                          fontWeight:600,
-                          lineHeight:'0.1', 
-                          mb:2,
+                          width:'20%',
+                          height:'20%',
+                          padding:'0.3rem',
+                          textAlign:'left',
                         }}
                       >
-                        {item.numero}
-                      </Typography>
+                        {item.icon}
+                      </Icon>
                       <Typography variant="h4" gutterBottom
                         sx={{ 
                           fontSize:'1.1rem' ,
@@ -234,14 +241,14 @@ const Services = () => {
                 width:'100%',
                 minHeight:'40vh',
                 display: 'flex',
-                border: '1px solid grey',
+                //border: '1px solid grey',
               }}
             >
               <Grid container spacing={4} justifyContent="center" alignItems="center">
                 {[
-                  { id: 4, title: "Business Analytics", content: "Análisis minucioso de datos para informar decisiones estratégicas, optimizar el rendimiento comercial y facilitar la toma de decisiones informadas.", numero:"04." },
-                  { id: 5, title: "Potencial Juvenil", content: "Brindamos oportunidades laborales y experiencia profesional a jóvenes prometedores en el campo de la tecnología.", numero:"05." },
-                  { id: 6, title: "Colaboración Estratégica", content: "Trabajamos como partners estratégicos con grandes empresas de marketing para ofrecer soluciones conjuntas y proyectos de alto impacto.", numero:"06." },
+                  { id: 4, title: "Business Analytics", content: "Análisis minucioso de datos para informar decisiones estratégicas, optimizar el rendimiento comercial y facilitar la toma de decisiones informadas.", icon:<Poll fontSize="large"/>, numero:"04." },
+                  { id: 5, title: "Potencial Juvenil", content: "Facilitamos el desarrollo profesional y ofrecemos oportunidades laborales y experiencia valiosa a jóvenes prometedores en el campo de la tecnología.", icon:<Jovenes fontSize="large"/>, numero:"05." },
+                  { id: 6, title: "Colaboración Estratégica", content: "Trabajamos como partners estratégicos con grandes empresas de marketing para ofrecer soluciones conjuntas y proyectos de alto impacto.", icon:<Empresas fontSize="large"/>, numero:"06." },
                 ].map((item) => (
                   <Grid item key={item.id} xs={12} md={4}>
                     <Container maxWidth="xs"
@@ -250,21 +257,20 @@ const Services = () => {
                         display: 'flex',
                         flexDirection: 'column',
                         textAlign: 'Left',
-                        padding:{xs:'1rem', md:'3rem'},
+                        padding:{xs:'1rem', md:'2rem'},
                         backgroundColor:'#ffffff',
                       }}
                     >
-                      <Typography variant="body1" gutterBottom
+                      <Icon
                         sx={{ 
-                          fontSize:'5rem' ,
-                          color: '#e9ebed', 
-                          fontWeight:600,
-                          lineHeight:'0.1', 
-                          mb:2,
+                          width:'20%',
+                          height:'20%',
+                          padding:'0.3rem',
+                          textAlign:'left',
                         }}
                       >
-                        {item.numero}
-                      </Typography>
+                        {item.icon}
+                      </Icon>
                       <Typography variant="h4" gutterBottom
                         sx={{ 
                           fontSize:'1.1rem' ,
@@ -297,6 +303,7 @@ const Services = () => {
             minHeight: '60vh',
             alignItems:'center',
             justifyContent:'center',
+            backgroundColor:'#ffffff',
           }}
         >
           <BannerStart/>
