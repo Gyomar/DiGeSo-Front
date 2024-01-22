@@ -78,19 +78,12 @@ const Services = () => {
                   position:'relative',
                 }}
               >
+                
                 <Box
                   sx={{
                     display: 'flex',
                     width: '100%',
-                    height: '20vh',
-                    //border:'1px solid black',
-                  }}
-                ></Box>
-                <Box
-                  sx={{
-                    display: 'flex',
-                    width: '100%',
-                    height: '45vh',
+                    height: '50vh',
                     //border:'1px solid red',
                     position:'relative',
                   }}
@@ -199,8 +192,9 @@ const Services = () => {
                         display: 'flex',
                         flexDirection: 'column',
                         textAlign: 'Left',
-                        padding:{xs:'1rem', md:'2rem'},
+                        padding:{xs:'1rem', md:'1.5rem'},
                         backgroundColor: 'white',
+                        boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
                       }}
                     >
                       <Icon
@@ -248,7 +242,7 @@ const Services = () => {
                 {[
                   { id: 4, title: "Business Analytics", content: "Análisis minucioso de datos para informar decisiones estratégicas, optimizar el rendimiento comercial y facilitar la toma de decisiones informadas.", icon:<Poll fontSize="large" style={{ color: '#20447b' }}/>, numero:"04." },
                   { id: 5, title: "Potencial Juvenil", content: "Facilitamos el desarrollo profesional y ofrecemos oportunidades laborales y experiencia valiosa a jóvenes prometedores en el campo de la tecnología.", icon:<Jovenes fontSize="large" style={{ color: '#20447b' }}/>, numero:"05." },
-                  { id: 6, title: "Colaboración Estratégica", content: "Trabajamos como partners estratégicos con grandes empresas de marketing para ofrecer soluciones conjuntas y proyectos de alto impacto.", icon:<Empresas fontSize="large" style={{ color: '#20447b' }}/>, numero:"06." },
+                  { id: 6, title: "Partner Estratégico", content: "Trabajamos como partners estratégicos con grandes empresas de marketing para ofrecer soluciones conjuntas y proyectos de alto impacto.", icon:<Empresas fontSize="large" style={{ color: '#20447b' }}/>, numero:"06." },
                 ].map((item) => (
                   <Grid item key={item.id} xs={12} md={4}>
                     <Container maxWidth="xs"
@@ -257,8 +251,9 @@ const Services = () => {
                         display: 'flex',
                         flexDirection: 'column',
                         textAlign: 'Left',
-                        padding:{xs:'1rem', md:'2rem'},
+                        padding:{xs:'1rem', md:'1.5rem'},
                         backgroundColor:'#ffffff',
+                        boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
                       }}
                     >
                       <Icon
