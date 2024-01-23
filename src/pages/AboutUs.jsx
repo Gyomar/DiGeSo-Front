@@ -126,7 +126,7 @@ const AboutUs = () => {
                         }}
                       />
                       <Typography variant="h4" gutterBottom>
-                        Quienes Somos?
+                        ¿Quiénes Somos?
                       </Typography>
                       <Typography variant="body1">
                         Digital Genius Solutions impulsa el crecimiento de emprendedores y PYMEs con 
@@ -174,12 +174,12 @@ const AboutUs = () => {
                         }}
                       />
                       <Typography variant="h4" gutterBottom>
-                        Nuestra Filosofia
+                        Nuestra Filosofía.
                       </Typography>
                       <Typography variant="body1" >
-                        Creemos en el poder del trabajo en equipo, la dedicación y la pasión. Fomentamos un
-                        entorno colaborativo donde cada miembro contribuye al éxito colectivo. Valoramos la
-                        innovación, la transparencia y la responsabilidad en cada proyecto.
+                        Creemos en el poder del trabajo en equipo, la dedicación y la pasión. Fomentamos
+                        un entorno colaborativo donde cada miembro contribuye al éxito colectivo. 
+                        Valoramos la innovación, la transparencia y la responsabilidad en cada proyecto.
                       </Typography>
                     </CardContent>
                   </Card>

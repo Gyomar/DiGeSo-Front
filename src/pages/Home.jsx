@@ -225,7 +225,7 @@ function Home() {
                         textWrap: 'balance',
                       }}
                     >
-                      Crea asombrosas webs, has crecer tu negocio con DiGeSo
+                      Crea asombrosas páginas web, haz crecer tu negocio con DiGeSo
                     </Typography>
                   </Grow>
                   <Grow
@@ -241,10 +241,10 @@ function Home() {
                         textWrap: 'pretty',
                       }}
                     >
-                      Soluciones de desarrollo web, landing pages, desarrollo de
-                      apps, marketing digital, publicidad, diseño de logos,
-                      sesiones de fotografía, edición de videos, business
-                      intelligence, tiendas virtuales y más...
+                      ¡Bienvenido a Digital Genius Solutions, tu socio integral para alcanzar el
+                      éxito en línea! Nos destacamos por ofrecer servicios especializados en diseño,
+                      desarrollo, eCommerce, marketing y gestión de redes sociales, brindando asistencia
+                      y soporte excepcionales para potenciar tu presencia en el mundo digital.
                     </Typography>
                   </Grow>
 
@@ -299,10 +299,9 @@ function Home() {
                     maxWidth: 540,
                   }}
                 >
-                  Bienvenido a Digital Genius Solutions, tu socio integral para
-                  el éxito en línea. Nos especializamos en ofrecer servicios de
-                  diseño, desarrollo, eCommerce, marketing, social media, y
-                  brindamos asistencia y soporte excepcionales.
+                  Ofrecemos soluciones integrales de desarrollo de sitos web, landing pages,
+                  y aplicaciones, marketing digital, publicidad, diseño de logos, edición de
+                  videos, Business Intelligence y tiendas virtuales. 
                 </Typography>
               </Stack>
             </Box>
