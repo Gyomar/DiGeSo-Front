@@ -17,7 +17,7 @@ const AboutUs = () => {
     <Layaout >
       <Box component="main"
         sx={{
-          backgroundColor:'#fdfdfd',
+          backgroundColor:'#f3f5f5',
           width:'100%',
           minHeight:'100vh',
           position:'relative',
@@ -53,7 +53,7 @@ const AboutUs = () => {
               sx={{
                 display: 'flex',
                 width: '100%',
-                height: '20vh',
+                height: '15vh',
                 //border:'1px solid black',
               }}
             ></Box>
@@ -61,7 +61,7 @@ const AboutUs = () => {
               sx={{
                 display: 'flex',
                 width: '100%',
-                height: '45vh',
+                height: '50vh',
                 //border:'1px solid red',
                 position:'relative',
               }}
@@ -107,7 +107,7 @@ const AboutUs = () => {
               sx={{
                 display: 'flex',
                 width: '100%',
-                minHeight: '35vh',
+                minHeight: '40vh',
                 //border:'1px solid blue',
                 position:'relative',
               }}
@@ -249,9 +249,9 @@ const AboutUs = () => {
                 //border: '1px solid blue',
               }}
             >
-              <Typography variant="h1" gutterBottom
+              <Typography variant="h3" gutterBottom
                 sx={{ 
-                  fontSize: { xs: '3rem', md: '3.5rem' },
+                  //fontSize: { xs: '3rem', md: '3.5rem' },
                   color: '#20447b', 
                 }}
               >
@@ -260,7 +260,7 @@ const AboutUs = () => {
             </Box>
             <Box
               sx={{ 
-                width:'100%',
+                width:'90%',
                 minHeight:'40vh',
                 display: 'flex',
                 //border: '1px solid purple',
@@ -268,8 +268,8 @@ const AboutUs = () => {
             >
               <Grid container spacing={4} justifyContent="center" alignItems="center">
                 {[
-                  { id: 1, title: "Desarrollo Colaborativo", content: "Fomentamos la colaboración entre equipos para crear soluciones digitales innovadoras y eficientes, impulsando proyectos de desarrollo web y aplicaciones.", numero:"01." },
-                  { id: 2, title: "Cultivo de Talento", content: "Identificamos y nutrimos jóvenes talentosos, proporcionándoles oportunidades de crecimiento en un entorno laboral donde aprenden y prosperan.", numero:"02." },
+                  { id: 1, title: "Desarrollo", content: "Fomentamos la colaboración entre equipos para crear soluciones digitales innovadoras y eficientes, impulsando proyectos de desarrollo.", numero:"01." },
+                  { id: 2, title: "Cultivo de Talento", content: "Identificamos y nutrimos jóvenes talentosos, proporcionándoles oportunidades de crecimiento en un entorno laboral donde prosperan.", numero:"02." },
                   { id: 3, title: "Estrategias Digitales", content: "Diseñamos y ejecutamos estrategias de marketing digital personalizadas, maximizando la visibilidad y el impacto de marcas y emprendimientos.", numero:"03." },
                 ].map((item) => (
                   <Grid item key={item.id} xs={12} md={4}>
@@ -279,38 +279,75 @@ const AboutUs = () => {
                         display: 'flex',
                         flexDirection: 'column',
                         textAlign: 'Left',
-                        padding:{xs:'1rem', md:'3rem'},
+                        padding:{xs:'1rem', md:'1.8rem'},
+                        alignItems:'flex-start',
+                        justifyContent:'center',
+                        backgroundColor: 'white', 
+                        boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
+                        //border:'1px solid pink',
                       }}
                     >
-                      <Typography variant="body1" gutterBottom
+                      <Box
                         sx={{ 
-                          fontSize:'5rem' ,
-                          color: '#e9ebed', 
-                          fontWeight:600,
-                          lineHeight:'0.1', 
+                          width:'100%',
+                          //border:'1px solid aqua',
+                          display:'flex',
+                          alignItems:'center',
+                          paddingTop:'1.2rem',
+                        }}
+                      >
+                        <Typography variant="body1" gutterBottom
+                          sx={{ 
+                            fontSize:'5rem' ,
+                            color: '#e9ebed', 
+                            fontWeight:600,
+                            lineHeight:'0.1', 
+                            mb:2,
+                          }}
+                        >
+                          {item.numero}
+                        </Typography>
+                      </Box>
+                      <Box
+                        sx={{ 
+                          width:'100%',
+                          //border:'1px solid purple',
+                          display:'flex',
+                            alignItems:'center',
+                        }}
+                      >
+                        <Typography variant="h5" gutterBottom
+                          sx={{ 
+                            //fontSize:'1.1rem' ,
+                            color: '#20447b', 
+                            margin:'0px',
+
+                          }}
+                        >
+                          {item.title}
+                        </Typography>
+                      </Box>
+                      <Box
+                        sx={{ 
+                          width:'100%',
+                          //border:'1px solid red', 
+                          display:'flex',
+                          alignItems:'center',
+                          mt:2,
                           mb:2,
                         }}
                       >
-                        {item.numero}
-                      </Typography>
-                      <Typography variant="h4" gutterBottom
-                        sx={{ 
-                          //fontSize:'1.1rem' ,
-                          color: '#20447b', 
-                          mb: 2, 
-                        }}
-                      >
-                        {item.title}
-                      </Typography>
-                      <Typography variant="body1" gutterBottom
-                        sx={{ 
-                          //fontSize:'1rem', 
-                          color:'Black',
-                          mb: 2, 
-                        }}
-                      >
-                        {item.content}
-                      </Typography>
+                        <Typography variant="body1" gutterBottom
+                          sx={{ 
+                            //fontSize:'1rem', 
+                            color:'Black',
+                            margin:'0px',
+                          }}
+                        >
+                          {item.content}
+                        </Typography>
+                      </Box>
+                      
                     </Container>
                   </Grid>
                 ))}
@@ -318,16 +355,17 @@ const AboutUs = () => {
             </Box>
             <Box
               sx={{ 
-                width:'100%',
+                width:'90%',
                 minHeight:'40vh',
                 display: 'flex',
+                mb:4,
                 //border: '1px solid grey',
               }}
             >
               <Grid container spacing={4} justifyContent="center" alignItems="center">
                 {[
-                  { id: 4, title: "Social Media", content: "Desarrollamos e implementamos estrategias de contenido efectivas en redes sociales, maximizando la visibilidad, la participación y la construcción de la marca.", numero:"04." },
-                  { id: 5, title: "E-commerce", content: "Creamos plataformas de comercio electrónico intuitivas y atractivas, optimizadas para la experiencia del usuario y diseñadas para impulsar las conversiones.", numero:"05." },
+                  { id: 4, title: "Social Media", content: "Desarrollamos e implementamos estrategias de contenido efectivas en redes sociales, maximizando la visibilidad de la marca.", numero:"04." },
+                  { id: 5, title: "E-commerce", content: "Creamos plataformas de comercio electrónico intuitivas, atractivas y optimizadas diseñadas para impulsar las conversiones.", numero:"05." },
                   { id: 6, title: "Ayuda y soporte", content: "Brindamos asistencia a clientes, asegurando respuestas rápidas y soluciones efectivas para sus preguntas y preocupaciones.", numero:"06." },
                 ].map((item) => (
                   <Grid item key={item.id} xs={12} md={4}>
@@ -337,38 +375,73 @@ const AboutUs = () => {
                         display: 'flex',
                         flexDirection: 'column',
                         textAlign: 'Left',
-                        padding:{xs:'1rem', md:'3rem'},
+                        padding:{xs:'1rem', md:'1.8rem'},
+                        alignItems:'flex-start',
+                        justifyContent:'center',
+                        backgroundColor: 'white',  
+                        boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
+                        //border:'1px solid pink',
                       }}
                     >
-                      <Typography variant="body1" gutterBottom
+                      <Box
                         sx={{ 
-                          fontSize:'5rem' ,
-                          color: '#e9ebed', 
-                          fontWeight:600,
-                          lineHeight:'0.1', 
+                          width:'100%',
+                          //border:'1px solid aqua',
+                          display:'flex',
+                          alignItems:'center',
+                          paddingTop:'1.2rem',
+                        }}
+                      >
+                        <Typography variant="body1" gutterBottom
+                          sx={{ 
+                            fontSize:'5rem' ,
+                            color: '#e9ebed', 
+                            fontWeight:600,
+                            lineHeight:'0.1', 
+                            mb:2,
+                          }}
+                        >
+                          {item.numero}
+                        </Typography>
+                      </Box>
+                      <Box
+                        sx={{ 
+                          width:'100%',
+                          //border:'1px solid purple',
+                          display:'flex',
+                            alignItems:'center',
+                        }}
+                      >
+                        <Typography variant="h5" gutterBottom
+                          sx={{ 
+                            color: '#20447b', 
+                            margin:'0px',
+                          }}
+                        >
+                          {item.title}
+                        </Typography>
+                      </Box>
+                      <Box
+                        sx={{ 
+                          width:'100%',
+                          //border:'1px solid red', 
+                          display:'flex',
+                          alignItems:'center',
+                          mt:2,
                           mb:2,
                         }}
                       >
-                        {item.numero}
-                      </Typography>
-                      <Typography variant="h4" gutterBottom
-                        sx={{ 
-                          //fontSize:'1.1rem' ,
-                          color: '#20447b', 
-                          mb: 2, 
-                        }}
-                      >
-                        {item.title}
-                      </Typography>
-                      <Typography variant="body1" gutterBottom
-                        sx={{ 
-                          //fontSize:'1rem', 
-                          color:'Black',
-                          mb: 2, 
-                        }}
-                      >
-                        {item.content}
-                      </Typography>
+                        <Typography variant="body1" gutterBottom
+                          sx={{ 
+                            //fontSize:'1rem', 
+                            color:'Black',
+                            margin:'0px',
+                          }}
+                        >
+                          {item.content}
+                        </Typography>
+                      </Box>
+                      
                     </Container>
                   </Grid>
                 ))}
@@ -446,7 +519,7 @@ const AboutUs = () => {
                   //border: '1px solid grey',
                 }}
               >
-                <Typography variant="h2" gutterBottom
+                <Typography variant="h3" gutterBottom
                   sx={{ 
                     //fontSize: { xs: '3rem', md: '3.5rem' },
                     display:'flex',
