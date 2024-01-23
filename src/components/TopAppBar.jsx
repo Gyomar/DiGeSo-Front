@@ -1,23 +1,27 @@
 import { useState } from 'react';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import AppBar from '@mui/material/AppBar';
-import Divider from '@mui/material/Divider';
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
+import { Link } from 'react-router-dom';
+import {
+  Box,
+  Button,
+  AppBar,
+  Divider,
+  Drawer,
+  IconButton,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+  Toolbar,
+  Container,
+  Fab,
+  Fade,
+  Slide,
+  useScrollTrigger
+} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import Toolbar from '@mui/material/Toolbar';
-import Container from '@mui/material/Container';
-import PropTypes from 'prop-types';
-import useScrollTrigger from '@mui/material/useScrollTrigger';
-import Fab from '@mui/material/Fab';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import Fade from '@mui/material/Fade';
-import Slide from '@mui/material/Slide';
+import PropTypes from 'prop-types';
+
 import LogoDigesoBlue from '../assets/images/LogoDigesoBlue.svg';
 import LogoDigesoWhite from '../assets/images/LogoDigesoWhite.svg';
 
@@ -116,7 +120,11 @@ const TopAppBar = (props) => {
       <List>
         {navItems.map((item) => (
           <ListItem key={item.label} disablePadding>
-            <ListItemButton href={item.link} sx={{ textAlign: 'center' }}>
+            <ListItemButton
+              LinkComponent={Link}
+              to={item.link}
+              sx={{ textAlign: 'center' }}
+            >
               <ListItemText primary={item.label} />
             </ListItemButton>
           </ListItem>
@@ -165,7 +173,8 @@ const TopAppBar = (props) => {
               <Box sx={{ display: { xs: 'none', md: 'block' } }}>
                 {navItems.map((item) => (
                   <Button
-                    href={item.link}
+                    LinkComponent={Link}
+                    to={item.link}
                     key={item.label}
                     sx={{ color: '#ffffff' }}
                   >

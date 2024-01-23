@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   Box,
   Button,
@@ -248,7 +249,7 @@ function Home() {
                     </Typography>
                   </Grow>
 
-                  <Button variant="contained" color="primary">
+                  <Button LinkComponent={Link} to="/contact-us" variant="contained" color="primary">
                     Empecemos
                   </Button>
                 </Stack>

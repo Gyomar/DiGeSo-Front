@@ -1,9 +1,4 @@
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
-import Stack from '@mui/material/Stack';
+import { Box, Paper, Button, Typography, Grid, Stack, Link } from '@mui/material';
 
 function BannerStart() {
   return (
@@ -73,7 +68,7 @@ function BannerStart() {
               </Stack>
             </Grid>
             <Grid container item xs={12} md={3} justifyContent="center">
-              <Button variant="contained">Empecemos</Button>
+              <Button LinkComponent={Link} href="/contact-us" variant="contained">Empecemos</Button>
             </Grid>
           </Grid>
         </Paper>

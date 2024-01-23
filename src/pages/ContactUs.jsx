@@ -1,10 +1,10 @@
 import { Box, Container, Fade, Stack, Typography } from '@mui/material';
-
 import EmailIcon from '@mui/icons-material/Email';
-import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import FacebookIcon from '@mui/icons-material/Facebook';
-
+import InstagramIcon from '@mui/icons-material/Instagram';
+import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+import WorkIcon from '@mui/icons-material/Work';
 import Layaout from '../containers/Layout';
 import CabezaFondo from '../assets/images/pages-hero-bg.jpg';
 import BannerStart from '../components/BannerStart';
@@ -54,6 +54,7 @@ const ContactUs = () => {
                   gutterBottom
                   sx={{
                     color: '#ffffff',
+                    textAlign: 'center'
                   }}
                 >
                   Contáctanos
@@ -63,6 +64,7 @@ const ContactUs = () => {
                   gutterBottom
                   sx={{
                     color: '#ffffff',
+                    textAlign: 'center'
                   }}
                 >
                   Contacto para servicios empresariales premium
@@ -109,7 +111,7 @@ const ContactUs = () => {
                 direction="column"
                 justifyContent="flex-start"
                 alignItems="center"
-                spacing={3}
+                spacing={4}
               >
                 <Typography
                   variant="h4"
@@ -118,6 +120,7 @@ const ContactUs = () => {
                     textAlign: 'left',
                     minWidth: 300,
                   }}
+                  color="primary"
                 >
                   Ponerse en contacto
                 </Typography>
@@ -125,7 +128,7 @@ const ContactUs = () => {
                   direction="column"
                   justifyContent="flex-start"
                   alignItems="flex-start"
-                  spacing={3}
+                  spacing={2}
                   sx={{
                     minWidth: 300,
                   }}
@@ -136,45 +139,93 @@ const ContactUs = () => {
                   <Stack
                     direction="row"
                     justifyContent="flex-start"
-                    alignItems="flex-start"
+                    alignItems="center"
                     spacing={3}
                   >
                     <EmailIcon color="primary" />
                     <Typography variant="body2" gutterBottom>
-                      info@example.com
+                      info@digesolutions.com
                     </Typography>
                   </Stack>
                   <Stack
                     direction="row"
                     justifyContent="flex-start"
-                    alignItems="flex-start"
-                    spacing={3}
-                  >
-                    <PhoneInTalkIcon color="primary" />
-                    <Typography variant="body2" gutterBottom>
-                      +001 987-654-3210
-                    </Typography>
-                  </Stack>
-                  <Stack
-                    direction="row"
-                    justifyContent="flex-start"
-                    alignItems="flex-start"
+                    alignItems="center"
                     spacing={3}
                   >
                     <WhatsAppIcon color="primary" />
                     <Typography variant="body2" gutterBottom>
-                      +001 987-654-3210
+                      +57 317 227 06 45
                     </Typography>
                   </Stack>
                   <Stack
                     direction="row"
                     justifyContent="flex-start"
-                    alignItems="flex-start"
+                    alignItems="center"
                     spacing={3}
                   >
                     <FacebookIcon color="primary" />
                     <Typography variant="body2" gutterBottom>
-                      @digeso
+                      @digesolutions
+                    </Typography>
+                  </Stack>
+                  <Stack
+                    direction="row"
+                    justifyContent="flex-start"
+                    alignItems="center"
+                    spacing={3}
+                  >
+                    <InstagramIcon color="primary" />
+                    <Typography variant="body2" gutterBottom>
+                      @digesolutions
+                    </Typography>
+                  </Stack>
+                </Stack>
+                <Stack
+                  direction="column"
+                  justifyContent="flex-start"
+                  alignItems="flex-start"
+                  spacing={2}
+                  sx={{
+                    minWidth: 300,
+                  }}
+                >
+                  <Typography variant="subtitle1" gutterBottom>
+                    Ventas
+                  </Typography>
+                  <Stack
+                    direction="row"
+                    justifyContent="flex-start"
+                    alignItems="center"
+                    spacing={3}
+                  >
+                    <WorkIcon color="primary" />
+                    <Typography variant="body2" gutterBottom>
+                      sales@digesolutions.com
+                    </Typography>
+                  </Stack>
+                </Stack>
+                <Stack
+                  direction="column"
+                  justifyContent="flex-start"
+                  alignItems="flex-start"
+                  spacing={2}
+                  sx={{
+                    minWidth: 300,
+                  }}
+                >
+                  <Typography variant="subtitle1" gutterBottom>
+                    Soporte
+                  </Typography>
+                  <Stack
+                    direction="row"
+                    justifyContent="flex-start"
+                    alignItems="center"
+                    spacing={3}
+                  >
+                    <SupportAgentIcon color="primary" />
+                    <Typography variant="body2" gutterBottom>
+                      support@digesolutions.com
                     </Typography>
                   </Stack>
                 </Stack>

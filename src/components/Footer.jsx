@@ -7,6 +7,8 @@ import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import EmailIcon from '@mui/icons-material/Email';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 const navItems = [
   { label: 'Inicio', link: '/' },
@@ -72,8 +74,8 @@ function Footer() {
                   alignItems="stretch"
                   spacing={2}
                 >
-                  <Link href="#"><FacebookIcon sx={{ color: '#ffffff' }} /></Link>
-                  <Link href="#"><InstagramIcon sx={{ color: '#ffffff' }} /></Link>
+                  <Link href="https://www.facebook.com/digesolutions/"><FacebookIcon sx={{ color: '#ffffff' }} /></Link>
+                  <Link href="https://www.instagram.com/digesolutions/"><InstagramIcon sx={{ color: '#ffffff' }} /></Link>
                 </Stack>
               </Stack>
             </Grid>
@@ -152,20 +154,28 @@ function Footer() {
                   alignItems="flex-start"
                   spacing={2}
                 >
-                  <Typography
-                    variant="body2"
-                    gutterBottom
-                    sx={{ textAlign: 'left', color: '#ffffff' }}
+                  <Stack
+                    direction="row"
+                    justifyContent="flex-start"
+                    alignItems="center"
+                    spacing={2}
                   >
-                    info@example.com
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    gutterBottom
-                    sx={{ textAlign: 'left', color: '#ffffff' }}
+                    <EmailIcon sx={{ color: '#ffffff' }} />
+                    <Typography variant="body2" gutterBottom sx={{ textAlign: 'left', color: '#ffffff' }}>
+                    info@digesolutions.com
+                    </Typography>
+                  </Stack>
+                  <Stack
+                    direction="row"
+                    justifyContent="flex-start"
+                    alignItems="center"
+                    spacing={2}
                   >
-                    1-800-1234-567
-                  </Typography>
+                    <WhatsAppIcon sx={{ color: '#ffffff' }} />
+                    <Typography variant="body2" gutterBottom sx={{ textAlign: 'left', color: '#ffffff' }}>
+                      +57 317 227 06 45
+                    </Typography>
+                  </Stack>
                 </Stack>
               </Stack>
             </Grid>
