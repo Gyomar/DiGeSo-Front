@@ -1,4 +1,4 @@
-name: Deploy to cPanel
+name: Deploy to cPanel using FTP
 
 on:
   push:
@@ -11,24 +11,26 @@ jobs:
 
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Set Up Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node
       with:
         node-version: 20
 
     - name: Install Dependencies
-      run: pnpm install
+      run: |
+        npm install -g pnpm
+        pnpm install
 
     - name: Build React App
       run: pnpm run build
 
     - name: Deploy to cPanel
-      uses: actions/ssh-deploy@v2
+      uses: SamKirkland/FTP-Deploy-Action@4.3.4
       with:
-        server: ${{ secrets.CPANEL_HOST }}
-        username: ${{ secrets.CPANEL_USER }}
-        password: ${{ secrets.CPANEL_PASSWORD }}
-        source: dist/
-        dest: public_html/
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: public_html
+        local-dir: dist
