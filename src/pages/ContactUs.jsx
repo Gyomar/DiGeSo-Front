@@ -56,7 +56,7 @@ const ContactUs = () => {
                     color: '#ffffff',
                   }}
                 >
-                  Contactanos
+                  Contáctanos
                 </Typography>
                 <Typography
                   variant="h5"
