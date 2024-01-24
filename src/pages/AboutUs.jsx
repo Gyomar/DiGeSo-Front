@@ -175,7 +175,7 @@ const AboutUs = () => {
         }}
       >
         <Container maxWidth="lg">
-          <Box sx={{ top: -90, position: 'relative' }}>
+          <Box sx={{ top: -80, position: 'relative' }}>
             <Grid container spacing={2} justifyContent="center">
               {cardsAboutList.map((item) => (
                 <Grid
@@ -279,7 +279,7 @@ const AboutUs = () => {
                           lineHeight={0}
                           fontWeight="bold"
                           sx={{
-                            color: '#e9ebed',
+                            color: '#cccdce',
                             position: 'relative',
                             bottom: -2,
                           }}

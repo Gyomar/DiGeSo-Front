@@ -161,7 +161,7 @@ const cardsTeamList = [
     index: 3,
     title: 'Manuel Buitrago',
     description: 'Diseñador Gráfico y UI/UX',
-    review: `Soy Manuel, un joven diseñador gráfico recién graduado de bachiller. Digital Genius me ha brindado la emocionante oportunidad de aplicar mi talento y ejercer mi primer trabajo profesional, mientras continúo mis estudios universitarios.`,
+    review: `Soy Manuel, un joven diseñador gráfico en formación y crecimiento. Digital Genius me ha brindado la emocionante oportunidad de aplicar mi talento, brindando un enfoque creativo, juvenil, actual y lleno de innovación para proyectos inspiradores y desafiantes.`,
     image: FotoManuel,
   },
 ];
@@ -205,7 +205,7 @@ function Home() {
         <Box component="main" sx={{ width: '100vw', zIndex: 1 }}>
           <Container maxWidth="lg">
             <Grid container spacing={2} sx={{ height: '100vh', px: 4 }}>
-              <Grid item xs={12} md={5}>
+              <Grid item xs={12} md={6} >
                 <Stack
                   direction="column"
                   justifyContent="center"
