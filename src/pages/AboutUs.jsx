@@ -329,7 +329,7 @@ const AboutUs = () => {
               <Box
                 sx={{
                   width: '100%',
-                  height: { xs: '10vh', lg: '70vh' },
+                  height: { xs: '10vh', lg: 600 },
                   backgroundImage: `url(${aboutus})`,
                   backgroundRepeat: 'no-repeat',
                   backgroundSize: 'cover',
@@ -340,7 +340,7 @@ const AboutUs = () => {
                 <Box
                   sx={{
                     width: '100%',
-                    height: { xs: '10vh', lg: '70vh' },
+                    height: { xs: '10vh', lg: 600 },
                     position: 'absolute',
                     backgroundColor: '#20447B',
                     opacity: 0.7,
@@ -356,13 +356,13 @@ const AboutUs = () => {
                 width: { xs: '100%', lg: '50%' },
               }}
             >
-              <Box sx={{ width: '100%', height: { xs: 'auto', lg: '72vh' }}}>
+              <Box sx={{ width: '100%', height: { xs: 'auto', lg: 600 }}}>
                 <Stack
                   direction="column"
                   justifyContent="center"
                   alignItems="stretch"
                   spacing={4}
-                  sx={{ px: { xs: 2, sm: 6, md: 8 }, pt: 6 }}
+                  sx={{ px: { xs: 2, sm: 6, md: 8 }, pt: 5 }}
                 >
                   <Typography
                     variant="h3"
