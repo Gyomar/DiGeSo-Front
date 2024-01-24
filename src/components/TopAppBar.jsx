@@ -149,7 +149,7 @@ const TopAppBar = (props) => {
           component="nav"
           sx={{ backgroundColor: 'transparent', boxShadow: 'none', pt: 2 }}
         >
-          <Container maxWidth="xl">
+          <Container maxWidth="lg">
             <Toolbar sx={{ justifyContent: 'space-between' }}>
               <IconButton
                 color="inherit"

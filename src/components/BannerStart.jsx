@@ -1,6 +1,14 @@
-import { Box, Paper, Button, Typography, Grid, Stack, Link } from '@mui/material';
+import {
+  Box,
+  Paper,
+  Button,
+  Typography,
+  Grid,
+  Stack,
+  Link,
+} from '@mui/material';
 
-function BannerStart() {
+const BannerStart = () => {
   return (
     <Stack
       direction="column"
@@ -48,8 +56,10 @@ function BannerStart() {
                 <Typography
                   variant="h4"
                   gutterBottom
+                  fontWeight="bold"
                   sx={{
                     textAlign: 'left',
+                    textWrap: 'balance',
                   }}
                   color="primary"
                 >
@@ -58,7 +68,7 @@ function BannerStart() {
                 <Typography
                   variant="body1"
                   gutterBottom
-                  sx={{ textAlign: 'left' }}
+                  sx={{ textAlign: 'left', textWrap: 'pretty' }}
                 >
                   ¿Estás listo para llevar tu negocio al siguiente nivel?
                   Empieza tu proyecto con nosotros y descubre cómo podemos
@@ -68,7 +78,13 @@ function BannerStart() {
               </Stack>
             </Grid>
             <Grid container item xs={12} md={3} justifyContent="center">
-              <Button LinkComponent={Link} href="/contact-us" variant="contained">Empecemos</Button>
+              <Button
+                LinkComponent={Link}
+                href="/contact-us"
+                variant="contained"
+              >
+                Empecemos
+              </Button>
             </Grid>
           </Grid>
         </Paper>

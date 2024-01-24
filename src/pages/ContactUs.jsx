@@ -20,9 +20,8 @@ const ContactUs = () => {
         <Box
           sx={{
             display: 'flex',
-            objectFit: 'cover',
             width: '100%',
-            height: '80vh',
+            height: '60vh',
             backgroundImage: `url(${CabezaFondo})`,
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
@@ -33,7 +32,7 @@ const ContactUs = () => {
             sx={{
               display: 'flex',
               width: '100%',
-              height: '80vh',
+              height: '60vh',
               position: 'absolute',
               backgroundColor: '#101218',
               opacity: 0.8,
@@ -41,17 +40,18 @@ const ContactUs = () => {
             }}
           />
           <Box component="main" sx={{ width: '100vw', zIndex: 1  }}>
-            <Container maxWidth="xl">
+            <Container maxWidth="lg">
               <Stack
                 direction="column"
                 justifyContent="center"
                 alignItems="center"
                 spacing={3}
-                sx={{ height: '80vh' }}
+                sx={{ height: '60vh' }}
               >
                 <Typography
                   variant="h3"
                   gutterBottom
+                  fontWeight="bold"
                   sx={{
                     color: '#ffffff',
                     textAlign: 'center'
@@ -62,9 +62,11 @@ const ContactUs = () => {
                 <Typography
                   variant="h5"
                   gutterBottom
+                  fontWeight="bold"
                   sx={{
                     color: '#ffffff',
-                    textAlign: 'center'
+                    textAlign: 'center',
+                    textWrap: 'balance'
                   }}
                 >
                   Contacto para servicios empresariales premium
@@ -76,6 +78,7 @@ const ContactUs = () => {
                     color: '#ffffff',
                     maxWidth: 540,
                     textAlign: 'center',
+                    textWrap: 'pretty'
                   }}
                 >
                   Bienvenido a nuestro centro de contacto exclusivo para
@@ -99,14 +102,14 @@ const ContactUs = () => {
           py: 10,
         }}
       >
-        <Container maxWidth="xl">
+        <Container maxWidth="lg">
           <Stack
             direction="column"
             justifyContent="center"
             alignItems="stretch"
             spacing={8}
           >
-            <Box>
+            <Box sx={{minWidth: 270, maxWidth: 300, p: 2, alignSelf: 'center'}}>
               <Stack
                 direction="column"
                 justifyContent="flex-start"
@@ -116,9 +119,10 @@ const ContactUs = () => {
                 <Typography
                   variant="h4"
                   gutterBottom
+                  fontWeight="bold"
                   sx={{
                     textAlign: 'left',
-                    minWidth: 300,
+                    width: '100%',
                   }}
                   color="primary"
                 >
@@ -130,10 +134,10 @@ const ContactUs = () => {
                   alignItems="flex-start"
                   spacing={2}
                   sx={{
-                    minWidth: 300,
+                    width: '100%',
                   }}
                 >
-                  <Typography variant="subtitle1" gutterBottom>
+                  <Typography variant="subtitle1" gutterBottom fontWeight="bold">
                     Contáctanos
                   </Typography>
                   <Stack
@@ -187,10 +191,10 @@ const ContactUs = () => {
                   alignItems="flex-start"
                   spacing={2}
                   sx={{
-                    minWidth: 300,
+                    width: '100%',
                   }}
                 >
-                  <Typography variant="subtitle1" gutterBottom>
+                  <Typography variant="subtitle1" gutterBottom fontWeight="bold">
                     Ventas
                   </Typography>
                   <Stack
@@ -211,10 +215,10 @@ const ContactUs = () => {
                   alignItems="flex-start"
                   spacing={2}
                   sx={{
-                    minWidth: 300,
+                    width: '100%',
                   }}
                 >
-                  <Typography variant="subtitle1" gutterBottom>
+                  <Typography variant="subtitle1" gutterBottom fontWeight="bold">
                     Soporte
                   </Typography>
                   <Stack

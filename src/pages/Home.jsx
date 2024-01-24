@@ -152,7 +152,7 @@ const cardsTeamList = [
   },
   {
     index: 2,
-    title: 'Dayana Perez',
+    title: 'Dayana Pérez',
     description: 'Desarrolladora Web y Marketing Digital',
     review: `¡Hola! Soy Dayana, Ingeniera en informática con más de 8 años de experiencia como programadora web frontend y cofundadora de Digital Genius, una empresa digital donde convergen pasión y profesionalismo para impulsar el éxito de empresas y emprendedores mediante desarrollos de aplicaciones y estrategias de marketing digital.`,
     image: FotoDayana,
@@ -203,7 +203,7 @@ function Home() {
           }}
         />
         <Box component="main" sx={{ width: '100vw', zIndex: 1 }}>
-          <Container maxWidth="xl">
+          <Container maxWidth="lg">
             <Grid container spacing={2} sx={{ height: '100vh', px: 4 }}>
               <Grid item xs={12} md={5}>
                 <Stack
@@ -221,6 +221,7 @@ function Home() {
                     <Typography
                       variant="h3"
                       gutterBottom
+                      fontWeight="bold"
                       sx={{
                         color: '#ffffff',
                         textWrap: 'balance',
@@ -268,7 +269,7 @@ function Home() {
           py: 10,
         }}
       >
-        <Container maxWidth="xl">
+        <Container maxWidth="lg">
           <Stack
             direction="column"
             justifyContent="center"
@@ -285,6 +286,7 @@ function Home() {
                 <Typography
                   variant="h2"
                   gutterBottom
+                  fontWeight="bold"
                   sx={{
                     textAlign: 'center',
                   }}
@@ -298,6 +300,7 @@ function Home() {
                   sx={{
                     textAlign: 'center',
                     maxWidth: 540,
+                    textWrap: 'pretty'
                   }}
                 >
                   Ofrecemos soluciones integrales de desarrollo de sitos web, landing pages,
@@ -309,13 +312,16 @@ function Home() {
             <Box>
               <Grid container spacing={2} justifyContent="center">
                 {cardsServiceList.map((item) => (
-                  <Grid item key={item.title}>
+                  <Grid item key={item.title} sx={{
+                    width: {xs: '95%', md: '48%', lg: '30%'},
+                  }}>
                     <Card
                       sx={{
-                        minHeight: 325,
-                        minWidth: 270,
-                        maxWidth: 380,
+                        minHeight: {xs: 240, md: 280, lg: 300},
+                        width: '100%',
                         p: 2,
+                        display: 'flex',
+                        alignItems: 'center'
                       }}
                     >
                       <CardContent>
@@ -323,7 +329,7 @@ function Home() {
                         <Typography variant="h6" gutterBottom>
                           {item.title}
                         </Typography>
-                        <Typography variant="body1">
+                        <Typography variant="body1" sx={{textWrap: 'pretty'}}>
                           {item.description}
                         </Typography>
                       </CardContent>
@@ -345,7 +351,7 @@ function Home() {
           py: 10,
         }}
       >
-        <Container maxWidth="xl">
+        <Container maxWidth="lg">
           <Stack
             direction="column"
             justifyContent="center"
@@ -362,6 +368,7 @@ function Home() {
                 <Typography
                   variant="h2"
                   gutterBottom
+                  fontWeight="bold"
                   sx={{
                     textAlign: 'center',
                   }}
@@ -375,6 +382,7 @@ function Home() {
                   sx={{
                     textAlign: 'center',
                     maxWidth: 540,
+                    textWrap: 'pretty'
                   }}
                 >
                   En DiGeSo, aprovechamos tecnologías de vanguardia, como React,
@@ -393,9 +401,9 @@ function Home() {
               >
                 {cardsTecnologyList.map((item) => (
                   <Grid item key={item.title}>
-                    <Card sx={{ width: 240 }} elevation={0}>
+                    <Card sx={{ width: {xs: 105, sm: 180} }} elevation={0}>
                       <CardMedia
-                        sx={{ height: 40, backgroundSize: 'contain' }}
+                        sx={{ height: 40, backgroundSize: 'contain', backgroundPosition: 'center center' }}
                         image={item.image}
                         title={item.title}
                       />
@@ -404,6 +412,7 @@ function Home() {
                           variant="h6"
                           gutterBottom
                           textAlign="center"
+                          fontWeight="bold"
                         >
                           {item.title}
                         </Typography>
@@ -430,7 +439,7 @@ function Home() {
           py: 10,
         }}
       >
-        <Container maxWidth="xl">
+        <Container maxWidth="lg">
           <Stack
             direction="column"
             justifyContent="center"
@@ -447,6 +456,7 @@ function Home() {
                 <Typography
                   variant="h2"
                   gutterBottom
+                  fontWeight="bold"
                   sx={{
                     textAlign: 'center',
                   }}
@@ -460,6 +470,7 @@ function Home() {
                   sx={{
                     textAlign: 'center',
                     maxWidth: 540,
+                    textWrap: 'pretty'
                   }}
                 >
                   Nuestro talentoso equipo incluye desarrolladores web
@@ -506,7 +517,7 @@ function Home() {
                           backgroundColor: '#ffffff',
                         }}
                       >
-                        <Typography variant="h6" gutterBottom color="primary">
+                        <Typography variant="h6" gutterBottom color="primary" fontWeight="bold">
                           {item.title}
                         </Typography>
                         <Typography variant="subtitle1">

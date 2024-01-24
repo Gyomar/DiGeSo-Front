@@ -16,8 +16,7 @@ const navItems = [
   { label: 'Servicios', link: '/services' },
   { label: 'Contáctanos', link: '/contact-us' },
 ];
-
-function Footer() {
+const Footer = () => {
   return (
     <>
       <Box
@@ -31,7 +30,7 @@ function Footer() {
           px: {xs: 1, sm: 4},
         }}
       >
-        <Container maxWidth="xl">
+        <Container maxWidth="lg">
           <Grid
             container
             spacing={2}
@@ -59,7 +58,7 @@ function Footer() {
                 <Typography
                   variant="body2"
                   gutterBottom
-                  sx={{ textAlign: 'left', color: '#ffffff' }}
+                  sx={{ textAlign: 'left', color: '#ffffff', textWrap: 'pretty' }}
                 >
                   Tu Socio Digital Integral Diseño | Desarrollo | eCommerce |
                   Marketing | Social Media Soporte Técnico | Tecnologías: React,
@@ -149,7 +148,7 @@ function Footer() {
                   Ponerse en contacto
                 </Typography>
                 <Stack
-                  direction={{ xs: 'row', md: 'column' }}
+                  direction={{ xs: 'column', sm: 'row', md: 'column' }}
                   justifyContent="flex-start"
                   alignItems="flex-start"
                   spacing={2}
