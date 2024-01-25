@@ -40,6 +40,7 @@ import LogoVite from '../assets/images/vitejs.svg';
 import LogoWordpress from '../assets/images/wordpress.svg';
 import LogoMetabusiness from '../assets/images/meta.svg';
 import LogoPrestashop from '../assets/images/prestashop.svg';
+import '../styles/_vars.scss';
 
 const cardsServiceList = [
   {
@@ -205,7 +206,7 @@ function Home() {
         <Box component="main" sx={{ width: '100vw', zIndex: 1 }}>
           <Container maxWidth="lg">
             <Grid container spacing={2} sx={{ height: '100vh', px: 4 }}>
-              <Grid item xs={12} md={6} >
+              <Grid item xs={12} md={6}>
                 <Stack
                   direction="column"
                   justifyContent="center"
@@ -223,11 +224,12 @@ function Home() {
                       gutterBottom
                       fontWeight="bold"
                       sx={{
-                        color: '#ffffff',
+                        color: 'var(--white)',
                         textWrap: 'balance',
                       }}
                     >
-                      Crea asombrosas páginas web, haz crecer tu negocio con DiGeSo
+                      Crea asombrosas páginas web, haz crecer tu negocio con
+                      DiGeSo
                     </Typography>
                   </Grow>
                   <Grow
@@ -239,18 +241,25 @@ function Home() {
                       variant="body1"
                       gutterBottom
                       sx={{
-                        color: '#ffffff',
+                        color: 'var(--white)',
                         textWrap: 'pretty',
                       }}
                     >
-                      ¡Bienvenido a Digital Genius Solutions, tu socio integral para alcanzar el
-                      éxito en línea! Nos destacamos por ofrecer servicios especializados en diseño,
-                      desarrollo, eCommerce, marketing y gestión de redes sociales, brindando asistencia
-                      y soporte excepcionales para potenciar tu presencia en el mundo digital.
+                      ¡Bienvenido a Digital Genius Solutions, tu socio integral
+                      para alcanzar el éxito en línea! Nos destacamos por
+                      ofrecer servicios especializados en diseño, desarrollo,
+                      eCommerce, marketing y gestión de redes sociales,
+                      brindando asistencia y soporte excepcionales para
+                      potenciar tu presencia en el mundo digital.
                     </Typography>
                   </Grow>
 
-                  <Button LinkComponent={Link} to="/contact-us" variant="contained" color="primary">
+                  <Button
+                    LinkComponent={Link}
+                    to="/contact-us"
+                    variant="contained"
+                    color="primary"
+                  >
                     Empecemos
                   </Button>
                 </Stack>
@@ -300,28 +309,33 @@ function Home() {
                   sx={{
                     textAlign: 'center',
                     maxWidth: 540,
-                    textWrap: 'pretty'
+                    textWrap: 'pretty',
                   }}
                 >
-                  Ofrecemos soluciones integrales de desarrollo de sitos web, landing pages,
-                  y aplicaciones, marketing digital, publicidad, diseño de logos, edición de
-                  videos, Business Intelligence y tiendas virtuales. 
+                  Ofrecemos soluciones integrales de desarrollo de sitos web,
+                  landing pages, y aplicaciones, marketing digital, publicidad,
+                  diseño de logos, edición de videos, Business Intelligence y
+                  tiendas virtuales.
                 </Typography>
               </Stack>
             </Box>
             <Box>
               <Grid container spacing={2} justifyContent="center">
                 {cardsServiceList.map((item) => (
-                  <Grid item key={item.title} sx={{
-                    width: {xs: '95%', md: '48%', lg: '30%'},
-                  }}>
+                  <Grid
+                    item
+                    key={item.title}
+                    sx={{
+                      width: { xs: '95%', md: '48%', lg: '30%' },
+                    }}
+                  >
                     <Card
                       sx={{
-                        minHeight: {xs: 240, md: 280, lg: 300},
+                        minHeight: { xs: 240, md: 280, lg: 300 },
                         width: '100%',
                         p: 2,
                         display: 'flex',
-                        alignItems: 'center'
+                        alignItems: 'center',
                       }}
                     >
                       <CardContent>
@@ -329,7 +343,7 @@ function Home() {
                         <Typography variant="h6" gutterBottom>
                           {item.title}
                         </Typography>
-                        <Typography variant="body1" sx={{textWrap: 'pretty'}}>
+                        <Typography variant="body1" sx={{ textWrap: 'pretty' }}>
                           {item.description}
                         </Typography>
                       </CardContent>
@@ -382,7 +396,7 @@ function Home() {
                   sx={{
                     textAlign: 'center',
                     maxWidth: 540,
-                    textWrap: 'pretty'
+                    textWrap: 'pretty',
                   }}
                 >
                   En DiGeSo, aprovechamos tecnologías de vanguardia, como React,
@@ -401,9 +415,13 @@ function Home() {
               >
                 {cardsTecnologyList.map((item) => (
                   <Grid item key={item.title}>
-                    <Card sx={{ width: {xs: 105, sm: 180} }} elevation={0}>
+                    <Card sx={{ width: { xs: 105, sm: 180 } }} elevation={0}>
                       <CardMedia
-                        sx={{ height: 40, backgroundSize: 'contain', backgroundPosition: 'center center' }}
+                        sx={{
+                          height: 40,
+                          backgroundSize: 'contain',
+                          backgroundPosition: 'center center',
+                        }}
                         image={item.image}
                         title={item.title}
                       />
@@ -470,7 +488,7 @@ function Home() {
                   sx={{
                     textAlign: 'center',
                     maxWidth: 540,
-                    textWrap: 'pretty'
+                    textWrap: 'pretty',
                   }}
                 >
                   Nuestro talentoso equipo incluye desarrolladores web
@@ -517,13 +535,21 @@ function Home() {
                           backgroundColor: '#ffffff',
                         }}
                       >
-                        <Typography variant="h6" gutterBottom color="primary" fontWeight="bold">
+                        <Typography
+                          variant="h6"
+                          gutterBottom
+                          color="primary"
+                          fontWeight="bold"
+                        >
                           {item.title}
                         </Typography>
                         <Typography variant="subtitle1">
                           {item.description}
                         </Typography>
-                        <Collapse in={expandedCardIndex === item.index} {...{ timeout: 1000 }}>
+                        <Collapse
+                          in={expandedCardIndex === item.index}
+                          {...{ timeout: 1000 }}
+                        >
                           <Typography
                             variant="body1"
                             sx={{ height: 294, textWrap: 'pretty', pt: 2 }}

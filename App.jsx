@@ -1,5 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { ThemeProvider, createTheme, responsiveFontSizes } from '@mui/material/styles';
+import {
+  ThemeProvider,
+  createTheme,
+  responsiveFontSizes,
+  alpha,
+} from '@mui/material/styles';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import Home from '/src/pages/Home';
@@ -15,21 +20,41 @@ import Dosis600woff2 from '/src/assets/fonts/dosis-v32-latin-600.woff2';
 import { esES as pickersEsES } from '@mui/x-date-pickers/locales';
 import { esES as coreEsES } from '@mui/material/locale';
 
-const theme = responsiveFontSizes(createTheme({
-  typography: {
-    fontFamily: ['Dosis'],
-  },
-  palette: {
-    primary: {
-      main: '#20447B',
+const primaryMain = '#20447B';
+const greyMain = '#f3f5f5';
+const whiteMain = '#ffffff';
+const balackMain = '#101218';
+const greenMain = '#25d366';
+
+const theme = responsiveFontSizes(
+  createTheme({
+    typography: {
+      fontFamily: ['Dosis'],
     },
-    secondary: {
-      main: '#ffc400',
+    palette: {
+      primary: {
+        main: primaryMain,
+        light: alpha(primaryMain, 0.7),
+        dark: '#1b3966',
+      },
+      grey: {
+        main: greyMain,
+      },
+      white: {
+        main: whiteMain,
+      },
+      black: {
+        main: balackMain,
+      },
+      green: {
+        main: greenMain,
+        light: alpha(greenMain, 0.7),
+        dark: '#21b758',
+      },
     },
-  },
-  components: {
-    MuiCssBaseline: {
-      styleOverrides: `
+    components: {
+      MuiCssBaseline: {
+        styleOverrides: `
 			@font-face {
         font-display: swap; 
         font-family: 'Dosis';
@@ -59,40 +84,41 @@ const theme = responsiveFontSizes(createTheme({
         src: url(${Dosis600woff2}) format('woff2');
       }
       `,
-    },
-    MuiTypography: {
-      defaultProps: {
-        fontWeight: 500,
+      },
+      MuiTypography: {
+        defaultProps: {
+          fontWeight: 500,
+        },
+      },
+      MuiTextField: {
+        defaultProps: {
+          fontWeight: 500,
+          fontSize: '16px',
+        },
+      },
+      MuiSelect: {
+        defaultProps: {
+          fontWeight: 500,
+          fontSize: '16px',
+        },
+      },
+      MuiInputLabel: {
+        defaultProps: {
+          fontWeight: 500,
+          fontSize: '16px',
+        },
+      },
+      MuiFormControlLabel: {
+        defaultProps: {
+          fontWeight: 500,
+          fontSize: '16px',
+        },
       },
     },
-    MuiTextField: {
-      defaultProps: {
-        fontWeight: 500,
-        fontSize: '16px',
-      },
-    },
-    MuiSelect: {
-      defaultProps: {
-        fontWeight: 500,
-        fontSize: '16px',
-      },
-    },
-    MuiInputLabel: {
-      defaultProps: {
-        fontWeight: 500,
-        fontSize: '16px',
-      },
-    },
-    MuiFormControlLabel: {
-      defaultProps: {
-        fontWeight: 500,
-        fontSize: '16px',
-      },
-    },
-  },
-  pickersEsES,
-  coreEsES,
-}));
+    pickersEsES,
+    coreEsES,
+  }),
+);
 
 const App = () => {
   return (

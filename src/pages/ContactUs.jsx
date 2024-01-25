@@ -8,6 +8,7 @@ import WorkIcon from '@mui/icons-material/Work';
 import Layaout from '../containers/Layout';
 import CabezaFondo from '../assets/images/pages-hero-bg.jpg';
 import BannerStart from '../components/BannerStart';
+import '../styles/_vars.scss';
 
 const ContactUs = () => {
   return (
@@ -53,7 +54,7 @@ const ContactUs = () => {
                   gutterBottom
                   fontWeight="bold"
                   sx={{
-                    color: '#ffffff',
+                    color: 'var(--white)',
                     textAlign: 'center'
                   }}
                 >
@@ -64,7 +65,7 @@ const ContactUs = () => {
                   gutterBottom
                   fontWeight="bold"
                   sx={{
-                    color: '#ffffff',
+                    color: 'var(--white)',
                     textAlign: 'center',
                     textWrap: 'balance'
                   }}
@@ -75,7 +76,7 @@ const ContactUs = () => {
                   variant="body1"
                   gutterBottom
                   sx={{
-                    color: '#ffffff',
+                    color: 'var(--white)',
                     maxWidth: 540,
                     textAlign: 'center',
                     textWrap: 'pretty'

@@ -9,6 +9,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import EmailIcon from '@mui/icons-material/Email';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import '../styles/_vars.scss';
 
 const navItems = [
   { label: 'Inicio', link: '/' },
@@ -23,7 +24,7 @@ const Footer = () => {
         sx={{
           display: 'flex',
           width: '100%',
-          backgroundColor: '#101218',
+          backgroundColor: 'var(--black)',
           alignItems: 'center',
           justifyContent: 'center',
           py: 8,
@@ -50,7 +51,7 @@ const Footer = () => {
                   gutterBottom
                   sx={{
                     textAlign: 'left',
-                    color: '#ffffff',
+                    color: 'var(--white)',
                   }}
                 >
                   Digital Genius Solutions
@@ -58,7 +59,7 @@ const Footer = () => {
                 <Typography
                   variant="body2"
                   gutterBottom
-                  sx={{ textAlign: 'left', color: '#ffffff', textWrap: 'pretty' }}
+                  sx={{ textAlign: 'left', color: 'var(--white)', textWrap: 'pretty' }}
                 >
                   Tu Socio Digital Integral Diseño | Desarrollo | eCommerce |
                   Marketing | Social Media Soporte Técnico | Tecnologías: React,
@@ -73,8 +74,8 @@ const Footer = () => {
                   alignItems="stretch"
                   spacing={2}
                 >
-                  <Link href="https://www.facebook.com/digesolutions/"><FacebookIcon sx={{ color: '#ffffff' }} /></Link>
-                  <Link href="https://www.instagram.com/digesolutions/"><InstagramIcon sx={{ color: '#ffffff' }} /></Link>
+                  <Link href="https://www.facebook.com/digesolutions/"><FacebookIcon color="white" /></Link>
+                  <Link href="https://www.instagram.com/digesolutions/"><InstagramIcon color="white" /></Link>
                 </Stack>
               </Stack>
             </Grid>
@@ -96,7 +97,7 @@ const Footer = () => {
                   gutterBottom
                   sx={{
                     textAlign: 'left',
-                    color: '#ffffff',
+                    color: 'var(--white)',
                   }}
                 >
                   Compañia
@@ -115,7 +116,7 @@ const Footer = () => {
                       underline="none"
                       sx={{
                         textAlign: 'left',
-                        color: '#ffffff',
+                        color: 'var(--white)',
                       }}
                     >
                       {item.label}
@@ -142,7 +143,7 @@ const Footer = () => {
                   gutterBottom
                   sx={{
                     textAlign: 'left',
-                    color: '#ffffff',
+                    color: 'var(--white)',
                   }}
                 >
                   Ponerse en contacto
@@ -159,8 +160,8 @@ const Footer = () => {
                     alignItems="center"
                     spacing={2}
                   >
-                    <EmailIcon sx={{ color: '#ffffff' }} />
-                    <Typography variant="body2" gutterBottom sx={{ textAlign: 'left', color: '#ffffff' }}>
+                    <EmailIcon color="white" />
+                    <Typography variant="body2" gutterBottom sx={{ textAlign: 'left', color: 'var(--white)' }}>
                     info@digesolutions.com
                     </Typography>
                   </Stack>
@@ -170,8 +171,8 @@ const Footer = () => {
                     alignItems="center"
                     spacing={2}
                   >
-                    <WhatsAppIcon sx={{ color: '#ffffff' }} />
-                    <Typography variant="body2" gutterBottom sx={{ textAlign: 'left', color: '#ffffff' }}>
+                    <WhatsAppIcon color="white" />
+                    <Typography variant="body2" gutterBottom sx={{ textAlign: 'left', color: 'var(--white)' }}>
                       +57 317 227 06 45
                     </Typography>
                   </Stack>
@@ -201,7 +202,7 @@ const Footer = () => {
           <Typography
             variant="caption"
             gutterBottom
-            sx={{ textAlign: 'center', color: '#ffffff' }}
+            sx={{ textAlign: 'center', color: 'var(--white)' }}
           >
             Copyright © 2024 Digital Genius Solutions | Desarrollado por
             Digital Genius Solutions

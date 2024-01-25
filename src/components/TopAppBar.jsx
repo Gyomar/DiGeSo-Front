@@ -16,10 +16,11 @@ import {
   Fab,
   Fade,
   Slide,
-  useScrollTrigger
+  useScrollTrigger,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import PropTypes from 'prop-types';
 
 import LogoDigesoBlue from '../assets/images/LogoDigesoBlue.svg';
@@ -32,7 +33,6 @@ const navItems = [
   { label: 'Servicios', link: '/services' },
   { label: 'Contáctenos', link: '/contact-us' },
 ];
-
 function ScrollTop(props) {
   const { children } = props;
 
@@ -58,7 +58,7 @@ function ScrollTop(props) {
       <Box
         onClick={handleClick}
         role="presentation"
-        sx={{ position: 'fixed', bottom: 16, right: 16 }}
+        sx={{ position: 'fixed', bottom: 80, right: 24 }}
       >
         {children}
       </Box>
@@ -176,7 +176,7 @@ const TopAppBar = (props) => {
                     LinkComponent={Link}
                     to={item.link}
                     key={item.label}
-                    sx={{ color: '#ffffff' }}
+                    color="white"
                   >
                     {item.label}
                   </Button>
@@ -206,6 +206,9 @@ const TopAppBar = (props) => {
           {drawer}
         </Drawer>
       </nav>
+      <Fab href="https://web.whatsapp.com/send?autoload=1&app_absent=1&phone=573172270645&text=Hola%2C+estoy+interesado+en+tus+servicios" aria-label="WhatsApp" sx={{ position: 'fixed', bottom: 16, right: 16}} color="green" target='_blank'>
+          <WhatsAppIcon fontSize="large" color="white" />
+      </Fab>
       <ScrollTop {...props}>
         <Fab size="small" aria-label="scroll back to top">
           <KeyboardArrowUpIcon />

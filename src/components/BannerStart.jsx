@@ -7,6 +7,7 @@ import {
   Stack,
   Link,
 } from '@mui/material';
+import '../styles/_vars.scss';
 
 const BannerStart = () => {
   return (
@@ -29,7 +30,7 @@ const BannerStart = () => {
         <Paper
           elevation={24}
           sx={{
-            backgroundColor: '#ffffff',
+            backgroundColor: 'var(--white)',
             minHeight: 200,
             width: '60vw',
             minWidth: 270,

@@ -17,6 +17,7 @@ import Marketing from '@mui/icons-material/SystemSecurityUpdateGood';
 import CabezaFondo from '../assets/images/pages-hero-bg.jpg';
 import Layaout from '../containers/Layout';
 import BannerStart from '../components/BannerStart';
+import '../styles/_vars.scss';
 
 const cardHelpYouList = [
   {
@@ -101,7 +102,7 @@ const Services = () => {
                   gutterBottom
                   fontWeight="bold"
                   sx={{
-                    color: '#ffffff',
+                    color: 'var(--white)',
                     textAlign: 'center',
                   }}
                 >
@@ -112,7 +113,7 @@ const Services = () => {
                   gutterBottom
                   fontWeight="bold"
                   sx={{
-                    color: '#ffffff',
+                    color: 'var(--white)',
                     textAlign: 'center',
                     textWrap: 'balance',
                   }}
@@ -123,7 +124,7 @@ const Services = () => {
                   variant="body1"
                   gutterBottom
                   sx={{
-                    color: '#ffffff',
+                    color: 'var(--white)',
                     maxWidth: 540,
                     textAlign: 'center',
                     textWrap: 'pretty',

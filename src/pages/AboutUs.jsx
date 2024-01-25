@@ -15,6 +15,7 @@ import BannerStart from '../components/BannerStart';
 import Layaout from '../containers/Layout';
 import CabezaFondo from '../assets/images/pages-hero-bg.jpg';
 import aboutus from '../assets/images/why-choose-us.jpg';
+import '../styles/_vars.scss';
 
 const cardsAboutList = [
   {
@@ -128,7 +129,7 @@ const AboutUs = () => {
                   gutterBottom
                   fontWeight="bold"
                   sx={{
-                    color: '#ffffff',
+                    color: 'var(--white)',
                     textAlign: 'center',
                   }}
                 >
@@ -139,7 +140,7 @@ const AboutUs = () => {
                   gutterBottom
                   fontWeight="bold"
                   sx={{
-                    color: '#ffffff',
+                    color: 'var(--white)',
                     textAlign: 'center',
                     textWrap: 'balance',
                   }}
@@ -150,7 +151,7 @@ const AboutUs = () => {
                   variant="body1"
                   gutterBottom
                   sx={{
-                    color: '#ffffff',
+                    color: 'var(--white)',
                     maxWidth: 540,
                     textAlign: 'center',
                     textWrap: 'pretty',
@@ -279,7 +280,7 @@ const AboutUs = () => {
                           lineHeight={0}
                           fontWeight="bold"
                           sx={{
-                            color: '#cccdce',
+                            color: 'var(--greyDark)',
                             position: 'relative',
                             bottom: -2,
                           }}
