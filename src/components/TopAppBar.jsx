@@ -206,7 +206,7 @@ const TopAppBar = (props) => {
           {drawer}
         </Drawer>
       </nav>
-      <Fab href="https://web.whatsapp.com/send?autoload=1&app_absent=1&phone=573172270645&text=Hola%2C+estoy+interesado+en+tus+servicios" aria-label="WhatsApp" sx={{ position: 'fixed', bottom: 16, right: 16}} color="green" target='_blank'>
+      <Fab href="https://wa.me/message/22OT76LT4VBLD1" aria-label="WhatsApp" sx={{ position: 'fixed', bottom: 16, right: 16}} color="green" target='_blank'>
           <WhatsAppIcon fontSize="large" color="white" />
       </Fab>
       <ScrollTop {...props}>

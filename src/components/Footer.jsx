@@ -74,8 +74,8 @@ const Footer = () => {
                   alignItems="stretch"
                   spacing={2}
                 >
-                  <Link href="https://www.facebook.com/digesolutions/"><FacebookIcon color="white" /></Link>
-                  <Link href="https://www.instagram.com/digesolutions/"><InstagramIcon color="white" /></Link>
+                  <Link href="https://www.facebook.com/digesolutions/" target='_blank' ><FacebookIcon color="white" /></Link>
+                  <Link href="https://www.instagram.com/digesolutions/" target='_blank'><InstagramIcon color="white" /></Link>
                 </Stack>
               </Stack>
             </Grid>
