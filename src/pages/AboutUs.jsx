@@ -4,17 +4,26 @@ import {
   Container,
   Grid,
   Card,
+  CardMedia,
   CardContent,
   Divider,
   Fade,
   Stack,
 } from '@mui/material';
+import VerifiedUserOutlinedIcon from '@mui/icons-material/VerifiedUserOutlined';
+import BalanceOutlinedIcon from '@mui/icons-material/BalanceOutlined';
+import HandshakeOutlinedIcon from '@mui/icons-material/HandshakeOutlined';
 
+import ImagenDesarrollo from '../assets/images/photo-desarrollo.jpg';
+import ImagenBusiness from '../assets/images/photo-business.jpg';
+import ImagenMarketing from '../assets/images/photo-marketing.jpg';
+import ImagenDesign from '../assets/images/photo-design.jpg';
 import WhyChooseAccordion from '../components/WhyChooseAccordion';
 import BannerStart from '../components/BannerStart';
 import Layaout from '../containers/Layout';
-import CabezaFondo from '../assets/images/pages-hero-bg.jpg';
-import aboutus from '../assets/images/why-choose-us.jpg';
+import CabezaFondo from '../assets/images/aboutus-hero-bg.jpg';
+import ImagenWhyChooseUs from '../assets/images/why-choose-us.jpg';
+import ImagenOurValues from '../assets/images/our-values.jpg';
 import '../styles/_vars.scss';
 
 const cardsAboutList = [
@@ -46,42 +55,84 @@ const cardsAboutList = [
   },
 ];
 
-const cardsUsProcess = [
+const cardsOurValues = [
+  {
+    title: 'Lealtad',
+    description: `La lealtad es la base de
+      nuestras relaciones. Fomentamos un ambiente
+      de confianza mutua y apoyo, cultivando
+      conexiones duraderas entre nuestro equipo,
+      clientes y asociados.`,
+    icon: (
+      <VerifiedUserOutlinedIcon sx={{ fontSize: '3.5rem' }} color="primary" />
+    ),
+  },
+  {
+    title: 'Honestidad',
+    description: `La honestidad es nuestra brújula moral.
+      Valoramos la transparencia y la integridad
+      en todas nuestras interacciones,
+      construyendo relaciones basadas en la
+      confianza y el respeto mutuo.`,
+    icon: <BalanceOutlinedIcon sx={{ fontSize: '3.5rem' }} color="primary" />,
+  },
+  {
+    title: 'Compromiso',
+    description: `Estamos comprometidos
+      con la excelencia. Nos dedicamos
+      completamente a cumplir nuestras
+      promesas, superar desafíos con
+      determinación y mantener un estándar
+      elevado en cada proyecto. Este compromiso
+      impulsa nuestra cultura y nos inspira a
+      alcanzar la grandeza en todo lo que
+      hacemos.`,
+    icon: <HandshakeOutlinedIcon sx={{ fontSize: '3.5rem' }} color="primary" />,
+  },
+];
+
+const cardsOurPilars = [
+  {
+    title: 'Diseño Gráfico',
+    description: `Desde la creación de logos hasta el diseño de
+    interfaces atractivas, nuestro equipo de diseñadores
+    creativos colabora estrechamente para transmitir la
+    identidad de marca de manera efectiva. En Digital
+    Genius, convertimos conceptos innovadores en
+    experiencias visuales cautivadoras.`,
+    image: ImagenDesign,
+  },
+  {
+    title: 'Inteligencia de Negocio',
+    description: `Utilizando herramientas como Power BI,
+    proporcionamos insights valiosos para
+    informar decisiones estratégicas y optimizar el
+    rendimiento comercial. Digital Genius se
+    destaca por ofrecer análisis detallados que
+    impulsan el éxito y el crecimiento sostenible de
+    nuestros clientes.`,
+    image: ImagenBusiness,
+  },
   {
     title: 'Desarrollo',
-    description:
-      'Fomentamos la colaboración entre equipos para crear soluciones digitales innovadoras y eficientes, impulsando proyectos de desarrollo.',
-    numero: '01.',
+    description: `Especializados en la creación de landings pages,
+    sitios web, eCommerce y aplicaciones interactivas,
+    nuestro equipo utiliza tecnologías avanzadas para
+    ofrecer soluciones digitales a medida que se
+    adaptan a las necesidades específicas de
+    nuestros clientes.`,
+    image: ImagenDesarrollo,
   },
   {
-    title: 'Cultivo de Talento',
-    description:
-      'Identificamos y nutrimos jóvenes talentosos, proporcionándoles oportunidades de crecimiento en un entorno laboral donde prosperan.',
-    numero: '02.',
-  },
-  {
-    title: 'Estrategias Digitales',
-    description:
-      'Diseñamos y ejecutamos estrategias de marketing digital personalizadas, maximizando la visibilidad y el impacto de marcas y emprendimientos.',
-    numero: '03.',
-  },
-  {
-    title: 'Social Media',
-    description:
-      'Desarrollamos e implementamos estrategias de contenido efectivas en redes sociales, maximizando la visibilidad de la marca.',
-    numero: '04.',
-  },
-  {
-    title: 'E-commerce',
-    description:
-      'Creamos plataformas de comercio electrónico intuitivas, atractivas y optimizadas diseñadas para impulsar las conversiones.',
-    numero: '05.',
-  },
-  {
-    title: 'Ayuda y soporte',
-    description:
-      'Brindamos asistencia a clientes, asegurando respuestas rápidas y soluciones efectivas para sus preguntas y preocupaciones.',
-    numero: '06.',
+    title: 'Marketing Digital',
+    description: `Desde SEO hasta campañas publicitarias, en
+    este pilar nos sumergimos en estrategias
+    efectivas para aumentar la visibilidad y llegar a
+    la audiencia objetivo. En Digital Genius,
+    potenciamos la presencia en línea de nuestros
+    clientes, ayudándoles a alcanzar y superar sus
+    metas de marketing.`,
+    image: ImagenMarketing,
   },
 ];
 
@@ -97,7 +148,7 @@ const AboutUs = () => {
           sx={{
             display: 'flex',
             width: '100%',
-            height: '60vh',
+            height: '70vh',
             backgroundImage: `url(${CabezaFondo})`,
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
@@ -108,9 +159,9 @@ const AboutUs = () => {
             sx={{
               display: 'flex',
               width: '100%',
-              height: '60vh',
+              height: '70vh',
               position: 'absolute',
-              backgroundColor: '#101218',
+              backgroundColor: 'var(--black)',
               opacity: 0.8,
               transition: 'background 0.3s, border-radius 0.3s, opacity 0.3s',
             }}
@@ -170,7 +221,7 @@ const AboutUs = () => {
         component="section"
         sx={{
           width: '100%',
-          backgroundColor: '#f3f5f5',
+          backgroundColor: 'var(--grey)',
           pb: 2,
           mt: 2,
         }}
@@ -200,7 +251,7 @@ const AboutUs = () => {
                         sx={{
                           height: '8px',
                           width: '50px',
-                          backgroundColor: '#20447B',
+                          backgroundColor: 'var(--primary)',
                           mb: 3,
                         }}
                       />
@@ -223,7 +274,8 @@ const AboutUs = () => {
         sx={{
           display: 'flex',
           width: '100%',
-          backgroundImage: 'linear-gradient(180deg, #f3f5f5 0%, #ffffff 100%)',
+          backgroundImage:
+            'linear-gradient(180deg, var(--grey) 0%, var(--white) 100%)',
           alignItems: 'center',
           justifyContent: 'center',
           pb: 10,
@@ -234,71 +286,107 @@ const AboutUs = () => {
             direction="column"
             justifyContent="center"
             alignItems="stretch"
-            spacing={8}
+            spacing={2}
+            sx={{ width: '100%' }}
           >
-            <Box>
-              <Typography
-                variant="h2"
-                gutterBottom
-                color="primary"
-                fontWeight="bold"
-                textAlign="center"
-              >
-                Nuestros Procesos
-              </Typography>
-            </Box>
-            <Box>
+            <Grid container justifyContent="center" alignItems="center">
               <Grid
-                container
-                spacing={4}
-                justifyContent="center"
-                alignItems="center"
+                item
+                sx={{
+                  width: { xs: '100%', md: '50%' },
+                }}
               >
-                {cardsUsProcess.map((item) => (
-                  <Grid
-                    item
-                    key={item.title}
-                    sx={{
-                      width: { xs: '95%', md: '48%', lg: '30%' },
-                    }}
+                <Box sx={{ p: 4 }}>
+                  <Stack
+                    direction="column"
+                    justifyContent="center"
+                    alignItems="stretch"
+                    spacing={4}
                   >
-                    <Card
-                      elevation={0}
-                      sx={{
-                        minHeight: { xs: 240, md: 280, lg: 300 },
-                        width: '100%',
-                        p: 2,
-                        display: 'flex',
-                        alignItems: 'center',
-                        backgroundColor: 'transparent',
-                      }}
+                    <Typography
+                      variant="h3"
+                      gutterBottom
+                      color="primary"
+                      fontWeight="bold"
                     >
-                      <CardContent>
-                        <Typography
-                          variant="h1"
-                          gutterBottom
-                          lineHeight={0}
-                          fontWeight="bold"
-                          sx={{
-                            color: 'var(--greyDark)',
-                            position: 'relative',
-                            bottom: -2,
-                          }}
+                      Nuestros Valores
+                    </Typography>
+                    <Stack
+                      direction="column"
+                      justifyContent="center"
+                      alignItems="flex-start"
+                      spacing={4}
+                    >
+                      {cardsOurValues.map((item) => (
+                        <Stack
+                          key={item.title}
+                          direction={{ xs: 'column', sm: 'row' }}
+                          justifyContent="center"
+                          alignItems="center"
+                          spacing={2}
                         >
-                          {item.numero}
-                        </Typography>
-                        <Typography variant="h5" gutterBottom fontWeight="bold">
-                          {item.title}
-                        </Typography>
-                        <Typography variant="body1" sx={{ textWrap: 'pretty' }}>
-                          {item.description}
-                        </Typography>
-                      </CardContent>
-                    </Card>
-                  </Grid>
-                ))}
+                          {item.icon}
+                          <Stack
+                            direction="column"
+                            justifyContent="center"
+                            alignItems="flex-start"
+                            spacing={0}
+                          >
+                            <Typography
+                              variant="h6"
+                              gutterBottom
+                              color="primary"
+                              fontWeight="bold"
+                            >
+                              {item.title}
+                            </Typography>
+                            <Typography
+                              variant="body1"
+                              gutterBottom
+                              sx={{ textWrap: 'pretty' }}
+                            >
+                              {item.description}
+                            </Typography>
+                          </Stack>
+                        </Stack>
+                      ))}
+                    </Stack>
+                  </Stack>
+                </Box>
               </Grid>
-            </Box>
+              <Grid
+                item
+                sx={{
+                  width: { xs: '100%', md: '50%' },
+                }}
+              >
+                <Box
+                  sx={{
+                    width: '100%',
+                    display: { xs: 'none', md: 'block' },
+                    height: { xs: 700, lg: 600 },
+                    backgroundImage: `url(${ImagenOurValues})`,
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center center',
+                    position: 'relative',
+                  }}
+                >
+                  <Box
+                    sx={{
+                      width: '100%',
+                      display: { xs: 'none', md: 'block' },
+                      height: { xs: 700, lg: 600 },
+                      position: 'absolute',
+                      backgroundColor: 'var(--primary)',
+                      opacity: 0.3,
+                      transition:
+                        'background 0.3s, border-radius 0.3s, opacity 0.3s',
+                    }}
+                  />
+                </Box>
+              </Grid>
+            </Grid>
           </Stack>
         </Container>
       </Box>
@@ -307,7 +395,89 @@ const AboutUs = () => {
         sx={{
           display: 'flex',
           width: '100%',
-          backgroundColor: '#f3f5f5',
+          backgroundColor: 'var(--grey)',
+          alignItems: 'center',
+          justifyContent: 'center',
+          pt: 10,
+          pb: 12,
+        }}
+      >
+        <Container maxWidth="lg">
+          <Stack
+            direction="column"
+            justifyContent="center"
+            alignItems="stretch"
+            spacing={6}
+          >
+            <Typography
+              variant="h3"
+              gutterBottom
+              fontWeight="bold"
+              sx={{
+                textAlign: 'center',
+              }}
+              color="primary"
+            >
+              Nuestros Pilares
+            </Typography>
+            <Box>
+            <Grid container spacing={2} justifyContent="center">
+              {cardsOurPilars.map((item) => (
+                <Grid
+                  container
+                  item
+                  key={item.title}
+                  sx={{
+                    width: { xs: '98%', md: '48%', lg: '24%' },
+                  }}
+                  alignItems="center"
+                  justifyContent="center"
+                >
+                  <Card
+                    sx={{
+                      width: '100%',
+                      height: { md: 410, lg: 510 },
+                      p: 2,
+                    }}
+                  >
+                    <CardMedia
+                      sx={{
+                        height: 150,
+                        backgroundRepeat: 'no-repeat',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center center',
+                      }}
+                      image={item.image}
+                      title={item.title}
+                    />
+                    <CardContent>
+                      <Typography
+                        variant="h6"
+                        gutterBottom
+                        fontWeight="bold"
+                        color="primary"
+                      >
+                        {item.title}
+                      </Typography>
+                      <Typography variant="body1" sx={{ textWrap: 'pretty' }}>
+                        {item.description}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              ))}
+            </Grid>
+          </Box>
+          </Stack>
+
+        </Container>
+      </Box>
+      <Box
+        component="section"
+        sx={{
+          display: 'flex',
+          width: '100%',
+          backgroundColor: 'var(--white)',
           alignItems: 'center',
           justifyContent: 'center',
           pb: 10,
@@ -318,7 +488,7 @@ const AboutUs = () => {
           justifyContent="center"
           alignItems="stretch"
           spacing={8}
-          sx={{width: '100%'}}
+          sx={{ width: '100%' }}
         >
           <Grid container justifyContent="center" alignItems="flex-start">
             <Grid
@@ -331,7 +501,7 @@ const AboutUs = () => {
                 sx={{
                   width: '100%',
                   height: { xs: '10vh', lg: 600 },
-                  backgroundImage: `url(${aboutus})`,
+                  backgroundImage: `url(${ImagenWhyChooseUs})`,
                   backgroundRepeat: 'no-repeat',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center center',
@@ -344,7 +514,7 @@ const AboutUs = () => {
                     height: { xs: '10vh', lg: 600 },
                     position: 'absolute',
                     backgroundColor: '#20447B',
-                    opacity: 0.7,
+                    opacity: 0.5,
                     transition:
                       'background 0.3s, border-radius 0.3s, opacity 0.3s',
                   }}
@@ -357,7 +527,7 @@ const AboutUs = () => {
                 width: { xs: '100%', lg: '50%' },
               }}
             >
-              <Box sx={{ width: '100%', height: { xs: 'auto', lg: 600 }}}>
+              <Box sx={{ width: '100%', height: { xs: 'auto', lg: 600 } }}>
                 <Stack
                   direction="column"
                   justifyContent="center"

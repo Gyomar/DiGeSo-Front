@@ -17,7 +17,7 @@ import {
 import BrushIcon from '@mui/icons-material/Brush';
 import CodeIcon from '@mui/icons-material/Code';
 import AppShortcutIcon from '@mui/icons-material/AppShortcut';
-import InterestsIcon from '@mui/icons-material/Interests';
+import Poll from '@mui/icons-material/Poll';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 
@@ -69,12 +69,12 @@ const cardsServiceList = [
     icon: <AppShortcutIcon sx={{ fontSize: '2.5rem' }} color="primary" />,
   },
   {
-    title: 'Social Media',
-    description: `Construye una comunidad activa y comprometida en las
-    redes sociales. Nuestro equipo crea estrategias de
-    contenido que resuenan, fomentando la lealtad de la
-    audiencia y aumentando la presencia en línea.`,
-    icon: <InterestsIcon sx={{ fontSize: '2.5rem' }} color="primary" />,
+    title: 'Business Intelligence',
+    description: `Utilizando herramientas como Power BI,
+    proporcionamos insights valiosos para
+    informar decisiones estratégicas y optimizar el
+    rendimiento comercial con analisis detallados.`,
+    icon: <Poll sx={{ fontSize: '2.5rem' }} color="primary" />,
   },
   {
     title: 'eCommerce',
@@ -170,7 +170,7 @@ const cardsTeamList = [
 function Home() {
   const [expandedCardIndex, setExpandedCardIndex] = useState(0);
 
-  const handleMouseOver = (cardIndex) => (event) => {
+  const handleMouseOver = (cardIndex) => () => {
     setExpandedCardIndex(cardIndex);
   };
 
@@ -228,8 +228,7 @@ function Home() {
                         textWrap: 'balance',
                       }}
                     >
-                      Crea asombrosas páginas web, haz crecer tu negocio con
-                      DiGeSo
+                      Impulsa Tu Éxito Digital con DiGeSo: Diseño, Desarrollo, Marketing y Crecimiento Empresarial.
                     </Typography>
                   </Grow>
                   <Grow
@@ -248,7 +247,7 @@ function Home() {
                       ¡Bienvenido a Digital Genius Solutions, tu socio integral
                       para alcanzar el éxito en línea! Nos destacamos por
                       ofrecer servicios especializados en diseño, desarrollo,
-                      eCommerce, marketing y gestión de redes sociales,
+                      eCommerce, marketing, gestión de redes sociales y business intelligence,
                       brindando asistencia y soporte excepcionales para
                       potenciar tu presencia en el mundo digital.
                     </Typography>

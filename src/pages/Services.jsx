@@ -14,7 +14,7 @@ import Empresas from '@mui/icons-material/Groups';
 import Jovenes from '@mui/icons-material/SettingsAccessibility';
 import Diseno from '@mui/icons-material/AppShortcut';
 import Marketing from '@mui/icons-material/SystemSecurityUpdateGood';
-import CabezaFondo from '../assets/images/pages-hero-bg.jpg';
+import CabezaFondo from '../assets/images/services-hero-bg.jpg';
 import Layaout from '../containers/Layout';
 import BannerStart from '../components/BannerStart';
 import '../styles/_vars.scss';
@@ -70,7 +70,7 @@ const Services = () => {
           sx={{
             display: 'flex',
             width: '100%',
-            height: '60vh',
+            height: '70vh',
             backgroundImage: `url(${CabezaFondo})`,
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
@@ -81,7 +81,7 @@ const Services = () => {
             sx={{
               display: 'flex',
               width: '100%',
-              height: '60vh',
+              height: '70vh',
               position: 'absolute',
               backgroundColor: '#101218',
               opacity: 0.8,
