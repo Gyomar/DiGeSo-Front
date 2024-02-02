@@ -16,10 +16,7 @@ export const postMessage = createAsyncThunk(
       dispatch(setLoading(true));
       await axios.post(
         endPoints.sendEmail,
-        newMessage,
-        {
-          headers: { Auth: endPoints.apiKey },
-        },
+        newMessage
       );
       dispatch(setSnackbar({ children: 'Mensaje enviado con Exito', severity: 'success' }));
       dispatch(setLoading(false));
