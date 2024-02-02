@@ -1,5 +1,4 @@
-const isDevelopment = import.meta.env.MODE === 'development';
-const API = isDevelopment ? import.meta.env.VITE_API_URL : 'https://api.digesolutions.com:3000';
+const API = import.meta.env.VITE_API_URL;
 const apiKey = import.meta.env.VITE_API_KEY;
 
 const createEndpoint = (basePath, routes) => {
