@@ -91,6 +91,9 @@ const ContactUs = () => {
           },
         }),
       );
+      dispatch(setMessage(''));
+      dispatch(setName(''));
+      dispatch(setEmail(''));
     } else {
       const errorMessage = invalidFields
         .map((field) => errorMessages[field])
