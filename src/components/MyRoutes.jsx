@@ -1,10 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
-import Home from '/src/pages/Home';
-import AboutUs from '/src/pages/AboutUs';
-import Services from '/src/pages/Services';
-import ContactUs from '/src/pages/ContactUs';
-import NotFound from '/src/pages/NotFound';
-import PrivacyPolicies from '/src/pages/PrivacyPolicies';
+import Home from '../pages/Home';
+import AboutUs from '../pages/AboutUs';
+import Services from '../pages/Services';
+import ContactUs from '../pages/ContactUs';
+import NotFound from '../pages/NotFound';
+import PrivacyPolicies from '../pages/PrivacyPolicies';
 
 const MyRoutes = () => {
   return (

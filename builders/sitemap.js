@@ -1,7 +1,7 @@
 import GenerateSitemap from "react-router-sitemap-maker";
-import Routes from "../src/ruotes";
+import MyRoutes from "../src/components/MyRoutes";
 
-const sitemapData = await GenerateSitemap(Routes(), {
+const sitemapData = await GenerateSitemap(MyRoutes(), {
 	baseUrl: "https://digesolutions.com",
 	hashrouting: false,
 	changeFrequency: "weekly"
