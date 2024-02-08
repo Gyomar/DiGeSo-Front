@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {
   ThemeProvider,
@@ -12,6 +13,7 @@ import AboutUs from '/src/pages/AboutUs';
 import Services from '/src/pages/Services';
 import ContactUs from '/src/pages/ContactUs';
 import NotFound from '/src/pages/NotFound';
+import PrivacyPolicies from '/src/pages/PrivacyPolicies';
 import CssBaseline from '@mui/material/CssBaseline';
 import Dosis300woff2 from '/src/assets/fonts/dosis-v32-latin-300.woff2';
 import Dosis400woff2 from '/src/assets/fonts/dosis-v32-latin-regular.woff2';
@@ -19,6 +21,7 @@ import Dosis500woff2 from '/src/assets/fonts/dosis-v32-latin-500.woff2';
 import Dosis600woff2 from '/src/assets/fonts/dosis-v32-latin-600.woff2';
 import { esES as pickersEsES } from '@mui/x-date-pickers/locales';
 import { esES as coreEsES } from '@mui/material/locale';
+import CookieMessage from './src/components/CookieMessage';
 
 const primaryMain = '#20447B';
 const greyMain = '#f3f5f5';
@@ -121,21 +124,85 @@ const theme = responsiveFontSizes(
 );
 
 const App = () => {
+  const [cookiesAccepted, setCookiesAccepted] = useState(false);
+  const [snackbarOpen, setSnackbarOpen] = useState(true);
+
+  function gtag() {
+    window.dataLayer.push(arguments);
+  }
+
+  // Inicializar Google Tag Manager
+  const initializeGoogleTagManager = () => {
+    try {
+      window.dataLayer = window.dataLayer || [];
+      gtag('js', new Date());
+      gtag('config', 'GTM-KGP3T7MQ');
+    } catch (error) {
+      console.error('Error al inicializar Google Tag Manager:', error);
+      // Manejar el error de manera adecuada (p. ej., mostrar un mensaje de error al usuario)
+    }
+  };
+
+  const handleAcceptCookies = () => {
+    localStorage.setItem('cookiesAccepted', 'true');
+    setCookiesAccepted(true);
+    initializeGoogleTagManager();
+    setSnackbarOpen(false);
+  };
+
+  const handleRejectCookies = () => {
+    localStorage.setItem('cookiesAccepted', 'false');
+    setCookiesAccepted(false);
+    setSnackbarOpen(false);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setSnackbarOpen(false);
+  };
+
+  useEffect(() => {
+    const isAccepted = localStorage.getItem('cookiesAccepted');
+    if (isAccepted === 'true') {
+      setCookiesAccepted(true);
+      initializeGoogleTagManager();
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
-    <ThemeProvider theme={theme}>
-      <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <CssBaseline />
-        <BrowserRouter>
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route exact path="/about-us" element={<AboutUs />} />
-            <Route exact path="/services" element={<Services />} />
-            <Route exact path="/contact-us" element={<ContactUs />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </LocalizationProvider>
-    </ThemeProvider>
+    <div>
+      {!cookiesAccepted && (
+        <CookieMessage
+          open={snackbarOpen}
+          onClose={handleClose}
+          onAccept={handleAcceptCookies}
+          onReject={handleRejectCookies}
+        />
+      )}
+      <ThemeProvider theme={theme}>
+        <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <CssBaseline />
+          <BrowserRouter>
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route exact path="/about-us" element={<AboutUs />} />
+              <Route exact path="/services" element={<Services />} />
+              <Route exact path="/contact-us" element={<ContactUs />} />
+              <Route
+                exact
+                path="/privacy-policies"
+                element={<PrivacyPolicies />}
+              />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </LocalizationProvider>
+      </ThemeProvider>
+    </div>
   );
 };
 
