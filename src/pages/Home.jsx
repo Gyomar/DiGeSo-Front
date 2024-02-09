@@ -220,7 +220,7 @@ function Home() {
                     {...{ timeout: 3000 }}
                   >
                     <Typography
-                      variant="h3"
+                      variant="h4"
                       gutterBottom
                       fontWeight="bold"
                       sx={{
