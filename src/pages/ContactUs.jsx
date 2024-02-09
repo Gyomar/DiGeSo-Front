@@ -121,7 +121,7 @@ const ContactUs = () => {
       <Fade
         in={true}
         style={{ transformOrigin: '0 0 0' }}
-        {...{ timeout: 3000 }}
+        {...{ timeout:  {xs: 500, sm: 3000} }}
       >
         <Box
           sx={{
