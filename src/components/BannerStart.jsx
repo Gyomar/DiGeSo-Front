@@ -80,6 +80,8 @@ const BannerStart = () => {
             </Grid>
             <Grid container item xs={12} md={3} justifyContent="center">
               <Button
+                type="button"
+                id="start-btn"
                 LinkComponent={Link}
                 href="/contact-us"
                 variant="contained"

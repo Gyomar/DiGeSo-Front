@@ -74,8 +74,8 @@ const Footer = () => {
                   alignItems="stretch"
                   spacing={2}
                 >
-                  <Link href="https://www.facebook.com/digesolutions/" target='_blank' ><FacebookIcon color="white" /></Link>
-                  <Link href="https://www.instagram.com/digesolutions/" target='_blank'><InstagramIcon color="white" /></Link>
+                  <Link id="fb-btn" href="https://www.facebook.com/digesolutions/" target='_blank' ><FacebookIcon color="white" /></Link>
+                  <Link id="ig-btn" href="https://www.instagram.com/digesolutions/" target='_blank'><InstagramIcon color="white" /></Link>
                 </Stack>
               </Stack>
             </Grid>
@@ -110,6 +110,7 @@ const Footer = () => {
                 >
                   {navItems.map((item) => (
                     <Link
+                      id={item.label + "-ft"}
                       variant="body2"
                       key={item.label}
                       href={item.link}

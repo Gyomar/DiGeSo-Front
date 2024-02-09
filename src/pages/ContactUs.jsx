@@ -52,14 +52,16 @@ const ContactUs = () => {
   const [isValidMessage, setIsValidMessage] = useState(true);
 
   useEffect(() => {
-    const isNameValid = name !== '' ? name.length >= 2 && /^[a-zA-Z\s]+$/.test(name): true;
+    const isNameValid =
+      name !== '' ? name.length >= 2 && /^[a-zA-Z\s]+$/.test(name) : true;
     const isEmailValid =
       email !== ''
         ? email.length >= 2 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
         : true;
     const isMessageValid =
       message !== ''
-  ? message.length >= 2 && /^[a-zA-Z0-9\s!?.(),:"'@%$#*;-]+$/.test(message)
+        ? message.length >= 2 &&
+          /^[a-zA-Z0-9\s!?.(),:"'@%$#*;-]+$/.test(message)
         : true;
     setIsValidName(isNameValid);
     setIsValidEmail(isEmailValid);
@@ -103,11 +105,11 @@ const ContactUs = () => {
   };
 
   const handleChangeMessage = (event) => {
-      dispatch(setMessage(event.target.value));
+    dispatch(setMessage(event.target.value));
   };
 
   const handleChangeName = (event) => {
-      dispatch(setName(event.target.value));
+    dispatch(setName(event.target.value));
   };
 
   const handleChangeEmail = (event) => {
@@ -240,6 +242,8 @@ const ContactUs = () => {
                 <Box>
                   <Paper elevation={16}>
                     <Stack
+                      component="form"
+                      id="contact-form"
                       direction="column"
                       justifyContent="center"
                       alignItems="flex-start"
@@ -289,10 +293,12 @@ const ContactUs = () => {
                         }}
                       />
                       <Button
+                        type="button"
+                        id="send-btn"
                         onClick={handleSend}
                         variant="contained"
                         size="large"
-                        endIcon={<SendIcon />}
+                        endIcon={<SendIcon id="send-ico" />}
                       >
                         Enviar
                       </Button>

@@ -123,16 +123,19 @@ const App = () => {
   const [cookiesAccepted, setCookiesAccepted] = useState(false);
   const [snackbarOpen, setSnackbarOpen] = useState(true);
 
-  function gtag() {
-    window.dataLayer.push(arguments);
-  }
-
   // Inicializar Google Tag Manager
   const initializeGoogleTagManager = () => {
     try {
       window.dataLayer = window.dataLayer || [];
-      gtag('js', new Date());
-      gtag('config', 'GTM-KGP3T7MQ');
+      window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      const f = document.getElementsByTagName('script')[0];
+      const j = document.createElement('script');
+      // eslint-disable-next-line no-constant-condition
+      const dl = 'dataLayer' !== 'dataLayer' ? '&l=' + 'dataLayer' : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-KGP3T7MQ' + dl;
+      f.parentNode.insertBefore(j, f);
+      window.dataLayer.push({ 'event': 'gtm.js' });
     } catch (error) {
       console.error('Error al inicializar Google Tag Manager:', error);
       // Manejar el error de manera adecuada (p. ej., mostrar un mensaje de error al usuario)

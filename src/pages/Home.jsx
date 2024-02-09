@@ -254,6 +254,8 @@ function Home() {
                   </Grow>
 
                   <Button
+                    type="button"
+                    id="start-home-btn"
                     LinkComponent={Link}
                     to="/contact-us"
                     variant="contained"

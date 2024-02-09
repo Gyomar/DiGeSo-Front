@@ -121,6 +121,8 @@ const TopAppBar = (props) => {
         {navItems.map((item) => (
           <ListItem key={item.label} disablePadding>
             <ListItemButton
+              type="button"
+              id={item.label + "-mb"}
               LinkComponent={Link}
               to={item.link}
               sx={{ textAlign: 'center' }}
@@ -173,6 +175,8 @@ const TopAppBar = (props) => {
               <Box sx={{ display: { xs: 'none', md: 'block' } }}>
                 {navItems.map((item) => (
                   <Button
+                    type="button"
+                    id={item.label + "-dk"}
                     LinkComponent={Link}
                     to={item.link}
                     key={item.label}
@@ -206,7 +210,7 @@ const TopAppBar = (props) => {
           {drawer}
         </Drawer>
       </nav>
-      <Fab href="https://wa.me/message/22OT76LT4VBLD1" aria-label="WhatsApp" sx={{ position: 'fixed', bottom: 16, right: 16}} color="green" target='_blank'>
+      <Fab id="wsp-btn" href="https://wa.me/message/22OT76LT4VBLD1" aria-label="WhatsApp" sx={{ position: 'fixed', bottom: 16, right: 16}} color="green" target='_blank'>
           <WhatsAppIcon fontSize="large" color="white" />
       </Fab>
       <ScrollTop {...props}>
