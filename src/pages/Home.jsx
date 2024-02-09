@@ -24,10 +24,10 @@ import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import Layaout from '../containers/Layout';
 import BannerStart from '../components/BannerStart';
 
-import CabezaFondo from '../assets/images/home-hero-bg.jpg';
-import FotoGyomar from '../assets/images/profile-photo-gyomar.jpg';
-import FotoDayana from '../assets/images/profile-photo-dayana.jpg';
-import FotoManuel from '../assets/images/profile-photo-manuel.jpg';
+import CabezaFondo from '../assets/images/home-hero-bg.webp';
+import FotoGyomar from '../assets/images/profile-photo-gyomar.webp';
+import FotoDayana from '../assets/images/profile-photo-dayana.webp';
+import FotoManuel from '../assets/images/profile-photo-manuel.webp';
 import LogoIllustrator from '../assets/images/illustrator.svg';
 import LogoPhotoshop from '../assets/images/photoshop.svg';
 import LogoFigma from '../assets/images/figma.svg';
@@ -217,10 +217,10 @@ function Home() {
                   <Grow
                     in={true}
                     style={{ transformOrigin: '0 0 0' }}
-                    {...{ timeout: {xs: 500, sm: 3000} }}
+                    {...{ timeout: {xs: 0, sm: 3000} }}
                   >
                     <Typography
-                      variant="h4"
+                      variant={{xs: "h4", sm: "h3"}}
                       gutterBottom
                       fontWeight="bold"
                       sx={{
@@ -234,7 +234,7 @@ function Home() {
                   <Grow
                     in={true}
                     style={{ transformOrigin: '0 0 0' }}
-                    {...{ timeout: {xs: 500, sm: 3000} }}
+                    {...{ timeout: {xs: 0, sm: 3000} }}
                   >
                     <Typography
                       variant="body1"

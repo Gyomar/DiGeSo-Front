@@ -14,7 +14,7 @@ import Empresas from '@mui/icons-material/Groups';
 import Jovenes from '@mui/icons-material/SettingsAccessibility';
 import Diseno from '@mui/icons-material/AppShortcut';
 import Marketing from '@mui/icons-material/SystemSecurityUpdateGood';
-import CabezaFondo from '../assets/images/services-hero-bg.jpg';
+import CabezaFondo from '../assets/images/services-hero-bg.webp';
 import Layaout from '../containers/Layout';
 import BannerStart from '../components/BannerStart';
 import '../styles/_vars.scss';
@@ -64,7 +64,7 @@ const Services = () => {
       <Fade
         in={true}
         style={{ transformOrigin: '0 0 0' }}
-        {...{ timeout: {xs: 500, sm: 3000} }}
+        {...{ timeout: {xs: 0, sm: 3000} }}
       >
         <Box
           sx={{

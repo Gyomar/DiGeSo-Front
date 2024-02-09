@@ -1,5 +1,5 @@
 import { Box, Container, Fade, Typography, Stack } from '@mui/material';
-import CabezaFondo from '../assets/images/services-hero-bg.jpg';
+import CabezaFondo from '../assets/images/services-hero-bg.webp';
 import Layaout from '../containers/Layout';
 import '../styles/_vars.scss';
 
@@ -9,7 +9,7 @@ const PrivacyPolicies = () => {
       <Fade
         in={true}
         style={{ transformOrigin: '0 0 0' }}
-        {...{ timeout: {xs: 500, sm: 3000} }}
+        {...{ timeout: {xs: 0, sm: 3000} }}
       >
         <Box
           sx={{

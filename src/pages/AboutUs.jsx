@@ -14,16 +14,16 @@ import VerifiedUserOutlinedIcon from '@mui/icons-material/VerifiedUserOutlined';
 import BalanceOutlinedIcon from '@mui/icons-material/BalanceOutlined';
 import HandshakeOutlinedIcon from '@mui/icons-material/HandshakeOutlined';
 
-import ImagenDesarrollo from '../assets/images/photo-desarrollo.jpg';
-import ImagenBusiness from '../assets/images/photo-business.jpg';
-import ImagenMarketing from '../assets/images/photo-marketing.jpg';
-import ImagenDesign from '../assets/images/photo-design.jpg';
+import ImagenDesarrollo from '../assets/images/photo-desarrollo.webp';
+import ImagenBusiness from '../assets/images/photo-business.webp';
+import ImagenMarketing from '../assets/images/photo-marketing.webp';
+import ImagenDesign from '../assets/images/photo-design.webp';
 import WhyChooseAccordion from '../components/WhyChooseAccordion';
 import BannerStart from '../components/BannerStart';
 import Layaout from '../containers/Layout';
-import CabezaFondo from '../assets/images/aboutus-hero-bg.jpg';
-import ImagenWhyChooseUs from '../assets/images/why-choose-us.jpg';
-import ImagenOurValues from '../assets/images/our-values.jpg';
+import CabezaFondo from '../assets/images/aboutus-hero-bg.webp';
+import ImagenWhyChooseUs from '../assets/images/why-choose-us.webp';
+import ImagenOurValues from '../assets/images/our-values.webp';
 import '../styles/_vars.scss';
 
 const cardsAboutList = [
@@ -142,7 +142,7 @@ const AboutUs = () => {
       <Fade
         in={true}
         style={{ transformOrigin: '0 0 0' }}
-        {...{ timeout: {xs: 500, sm: 3000} }}
+        {...{ timeout: {xs: 0, sm: 3000} }}
       >
         <Box
           sx={{

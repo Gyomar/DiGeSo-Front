@@ -24,7 +24,7 @@ import WorkIcon from '@mui/icons-material/Work';
 import SendIcon from '@mui/icons-material/Send';
 
 import Layaout from '../containers/Layout';
-import CabezaFondo from '../assets/images/contactus-hero-bg.jpg';
+import CabezaFondo from '../assets/images/contactus-hero-bg.webp';
 import BannerStart from '../components/BannerStart';
 import { setSnackbar } from '../services/reducers/ui.slice';
 import {
@@ -121,7 +121,7 @@ const ContactUs = () => {
       <Fade
         in={true}
         style={{ transformOrigin: '0 0 0' }}
-        {...{ timeout:  {xs: 500, sm: 3000} }}
+        {...{ timeout:  {xs: 0, sm: 3000} }}
       >
         <Box
           sx={{
