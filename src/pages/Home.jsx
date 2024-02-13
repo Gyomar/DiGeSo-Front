@@ -214,13 +214,8 @@ function Home() {
                   spacing={4}
                   sx={{ height: '100vh' }}
                 >
-                  <Grow
-                    in={true}
-                    style={{ transformOrigin: '0 0 0' }}
-                    {...{ timeout: {xs: 0, sm: 3000} }}
-                  >
                     <Typography
-                      variant={{xs: "h4", sm: "h3"}}
+                      variant="h1"
                       gutterBottom
                       fontWeight="bold"
                       sx={{
@@ -230,11 +225,10 @@ function Home() {
                     >
                       Impulsa Tu Éxito Digital con DiGeSo: Diseño, Desarrollo, Marketing y Crecimiento Empresarial.
                     </Typography>
-                  </Grow>
                   <Grow
                     in={true}
                     style={{ transformOrigin: '0 0 0' }}
-                    {...{ timeout: {xs: 0, sm: 3000} }}
+                    {...{ timeout: 3000 }}
                   >
                     <Typography
                       variant="body1"
@@ -341,7 +335,7 @@ function Home() {
                     >
                       <CardContent>
                         {item.icon}
-                        <Typography variant="h6" gutterBottom>
+                        <Typography variant="h3" gutterBottom>
                           {item.title}
                         </Typography>
                         <Typography variant="body1" sx={{ textWrap: 'pretty' }}>
@@ -428,7 +422,7 @@ function Home() {
                       />
                       <CardContent>
                         <Typography
-                          variant="h6"
+                          variant="h3"
                           gutterBottom
                           textAlign="center"
                           fontWeight="bold"
@@ -537,14 +531,14 @@ function Home() {
                         }}
                       >
                         <Typography
-                          variant="h6"
+                          variant="h3"
                           gutterBottom
                           color="primary"
                           fontWeight="bold"
                         >
                           {item.title}
                         </Typography>
-                        <Typography variant="subtitle1">
+                        <Typography variant="body1">
                           {item.description}
                         </Typography>
                         <Collapse

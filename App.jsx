@@ -3,7 +3,6 @@ import { BrowserRouter} from 'react-router-dom';
 import {
   ThemeProvider,
   createTheme,
-  responsiveFontSizes,
   alpha,
 } from '@mui/material/styles';
 import { LocalizationProvider } from '@mui/x-date-pickers';
@@ -20,21 +19,75 @@ import CookieMessage from './src/components/CookieMessage';
 import MyRoutes from './src/components/MyRoutes';
 
 const primaryMain = '#20447B';
+const secondaryMain = '#20727b'
 const greyMain = '#f3f5f5';
 const whiteMain = '#ffffff';
 const balackMain = '#101218';
 const greenMain = '#25d366';
 
-const theme = responsiveFontSizes(
+const theme =
   createTheme({
     typography: {
       fontFamily: ['Dosis'],
+      h1 : {
+        fontSize : '1.6rem',  
+        '@media (min-width:600px)': {
+          fontSize: '2.2rem',
+        },
+        '@media (min-width:1200px)': {
+          fontSize: '2.8rem',
+        },
+      },
+      h2 : {
+        fontSize : '1.4rem',  
+        '@media (min-width:600px)': {
+          fontSize: '1.6rem',
+        },
+        '@media (min-width:1200px)': {
+          fontSize: '2rem',
+        },
+      },
+      h3 : {
+        fontSize : '1.3rem',  
+        '@media (min-width:600px)': {
+          fontSize: '1.4rem',
+        },
+        '@media (min-width:1200px)': {
+          fontSize: '1.5rem',
+        },
+      },
+      h4 : {
+        fontSize : '1.2rem',  
+        '@media (min-width:1200px)': {
+          fontSize: '1.4rem',
+        },
+      },
+      h5 : {
+        fontSize : '1.1rem',  
+        '@media (min-width:1200px)': {
+          fontSize: '1.3rem',
+        },
+      },
+      h6 : {
+        fontSize : '1rem',  
+        '@media (min-width:1200px)': {
+          fontSize: '1.2rem',
+        },
+      }
     },
     palette: {
+      contrastThreshold: 4.5,
       primary: {
         main: primaryMain,
         light: alpha(primaryMain, 0.7),
         dark: '#1b3966',
+        contrastText: '#fff',
+      },
+      secondary: {
+        main: secondaryMain,
+        light: alpha(secondaryMain, 0.7),
+        dark: '#3a6ab2',
+        contrastText: '#000',
       },
       grey: {
         main: greyMain,
@@ -116,8 +169,7 @@ const theme = responsiveFontSizes(
     },
     pickersEsES,
     coreEsES,
-  }),
-);
+  });
 
 const App = () => {
   const [cookiesAccepted, setCookiesAccepted] = useState(false);

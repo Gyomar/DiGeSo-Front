@@ -47,7 +47,7 @@ const Footer = () => {
                 spacing={2}
               >
                 <Typography
-                  variant="h6"
+                  variant="body1"
                   gutterBottom
                   sx={{
                     textAlign: 'left',
@@ -74,8 +74,8 @@ const Footer = () => {
                   alignItems="stretch"
                   spacing={2}
                 >
-                  <Link id="fb-btn" href="https://www.facebook.com/digesolutions/" target='_blank' ><FacebookIcon color="white" /></Link>
-                  <Link id="ig-btn" href="https://www.instagram.com/digesolutions/" target='_blank'><InstagramIcon color="white" /></Link>
+                  <Link id="fb-btn" href="https://www.facebook.com/digesolutions/" target='_blank' ><FacebookIcon color="white" titleAccess="facebook" /></Link>
+                  <Link id="ig-btn" href="https://www.instagram.com/digesolutions/" target='_blank'><InstagramIcon color="white" titleAccess="instagram"  /></Link>
                 </Stack>
               </Stack>
             </Grid>
@@ -93,7 +93,7 @@ const Footer = () => {
                 spacing={2}
               >
                 <Typography
-                  variant="h6"
+                  variant="body1"
                   gutterBottom
                   sx={{
                     textAlign: 'left',
@@ -140,7 +140,7 @@ const Footer = () => {
                 spacing={2}
               >
                 <Typography
-                  variant="h6"
+                  variant="body1"
                   gutterBottom
                   sx={{
                     textAlign: 'left',

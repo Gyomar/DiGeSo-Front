@@ -176,7 +176,7 @@ const AboutUs = () => {
                 sx={{ height: '60vh' }}
               >
                 <Typography
-                  variant="h3"
+                  variant="h1"
                   gutterBottom
                   fontWeight="bold"
                   sx={{
@@ -187,11 +187,12 @@ const AboutUs = () => {
                   Nosotros
                 </Typography>
                 <Typography
-                  variant="h5"
+                  variant="h2"
                   gutterBottom
                   fontWeight="bold"
                   sx={{
                     color: 'var(--white)',
+                    maxWidth: 540,
                     textAlign: 'center',
                     textWrap: 'balance',
                   }}
@@ -255,7 +256,7 @@ const AboutUs = () => {
                           mb: 3,
                         }}
                       />
-                      <Typography variant="h4" gutterBottom>
+                      <Typography variant="h3" gutterBottom>
                         {item.title}
                       </Typography>
                       <Typography variant="body1">
@@ -304,7 +305,7 @@ const AboutUs = () => {
                     spacing={4}
                   >
                     <Typography
-                      variant="h3"
+                      variant="h2"
                       gutterBottom
                       color="primary"
                       fontWeight="bold"
@@ -333,7 +334,7 @@ const AboutUs = () => {
                             spacing={0}
                           >
                             <Typography
-                              variant="h6"
+                              variant="h3"
                               gutterBottom
                               color="primary"
                               fontWeight="bold"
@@ -410,7 +411,7 @@ const AboutUs = () => {
             spacing={6}
           >
             <Typography
-              variant="h3"
+              variant="h2"
               gutterBottom
               fontWeight="bold"
               sx={{
@@ -452,7 +453,7 @@ const AboutUs = () => {
                     />
                     <CardContent>
                       <Typography
-                        variant="h6"
+                        variant="h3"
                         gutterBottom
                         fontWeight="bold"
                         color="primary"
@@ -536,7 +537,7 @@ const AboutUs = () => {
                   sx={{ px: { xs: 2, sm: 6, md: 8 }, pt: 5 }}
                 >
                   <Typography
-                    variant="h3"
+                    variant="h2"
                     gutterBottom
                     color="primary"
                     fontWeight="bold"

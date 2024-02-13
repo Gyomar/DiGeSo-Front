@@ -55,7 +55,7 @@ const BannerStart = () => {
                 sx={{ p: 2 }}
               >
                 <Typography
-                  variant="h4"
+                  variant="h3"
                   gutterBottom
                   fontWeight="bold"
                   sx={{

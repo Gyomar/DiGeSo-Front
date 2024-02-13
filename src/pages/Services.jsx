@@ -98,7 +98,7 @@ const Services = () => {
                 sx={{ height: '60vh' }}
               >
                 <Typography
-                  variant="h3"
+                  variant="h1"
                   gutterBottom
                   fontWeight="bold"
                   sx={{
@@ -109,11 +109,12 @@ const Services = () => {
                   Servicios
                 </Typography>
                 <Typography
-                  variant="h5"
+                  variant="h2"
                   gutterBottom
                   fontWeight="bold"
                   sx={{
                     color: 'var(--white)',
+                    maxWidth: 540,
                     textAlign: 'center',
                     textWrap: 'balance',
                   }}
@@ -209,7 +210,7 @@ const Services = () => {
                     >
                       <CardContent>
                         {item.icon}
-                        <Typography variant="h6" gutterBottom>
+                        <Typography variant="h3" gutterBottom>
                           {item.title}
                         </Typography>
                         <Typography variant="body1" sx={{ textWrap: 'pretty' }}>

@@ -43,7 +43,7 @@ const PrivacyPolicies = () => {
                 sx={{ height: '40vh' }}
               >
                 <Typography
-                  variant="h3"
+                  variant="h1"
                   gutterBottom
                   fontWeight="bold"
                   sx={{
@@ -75,7 +75,7 @@ const PrivacyPolicies = () => {
             sx={{px: 4}}
           >
             <Typography
-              variant="h6"
+              variant="h3"
               gutterBottom
               fontWeight="bold"
               textAlign="left"
@@ -108,7 +108,7 @@ const PrivacyPolicies = () => {
               Gracias por visitar nuestro sitio web. En Digital Genius Solutions, valoramos tu privacidad y nos comprometemos a proteger tus datos personales. Esta política de privacidad describe cómo recopilamos, utilizamos y protegemos la información personal que nos proporcionas al interactuar con nuestro sitio web.
             </Typography>
             <Typography
-              variant="h6"
+              variant="h5"
               gutterBottom
               fontWeight="bold"
               textAlign="left"
@@ -140,7 +140,7 @@ const PrivacyPolicies = () => {
               Además, podemos recopilar información personal que nos proporcionas voluntariamente al completar formularios en el sitio, como nombre, dirección de correo electrónico y número de teléfono. Esta información se utiliza para comunicarnos contigo y para personalizar nuestros servicios según tus preferencias.
             </Typography>
             <Typography
-              variant="h6"
+              variant="h5"
               gutterBottom
               fontWeight="bold"
               textAlign="left"
@@ -161,7 +161,7 @@ const PrivacyPolicies = () => {
               La información que recopilamos se utiliza para mejorar nuestros servicios, proporcionarte contenido personalizado y comunicarnos contigo sobre nuestras ofertas y promociones. No compartimos tu información personal con terceros sin tu consentimiento, excepto cuando sea necesario para cumplir con la ley o proteger nuestros derechos.
             </Typography>
             <Typography
-              variant="h6"
+              variant="h5"
               gutterBottom
               fontWeight="bold"
               textAlign="left"
@@ -182,7 +182,7 @@ const PrivacyPolicies = () => {
               Utilizamos cookies y tecnologías similares para mejorar la experiencia del usuario y recopilar información sobre cómo interactúas con nuestro contenido. Puedes controlar el uso de cookies a través de la configuración de tu navegador. Para obtener más información sobre cómo utilizamos las cookies, consulta nuestra política de cookies.
             </Typography>
             <Typography
-              variant="h6"
+              variant="h5"
               gutterBottom
               fontWeight="bold"
               textAlign="left"
@@ -203,7 +203,7 @@ const PrivacyPolicies = () => {
               Tomamos medidas para proteger la información personal que recopilamos contra accesos no autorizados, divulgación o destrucción. Sin embargo, debes tener en cuenta que ninguna transmisión de datos a través de Internet o almacenamiento electrónico es 100% segura.
             </Typography>
             <Typography
-              variant="h6"
+              variant="h5"
               gutterBottom
               fontWeight="bold"
               textAlign="left"
@@ -224,7 +224,7 @@ const PrivacyPolicies = () => {
               Nos reservamos el derecho de actualizar esta política de privacidad en cualquier momento. Te recomendamos que revises periódicamente esta página para estar al tanto de cualquier cambio. La fecha de la última actualización se indicará al comienzo de la política de privacidad.
             </Typography>
             <Typography
-              variant="h6"
+              variant="h5"
               gutterBottom
               fontWeight="bold"
               textAlign="left"

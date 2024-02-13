@@ -41,11 +41,13 @@ const Alert = forwardRef(function Alert(props, ref) {
 
 const ContactUs = () => {
   const dispatch = useDispatch();
-  const isLoading = useSelector((state) => state.ui.loading);
-  const snackbar = useSelector((state) => state.ui.snackbar);
-  const message = useSelector((state) => state.contacUs.message);
-  const name = useSelector((state) => state.contacUs.name);
-  const email = useSelector((state) => state.contacUs.email);
+  const { isLoading, snackbar, message, name, email } = useSelector((state) => ({
+    loading: state.ui.loading,
+    snackbar: state.ui.snackbar,
+    message: state.contactUs.message,
+    name: state.contactUs.name,
+    email: state.contactUs.email,
+  }));
 
   const [isValidName, setIsValidName] = useState(true);
   const [isValidEmail, setIsValidEmail] = useState(true);
@@ -155,7 +157,7 @@ const ContactUs = () => {
                 sx={{ height: '60vh' }}
               >
                 <Typography
-                  variant="h3"
+                  variant="h1"
                   gutterBottom
                   fontWeight="bold"
                   sx={{
@@ -166,11 +168,12 @@ const ContactUs = () => {
                   Contáctanos
                 </Typography>
                 <Typography
-                  variant="h5"
+                  variant="h2"
                   gutterBottom
                   fontWeight="bold"
                   sx={{
                     color: 'var(--white)',
+                    maxWidth: 540,
                     textAlign: 'center',
                     textWrap: 'balance',
                   }}
@@ -232,7 +235,7 @@ const ContactUs = () => {
                 sx={{ width: '100%' }}
               >
                 <Typography
-                  variant="h4"
+                  variant="h3"
                   gutterBottom
                   color="primary"
                   fontWeight="bold"
@@ -324,7 +327,7 @@ const ContactUs = () => {
                 sx={{ width: '100%' }}
               >
                 <Typography
-                  variant="h4"
+                  variant="h3"
                   gutterBottom
                   fontWeight="bold"
                   sx={{
